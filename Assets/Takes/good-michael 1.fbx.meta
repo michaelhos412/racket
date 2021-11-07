@@ -1,0 +1,578 @@
+fileFormatVersion: 2
+guid: 5f8b972b0f7a6544092e213ffc169624
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -2315991552129164737
+    second: good-michael
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'good-michael' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'michael_baseline_Spine1' has translation
+      animation that will be discarded.\n\t'michael_baseline_LeftHand' has translation
+      animation that will be discarded.\n\t'michael_baseline_RightHand' has translation
+      animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: michael_baseline_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: michael_baseline_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: good-michael 1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: good-michael
+      parentName: good-michael 1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_BackLeft
+      parentName: good-michael
+      position: {x: 0.3980058, y: 1.1042578, z: 0.2863986}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_BackRight
+      parentName: good-michael
+      position: {x: 0.52903837, y: 1.1057357, z: 0.40803984}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_BackTop
+      parentName: good-michael
+      position: {x: 0.43729815, y: 1.3373555, z: 0.3668011}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_Chest
+      parentName: good-michael
+      position: {x: 0.2749838, y: 1.2304922, z: 0.54807633}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_HeadFront
+      parentName: good-michael
+      position: {x: 0.33027956, y: 1.6245041, z: 0.58106345}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_HeadSide
+      parentName: good-michael
+      position: {x: 0.47037295, y: 1.574142, z: 0.51919097}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_HeadTop
+      parentName: good-michael
+      position: {x: 0.38815108, y: 1.661079, z: 0.49892664}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LAnkleOut
+      parentName: good-michael
+      position: {x: 0.23809224, y: 0.057497013, z: 0.24203075}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LElbowOut
+      parentName: good-michael
+      position: {x: 0.18905213, y: 0.9730636, z: 0.2836107}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LHandOut
+      parentName: good-michael
+      position: {x: 0.0641822, y: 0.6556111, z: 0.42772204}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LKneeOut
+      parentName: good-michael
+      position: {x: 0.17320721, y: 0.44711554, z: 0.33627635}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LShin
+      parentName: good-michael
+      position: {x: 0.17015572, y: 0.20398667, z: 0.34886122}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LShoulderBack
+      parentName: good-michael
+      position: {x: 0.30781817, y: 1.2627904, z: 0.2539482}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LShoulderTop
+      parentName: good-michael
+      position: {x: 0.28958285, y: 1.3842509, z: 0.3371516}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LThigh
+      parentName: good-michael
+      position: {x: 0.18236513, y: 0.6649217, z: 0.46593803}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LToeIn
+      parentName: good-michael
+      position: {x: 0.1735192, y: 0.028794767, z: 0.45646632}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LToeOut
+      parentName: good-michael
+      position: {x: 0.10021074, y: 0.037347425, z: 0.35708508}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LUArmHigh
+      parentName: good-michael
+      position: {x: 0.25867853, y: 1.1121577, z: 0.27773494}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LWristIn
+      parentName: good-michael
+      position: {x: 0.0800426, y: 0.7932176, z: 0.42919204}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LWristOut
+      parentName: good-michael
+      position: {x: 0.09349767, y: 0.7631352, z: 0.37295237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RAnkleOut
+      parentName: good-michael
+      position: {x: 0.5201023, y: 0.06254108, z: 0.43580595}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RElbowOut
+      parentName: good-michael
+      position: {x: 0.6257015, y: 1.0048513, z: 0.5787848}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RHandOut
+      parentName: good-michael
+      position: {x: 0.5840028, y: 0.6819004, z: 0.7830988}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RKneeOut
+      parentName: good-michael
+      position: {x: 0.52478504, y: 0.49960694, z: 0.5145338}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RShin
+      parentName: good-michael
+      position: {x: 0.43977866, y: 0.29356113, z: 0.49623546}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RShoulderBack
+      parentName: good-michael
+      position: {x: 0.57912105, y: 1.2549381, z: 0.4882241}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RShoulderTop
+      parentName: good-michael
+      position: {x: 0.4912909, y: 1.3792593, z: 0.48720416}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RThigh
+      parentName: good-michael
+      position: {x: 0.4330984, y: 0.5226735, z: 0.5696493}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RToeIn
+      parentName: good-michael
+      position: {x: 0.3876903, y: 0.015718222, z: 0.54163694}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RToeOut
+      parentName: good-michael
+      position: {x: 0.5070538, y: 0.030930717, z: 0.54816324}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RUArmHigh
+      parentName: good-michael
+      position: {x: 0.5726428, y: 1.1143712, z: 0.5288982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RWristIn
+      parentName: good-michael
+      position: {x: 0.5350593, y: 0.82069325, z: 0.8040453}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RWristOut
+      parentName: good-michael
+      position: {x: 0.5857272, y: 0.79980546, z: 0.7653602}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_WaistLBack
+      parentName: good-michael
+      position: {x: 0.36824661, y: 0.90260464, z: 0.29652682}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_WaistLFront
+      parentName: good-michael
+      position: {x: 0.21707027, y: 0.9075466, z: 0.43516803}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_WaistRBack
+      parentName: good-michael
+      position: {x: 0.55872446, y: 0.8830246, z: 0.4903138}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_WaistRFront
+      parentName: good-michael
+      position: {x: 0.42488363, y: 0.9201353, z: 0.6190232}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_Hips
+      parentName: good-michael 1(Clone)
+      position: {x: 0, y: 0.81256866, z: 0}
+      rotation: {x: 0.07897273, y: -0.010268326, z: -0.011836065, w: 0.99675363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftUpLeg
+      parentName: michael_baseline_Hips
+      position: {x: -0.090763584, y: 0.000000022177119, z: -0.0000000035215635}
+      rotation: {x: -0.0914453, y: -0.047183007, z: 0.010312213, w: 0.99463826}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftLeg
+      parentName: michael_baseline_LeftUpLeg
+      position: {x: 0.000000014901161, y: -0.34982577, z: 0}
+      rotation: {x: 0.026236862, y: 0.0776008, z: 0.027495198, w: 0.99625987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftFoot
+      parentName: michael_baseline_LeftLeg
+      position: {x: 0.00000005401671, y: -0.4304662, z: 0.00000031106174}
+      rotation: {x: -0.234544, y: -0.121397525, z: 0.056081295, w: 0.9628638}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftToeBase
+      parentName: michael_baseline_LeftFoot
+      position: {x: -0, y: -0.05899633, z: 0.1361454}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightUpLeg
+      parentName: michael_baseline_Hips
+      position: {x: 0.090763584, y: -0.000000021595042, z: 0.0000000043655746}
+      rotation: {x: -0.095089436, y: -0.014751733, z: 0.024924519, w: 0.99504733}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightLeg
+      parentName: michael_baseline_RightUpLeg
+      position: {x: -0.000000016763806, y: -0.34982607, z: -0.000000067055225}
+      rotation: {x: 0.025554348, y: 0.035679463, z: 0.010753051, w: 0.99897873}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightFoot
+      parentName: michael_baseline_RightLeg
+      position: {x: -0.00000027939677, y: -0.4304675, z: 0.00000006519258}
+      rotation: {x: -0.26102114, y: -0.085977755, z: 0.07389869, w: 0.9586526}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightToeBase
+      parentName: michael_baseline_RightFoot
+      position: {x: -0, y: -0.05899633, z: 0.1361454}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_Spine
+      parentName: michael_baseline_Hips
+      position: {x: -0, y: 0.07442614, z: 0}
+      rotation: {x: -0.07881398, y: -0.017400112, z: 0.023604505, w: 0.996458}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_Spine1
+      parentName: michael_baseline_Spine
+      position: {x: 0.00000023841858, y: 0.19591457, z: 0.000000074505806}
+      rotation: {x: 0.007648567, y: -0.0058559175, z: -0.022637319, w: 0.9996973}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftShoulder
+      parentName: michael_baseline_Spine1
+      position: {x: -0.03737837, y: 0.16578792, z: -0.006550193}
+      rotation: {x: 0.030601528, y: -0.032797046, z: -0.05017894, w: 0.99773246}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftArm
+      parentName: michael_baseline_LeftShoulder
+      position: {x: -0.15239692, y: 0, z: 0}
+      rotation: {x: 0.12051638, y: 0.079898976, z: 0.05887962, w: 0.98773736}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftForeArm
+      parentName: michael_baseline_LeftArm
+      position: {x: -0.29715103, y: 0, z: 0}
+      rotation: {x: -0.020714598, y: 0.028743908, z: -0.0043229125, w: 0.9993628}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_LeftHand
+      parentName: michael_baseline_LeftForeArm
+      position: {x: -0.24737586, y: 0.000000014901161, z: -0.00000017881393}
+      rotation: {x: -0.019366901, y: 0.018924266, z: 0.018029774, w: 0.9994707}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_Neck
+      parentName: michael_baseline_Spine1
+      position: {x: -0.00000014994293, y: 0.21527973, z: -0.00000011175871}
+      rotation: {x: -0.0842124, y: 0.039938852, z: 0.000022674301, w: 0.99564713}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_Head
+      parentName: michael_baseline_Neck
+      position: {x: -0, y: 0.14068358, z: 0.018152718}
+      rotation: {x: -0.24767043, y: 0.046047833, z: -0.016744116, w: 0.9676046}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightShoulder
+      parentName: michael_baseline_Spine1
+      position: {x: 0.035048485, y: 0.16578792, z: -0.006550193}
+      rotation: {x: -0.0051720133, y: 0.1393553, z: 0.07607161, w: 0.9873026}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightArm
+      parentName: michael_baseline_RightShoulder
+      position: {x: 0.15239692, y: 0, z: 0}
+      rotation: {x: 0.03213995, y: -0.10684487, z: -0.07441421, w: 0.99096614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightForeArm
+      parentName: michael_baseline_RightArm
+      position: {x: 0.29715103, y: 0, z: 0}
+      rotation: {x: -0.0033810376, y: -0.026194489, z: 0.009039709, w: 0.99961025}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_RightHand
+      parentName: michael_baseline_RightForeArm
+      position: {x: 0.2609691, y: 0.00000047683716, z: -0.00000020861626}
+      rotation: {x: 0.000670576, y: -0.11740575, z: -0.00963445, w: 0.9930371}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
