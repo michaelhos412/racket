@@ -49,5 +49,7 @@ MonoBehaviour:
   SkeletonCoordinates: 0
   BoneNamingConvention: 0
   DrawMarkers: 1
+  DrawCameras: 0
+  DrawForcePlates: 0
   RecordOnPlay: 0
   SkipDataDescriptions: 0
