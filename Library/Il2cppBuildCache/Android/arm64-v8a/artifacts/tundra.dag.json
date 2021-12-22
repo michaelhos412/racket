@@ -1,0 +1,155 @@
+{
+  "Nodes": [
+    {
+      "Annotation": "all_tundra_nodes",
+      "Action": "",
+      "Inputs": [],
+      "Outputs": [],
+      "TargetDirectories": [],
+      "PassIndex": 0,
+      "ToBuildDependencies": [
+        1
+      ],
+      "ToUseDependencies": [],
+      "OverwriteOutputs": true,
+      "FrontendResponseFiles": [],
+      "AllowUnexpectedOutput": true,
+      "AllowedOutputSubstrings": [],
+      "DebugActionIndex": 0
+    },
+    {
+      "Annotation": "Il2Cpp D:/FYP/Library/Il2cppBuildCache/Android/arm64-v8a/Native/arm64-v8a/libil2cpp.so",
+      "Action": "D:\\2020.3.20f1\\Editor\\Data\\il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe --convert-to-cpp --emit-null-checks --enable-array-bounds-check --dotnetprofile=\"unityaot\" --compile-cpp --libil2cpp-static --platform=\"Android\" --architecture=\"ARM64\" --configuration=\"Release\" --outputpath=\"D:\\FYP\\Library\\Il2cppBuildCache\\Android\\arm64-v8a\\Native\\arm64-v8a\\libil2cpp.so\" --cachedirectory=\"D:\\FYP\\Assets\\..\\Library\\il2cpp_android_arm64-v8a/il2cpp_cache\" --additional-include-directories=\"D:/2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools\\bdwgc/include\" --additional-include-directories=\"D:/2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools\\libil2cpp/include\" --baselib-directory=\"D:/2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer\\Variations\\il2cpp\\Development\\StaticLibs\\arm64-v8a\" --avoid-dynamic-library-copy --tool-chain-path=\"D:/2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK\" --profiler-report --map-file-parser=D:/2020.3.20f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe --directory=D:/FYP/Temp/StagingArea/assets/bin/Data/Managed --generatedcppdir=D:/FYP/Library/Il2cppBuildCache/Android/arm64-v8a/il2cppOutput",
+      "Inputs": [
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Assembly-CSharp.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/AssistantCoreSDKRuntime.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Facebook.WitAI.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Mono.Security.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/mscorlib.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Oculus.AudioManager.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Oculus.LipSync.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Oculus.Platform.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Oculus.Spatializer.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Oculus.VR.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/System.Configuration.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/System.Core.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/System.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/System.Xml.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Unity.TextMeshPro.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Unity.XR.Management.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/Unity.XR.Oculus.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AIModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AndroidJNIModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AnimationModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.ARModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AssetBundleModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AudioModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.CoreModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.GridModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.ImageConversionModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.IMGUIModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.InputLegacyModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.InputModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.ParticleSystemModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.Physics2DModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.PhysicsModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SharedInternalsModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SpatialTracking.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SpriteShapeModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SubsystemsModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.TerrainModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.TextCoreModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.TextRenderingModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.TilemapModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.UI.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.UIModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.UnityWebRequestModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.VideoModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.VRModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.XR.LegacyInputHelpers.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.XRModule.dll",
+        "D:/FYP/Temp/StagingArea/assets/bin/Data/Managed/VoiceSDK.Runtime.dll",
+        "D:/2020.3.20f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe",
+        "D:/2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/arm64-v8a/baselib.a",
+        "D:/2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/arm64-v8a/libunityruntime.a",
+        "D:/2020.3.20f1/Editor/Data/il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe"
+      ],
+      "Outputs": [
+        "D:/FYP/Library/Il2cppBuildCache/Android/arm64-v8a/Native/arm64-v8a/libil2cpp.so"
+      ],
+      "TargetDirectories": [],
+      "PassIndex": 0,
+      "ToBuildDependencies": [],
+      "ToUseDependencies": [],
+      "OverwriteOutputs": false,
+      "FrontendResponseFiles": [],
+      "AllowUnexpectedOutput": true,
+      "AllowedOutputSubstrings": [],
+      "DebugActionIndex": 1
+    }
+  ],
+  "FileSignatures": [
+    {
+      "File": "../../../../../2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/bdwgc/include"
+    },
+    {
+      "File": "../../../../../2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/libil2cpp/include"
+    },
+    {
+      "File": "../../../../../2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/arm64-v8a"
+    },
+    {
+      "File": "../../../../Temp/StagingArea/assets/bin/Data/Managed"
+    },
+    {
+      "File": "artifacts/buildprogram/tundra_buildprogram.dag.json"
+    },
+    {
+      "File": "il2cpp_settings.json"
+    },
+    {
+      "File": "unitylinker_settings.json"
+    }
+  ],
+  "GlobSignatures": [
+    {
+      "Path": "../../../../Temp/StagingArea/assets/bin/Data/Managed"
+    },
+    {
+      "Path": "../../../../../2020.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/arm64-v8a",
+      "Recurse": 1
+    }
+  ],
+  "ContentDigestExtensions": [
+    ".rsp",
+    ".dll",
+    ".exe",
+    ".txt",
+    ".c",
+    ".cpp",
+    ".h",
+    ".cs",
+    ".hpp"
+  ],
+  "StructuredLogFileName": "artifacts/tundra.log.json",
+  "StateFileName": "artifacts/TundraBuildState.state",
+  "StateFileNameTmp": "artifacts/TundraBuildState.state.tmp",
+  "ScanCacheFileName": "artifacts/tundra.scancache",
+  "ScanCacheFileNameTmp": "artifacts/tundra.scancache.tmp",
+  "DigestCacheFileName": "artifacts/tundra.digestcache",
+  "DigestCacheFileNameTmp": "artifacts/tundra.digestcache.tmp",
+  "DirectoriesCausingImplicitDependencies": [],
+        "NamedNodes": {
+          "all_tundra_nodes": 0
+        }
+,  "DefaultNodes": [
+    0
+  ],
+  "SharedResources": [],
+  "Scanners": [],
+  "Identifier": "artifacts/tundra.dag.json",
+  "BuildTitle": "Bee",
+  "RelativePathToRoot": ".."
+}
