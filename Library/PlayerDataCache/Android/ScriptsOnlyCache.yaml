@@ -11,15 +11,7 @@ ScriptsOnlyBuild:
     - Assets.Oculus.VR.Editor.OVRPlatformToolSettings
     - OVRConfig
     Oculus.VR.dll:
-    - OVRCameraRig
-    - OVRHand
-    - OVRHeadsetEmulator
-    - OVRManager
-    - OVRMesh
-    - OVRMeshRenderer
     - OVRRuntimeSettings
-    - OVRSkeleton
-    - OVRSkeletonRenderer
     Unity.PlasticSCM.Editor.dll:
     - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
@@ -44,10 +36,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
-    UnityEngine.XR.LegacyInputHelpers.dll:
-    - UnityEditor.XR.LegacyInputHelpers.CameraOffset
   sceneClasses:
-    Assets/Scenes/SampleScene 1.unity:
+    Assets/Scenes/SampleScene 2.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -93,39 +83,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1652}
     - Class: 114
-      Script: {instanceID: 1682}
-    - Class: 114
       Script: {instanceID: 1686}
     - Class: 114
       Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 2176}
-    - Class: 114
-      Script: {instanceID: 2422}
-    - Class: 114
       Script: {instanceID: 2498}
     - Class: 114
-      Script: {instanceID: 2594}
-    - Class: 114
-      Script: {instanceID: 2854}
-    - Class: 114
       Script: {instanceID: 3058}
-    - Class: 114
-      Script: {instanceID: 3398}
     - Class: 114
       Script: {instanceID: 4030}
     - Class: 114
       Script: {instanceID: 4076}
     - Class: 114
-      Script: {instanceID: 4198}
-    - Class: 114
       Script: {instanceID: 4536}
     - Class: 114
       Script: {instanceID: 4944}
-    - Class: 114
-      Script: {instanceID: 5548}
-    - Class: 114
-      Script: {instanceID: 5580}
     - Class: 114
       Script: {instanceID: 6518}
     - Class: 114
@@ -2125,5 +2097,5 @@ ScriptsOnlyBuild:
     className: TrackSegment
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene 1.unity
-  playerPath: D:/FYP/test2.apk
+  - Assets/Scenes/SampleScene 2.unity
+  playerPath: D:/FYP/test3.apk
