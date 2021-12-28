@@ -69,14 +69,26 @@ public class OptitrackRigidBodyState
 
 
 /// <summary>Represents the state of a streamed skeleton at an instant in time.</summary>
-public class OptitrackSkeletonState
+public class OptitrackSkeletonState : ICloneable
 {
     /// <summary>Maps from OptiTrack bone IDs to their corresponding bone poses.</summary>
     public Dictionary<Int32, OptitrackPose> BonePoses;
     public Dictionary<Int32, OptitrackPose> LocalBonePoses;
+
+    public object Clone()
+    {
+        Dictionary<Int32, OptitrackPose> cloneBonePoses = new Dictionary<Int32, OptitrackPose>(BonePoses);
+        Dictionary<Int32, OptitrackPose> cloneLocalBonePoses = new Dictionary<Int32, OptitrackPose>(LocalBonePoses);
+        OptitrackSkeletonState clone = new OptitrackSkeletonState
+        {
+            BonePoses = cloneBonePoses,
+            LocalBonePoses = cloneLocalBonePoses
+        };   
+
+    return clone;
+    }
+
 }
-
-
 public class OptitrackRigidBodyDefinition
 {
     public class MarkerDefinition
@@ -1265,7 +1277,8 @@ public class OptitrackStreamingClient : MonoBehaviour
                 {
                     // Host app is Motive: If new enough to support subscription, failure is an error.
                     // Otherwise, warn them that they may want to update Motive to reduce bandwidth consumption.
-                    if ( m_client.ServerAppVersion >= new Version(2, 2, 0) )
+                   
+                        if (m_client.ServerAppVersion >= new Version(2, 2, 0) )
                     {
                         Debug.LogError( "Failed to subscribe to rigid body streaming data for component", component);
                     }

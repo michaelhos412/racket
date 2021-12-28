@@ -69,10 +69,21 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     /// <summary>Set up to write poses to this GameObject using <see cref="DestinationAvatar"/>.</summary>
     private HumanPoseHandler m_destPoseHandler;
+
+    private List<OptitrackSkeletonState> skeletonStateBuffer;
+    private OptitrackSkeletonState tempState;
+
+    private int skeletonStateBufferIndex;
+
+    private bool useTemp = false;
+    private bool recording = false;
+    private bool playRecording = false;
     #endregion Private fields
 
     void Start()
     {
+        skeletonStateBuffer = new List<OptitrackSkeletonState>();
+
         // If the user didn't explicitly associate a client, find a suitable default.
         if ( this.StreamingClient == null )
         {
@@ -130,11 +141,83 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     void Update()
     {
+
         OptitrackSkeletonState skelState = StreamingClient.GetLatestSkeletonState( m_skeletonDef.Id );
-        if ( skelState != null )
+        
+        if (skelState == null)
         {
-            // Update the transforms of the bone GameObjects.
-            for ( int i = 0; i < m_skeletonDef.Bones.Count; ++i )
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OptitrackSkeletonState tempState = (OptitrackSkeletonState) skelState.Clone();
+            useTemp = !useTemp;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            recording = !recording;
+            if (recording)
+            {
+                skeletonStateBuffer.Clear();
+                Debug.Log("start recording motion");
+            }
+            else
+            {
+                Debug.Log("stop recording motion");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            playRecording = !playRecording;
+            Debug.Log("Playing recording");
+            Debug.Log(skeletonStateBuffer.Count);
+            if (playRecording)
+            {
+                skeletonStateBufferIndex = 0;
+            }
+        }
+
+        if (useTemp)
+        {
+            skelState = tempState;
+        }
+
+        if (recording)
+        {
+            OptitrackSkeletonState newSkeletonState = new OptitrackSkeletonState
+            {
+                BonePoses = new Dictionary<Int32, OptitrackPose>(),
+                LocalBonePoses = new Dictionary<int, OptitrackPose>(),
+            };
+
+            foreach (KeyValuePair<Int32, OptitrackPose> pair in skelState.BonePoses)
+            {
+                newSkeletonState.BonePoses.Add(pair.Key, new OptitrackPose
+                {
+                    Position = pair.Value.Position,
+                    Orientation = pair.Value.Orientation
+                });
+            }
+
+            foreach (KeyValuePair<Int32, OptitrackPose> pair in skelState.LocalBonePoses)
+            {
+                newSkeletonState.LocalBonePoses.Add(pair.Key, new OptitrackPose
+                {
+                    Position = pair.Value.Position,
+                    Orientation = pair.Value.Orientation
+                });
+            }
+
+            skeletonStateBuffer.Add(newSkeletonState);
+        }
+        
+        if (playRecording)
+        {
+            
+            for (int i = 0; i < m_skeletonDef.Bones.Count; ++i)
             {
                 Int32 boneId = m_skeletonDef.Bones[i].Id;
 
@@ -145,15 +228,15 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 if (StreamingClient.SkeletonCoordinates == StreamingCoordinatesValues.Global)
                 {
                     // Use global skeleton coordinates
-                    foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
+                    foundPose = skeletonStateBuffer[skeletonStateBufferIndex].LocalBonePoses.TryGetValue(boneId, out bonePose);
                 }
                 else
                 {
                     // Use local skeleton coordinates
-                    foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
+                    foundPose = skeletonStateBuffer[skeletonStateBufferIndex].BonePoses.TryGetValue(boneId, out bonePose);
                 }
 
-                bool foundObject = m_boneObjectMap.TryGetValue( boneId, out boneObject );
+                bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
                 if (foundPose && foundObject)
                 {
                     boneObject.transform.localPosition = bonePose.Position;
@@ -162,15 +245,57 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
 
             // Perform Mecanim retargeting.
-            if ( m_srcPoseHandler != null && m_destPoseHandler != null )
+            if (m_srcPoseHandler != null && m_destPoseHandler != null)
             {
                 // Interpret the streamed pose into Mecanim muscle space representation.
-                m_srcPoseHandler.GetHumanPose( ref m_humanPose );
+                m_srcPoseHandler.GetHumanPose(ref m_humanPose);
 
                 // Re-target that muscle space pose to the destination avatar.
-                m_destPoseHandler.SetHumanPose( ref m_humanPose );
+                m_destPoseHandler.SetHumanPose(ref m_humanPose);
+            }
+
+            skeletonStateBufferIndex = (skeletonStateBufferIndex + 1) % skeletonStateBuffer.Count;
+            return;
+        }
+
+        // Update the transforms of the bone GameObjects.
+        for ( int i = 0; i < m_skeletonDef.Bones.Count; ++i )
+        {
+            Int32 boneId = m_skeletonDef.Bones[i].Id;
+
+            OptitrackPose bonePose;
+            GameObject boneObject;
+
+            bool foundPose = false;
+            if (StreamingClient.SkeletonCoordinates == StreamingCoordinatesValues.Global)
+            {
+                // Use global skeleton coordinates
+                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
+            }
+            else
+            {
+                // Use local skeleton coordinates
+                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
+            }
+
+            bool foundObject = m_boneObjectMap.TryGetValue( boneId, out boneObject );
+            if (foundPose && foundObject)
+            {
+                boneObject.transform.localPosition = bonePose.Position;
+                boneObject.transform.localRotation = bonePose.Orientation;
             }
         }
+
+        // Perform Mecanim retargeting.
+        if ( m_srcPoseHandler != null && m_destPoseHandler != null )
+        {
+            // Interpret the streamed pose into Mecanim muscle space representation.
+            m_srcPoseHandler.GetHumanPose( ref m_humanPose );
+
+            // Re-target that muscle space pose to the destination avatar.
+            m_destPoseHandler.SetHumanPose( ref m_humanPose );
+        }
+        
     }
 
 
@@ -181,7 +306,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     /// <param name="rootObjectName"></param>
     private void MecanimSetup( string rootObjectName )
     {
-        string[] humanTraitBoneNames = HumanTrait.BoneName;
+        string[] humanTraitBoneNames = HumanTrait.BoneName;    
 
         // Set up the mapping between Mecanim human anatomy and OptiTrack skeleton representations.
         List<HumanBone> humanBones = new List<HumanBone>( m_skeletonDef.Bones.Count );
