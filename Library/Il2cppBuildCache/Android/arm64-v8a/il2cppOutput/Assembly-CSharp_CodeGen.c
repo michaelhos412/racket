@@ -2165,18 +2165,18 @@ extern void collideEvent_OnCollisionEnter_mD603528810A1063ABAC70188810566267C3A5
 extern void collideEvent_Respawn_m7E556E4CE677D009CA311D694BD0E88A8A102AA8 (void);
 // 0x0000043F System.Void collideEvent::.ctor()
 extern void collideEvent__ctor_mFECC33B6A88326FC68E38FCB13B81B0DF316AAAF (void);
-// 0x00000440 System.Void collideEvent/<Respawn>d__1::.ctor(System.Int32)
-extern void U3CRespawnU3Ed__1__ctor_m47AF14B4249EE0DD013FFFDD456678AE40B1732A (void);
-// 0x00000441 System.Void collideEvent/<Respawn>d__1::System.IDisposable.Dispose()
-extern void U3CRespawnU3Ed__1_System_IDisposable_Dispose_m3DD38ED2B72B56B73005698E11E091155BCB3AA9 (void);
-// 0x00000442 System.Boolean collideEvent/<Respawn>d__1::MoveNext()
-extern void U3CRespawnU3Ed__1_MoveNext_m12838D75ADAB133D50CF5F0BD277AD9F8130F9E9 (void);
-// 0x00000443 System.Object collideEvent/<Respawn>d__1::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CRespawnU3Ed__1_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8F17A75E65107D386D7D63133A083ADA5427087D (void);
-// 0x00000444 System.Void collideEvent/<Respawn>d__1::System.Collections.IEnumerator.Reset()
-extern void U3CRespawnU3Ed__1_System_Collections_IEnumerator_Reset_m32C0F0F7C826B7817F066D80AAD816F4C15205B7 (void);
-// 0x00000445 System.Object collideEvent/<Respawn>d__1::System.Collections.IEnumerator.get_Current()
-extern void U3CRespawnU3Ed__1_System_Collections_IEnumerator_get_Current_m87DA203A8BA274D3B7C17B8F7AE2BA6C5DC52E49 (void);
+// 0x00000440 System.Void collideEvent/<Respawn>d__3::.ctor(System.Int32)
+extern void U3CRespawnU3Ed__3__ctor_m1BB645DCC088F24E7866A23DB13E0D52392BBCB9 (void);
+// 0x00000441 System.Void collideEvent/<Respawn>d__3::System.IDisposable.Dispose()
+extern void U3CRespawnU3Ed__3_System_IDisposable_Dispose_m09246A363AC490D3E16EE930C31BFD2C154D7F69 (void);
+// 0x00000442 System.Boolean collideEvent/<Respawn>d__3::MoveNext()
+extern void U3CRespawnU3Ed__3_MoveNext_m4E21304A7D06F6C7085E577AC23F05E844449DE0 (void);
+// 0x00000443 System.Object collideEvent/<Respawn>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CRespawnU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9DF613044951D9403BC39891E9511ADCF4D8BDDC (void);
+// 0x00000444 System.Void collideEvent/<Respawn>d__3::System.Collections.IEnumerator.Reset()
+extern void U3CRespawnU3Ed__3_System_Collections_IEnumerator_Reset_m15CA0CEF7E0FF07ADE1BCF53B00305622B94D322 (void);
+// 0x00000445 System.Object collideEvent/<Respawn>d__3::System.Collections.IEnumerator.get_Current()
+extern void U3CRespawnU3Ed__3_System_Collections_IEnumerator_get_Current_mCA3E6FCE732C2447276007016ADAF4EACEF8A2AE (void);
 // 0x00000446 System.Void NaturalPoint.NatNetLib.NatNetException::.ctor()
 extern void NatNetException__ctor_m4794080C27702408EDCD2EA3F137617CED83D803 (void);
 // 0x00000447 System.Void NaturalPoint.NatNetLib.NatNetException::.ctor(System.String)
@@ -4727,12 +4727,12 @@ static Il2CppMethodPointer s_methodPointers[1834] =
 	collideEvent_OnCollisionEnter_mD603528810A1063ABAC70188810566267C3A5E33,
 	collideEvent_Respawn_m7E556E4CE677D009CA311D694BD0E88A8A102AA8,
 	collideEvent__ctor_mFECC33B6A88326FC68E38FCB13B81B0DF316AAAF,
-	U3CRespawnU3Ed__1__ctor_m47AF14B4249EE0DD013FFFDD456678AE40B1732A,
-	U3CRespawnU3Ed__1_System_IDisposable_Dispose_m3DD38ED2B72B56B73005698E11E091155BCB3AA9,
-	U3CRespawnU3Ed__1_MoveNext_m12838D75ADAB133D50CF5F0BD277AD9F8130F9E9,
-	U3CRespawnU3Ed__1_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8F17A75E65107D386D7D63133A083ADA5427087D,
-	U3CRespawnU3Ed__1_System_Collections_IEnumerator_Reset_m32C0F0F7C826B7817F066D80AAD816F4C15205B7,
-	U3CRespawnU3Ed__1_System_Collections_IEnumerator_get_Current_m87DA203A8BA274D3B7C17B8F7AE2BA6C5DC52E49,
+	U3CRespawnU3Ed__3__ctor_m1BB645DCC088F24E7866A23DB13E0D52392BBCB9,
+	U3CRespawnU3Ed__3_System_IDisposable_Dispose_m09246A363AC490D3E16EE930C31BFD2C154D7F69,
+	U3CRespawnU3Ed__3_MoveNext_m4E21304A7D06F6C7085E577AC23F05E844449DE0,
+	U3CRespawnU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9DF613044951D9403BC39891E9511ADCF4D8BDDC,
+	U3CRespawnU3Ed__3_System_Collections_IEnumerator_Reset_m15CA0CEF7E0FF07ADE1BCF53B00305622B94D322,
+	U3CRespawnU3Ed__3_System_Collections_IEnumerator_get_Current_mCA3E6FCE732C2447276007016ADAF4EACEF8A2AE,
 	NatNetException__ctor_m4794080C27702408EDCD2EA3F137617CED83D803,
 	NatNetException__ctor_mFB29F80DCDB8C225045F377E490D753EE755129A,
 	NatNetException__ctor_m6466D1DC718612E77B71D2EE29F9E43D4892A41B,
