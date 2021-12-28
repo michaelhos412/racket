@@ -40882,7 +40882,7 @@ IL_003a:
 		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_8), (0.25999999f), (0.25999999f), (0.25999999f), /*hidden argument*/NULL);
 		NullCheck(L_7);
 		Transform_set_localScale_mF4D1611E48D1BA7566A1E166DC2DACF3ADD8BA3A(L_7, L_8, /*hidden argument*/NULL);
-		// gameObject.transform.localPosition = new Vector3(0.148f, 4.12f, 3.4f);
+		// gameObject.transform.position = new Vector3(0.148f, 3.29f, 2.75f);
 		collideEvent_t9F4B8ED914856D218D3C72B778C0F91AC778B85A * L_9 = __this->get_U3CU3E4__this_3();
 		NullCheck(L_9);
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_10;
@@ -40892,9 +40892,9 @@ IL_003a:
 		L_11 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_10, /*hidden argument*/NULL);
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_12;
 		memset((&L_12), 0, sizeof(L_12));
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_12), (0.148000002f), (4.11999989f), (3.4000001f), /*hidden argument*/NULL);
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_12), (0.148000002f), (3.28999996f), (2.75f), /*hidden argument*/NULL);
 		NullCheck(L_11);
-		Transform_set_localPosition_m2A2B0033EF079077FAE7C65196078EAF5D041AFC(L_11, L_12, /*hidden argument*/NULL);
+		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_11, L_12, /*hidden argument*/NULL);
 		// }
 		return (bool)0;
 	}
