@@ -58,22 +58,22 @@ static Il2CppMethodPointer s_methodPointers[16] =
 };
 static const int32_t s_InvokerIndices[16] = 
 {
-	1552,
-	3096,
-	3096,
-	3067,
-	3067,
-	3044,
-	1552,
-	3096,
-	3096,
-	3044,
+	1950,
+	4175,
+	4175,
+	4138,
+	4138,
+	4111,
+	1950,
+	4175,
+	4175,
+	4111,
 	-1,
 	-1,
 	-1,
 	-1,
-	2524,
-	3096,
+	3299,
+	4175,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {
@@ -81,8 +81,8 @@ static const Il2CppTokenRangePair s_rgctxIndices[1] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[2] = 
 {
-	{ (Il2CppRGCTXDataType)1, 284 },
-	{ (Il2CppRGCTXDataType)2, 284 },
+	{ (Il2CppRGCTXDataType)1, 478 },
+	{ (Il2CppRGCTXDataType)2, 478 },
 };
 extern const CustomAttributesCacheGenerator g_AssistantCoreSDKRuntime_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssistantCoreSDKRuntime_CodeGenModule;

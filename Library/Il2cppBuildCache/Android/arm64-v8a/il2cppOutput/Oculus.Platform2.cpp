@@ -39305,7 +39305,7 @@ IL_0094:
 			Invite_tC61621EF56E7E7D1424603462B21CC4024D73A43 * L_33 = L_32->get_address_of_invite_0();
 			String_t* L_34 = L_33->get_OwnerID_1();
 			NullCheck(L_31);
-			VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_31, L_34);
+			VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_31, L_34);
 			// button.name = invite.RoomID.ToString();
 			GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_35 = V_6;
 			U3CU3Ec__DisplayClass31_0_t6F9A2E2E226703452EC82D5BBBE99814A4EF9D1D * L_36 = V_5;
@@ -39701,7 +39701,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_set_Score_m8530DB1D501AE73515DDAB
 		String_t* L_6;
 		L_6 = UInt32_ToString_mEB55F257429D34ED2BF41AE9567096F1F969B9A0((uint32_t*)L_5, /*hidden argument*/NULL);
 		NullCheck(L_4);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, L_6);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, L_6);
 	}
 
 IL_0030:
@@ -39780,7 +39780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Start_m7658706F3590F1416DB37D9400
 		// m_scoreUI.text = "0";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_5 = __this->get_m_scoreUI_8();
 		NullCheck(L_5);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
 		// }
 		return;
 	}
@@ -50403,7 +50403,7 @@ IL_0075:
 			MemoryStream_t0B450399DD6D0175074FED99DD321D65771C9E1C * L_16 = V_0;
 			NullCheck(L_16);
 			ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_17;
-			L_17 = VirtFuncInvoker0< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* >::Invoke(33 /* System.Byte[] System.IO.MemoryStream::ToArray() */, L_16);
+			L_17 = VirtFuncInvoker0< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* >::Invoke(34 /* System.Byte[] System.IO.MemoryStream::ToArray() */, L_16);
 			V_3 = L_17;
 			IL2CPP_LEAVE(0x89, FINALLY_007e);
 		}

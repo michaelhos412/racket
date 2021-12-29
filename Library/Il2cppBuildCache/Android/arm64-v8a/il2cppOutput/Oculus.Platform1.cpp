@@ -21522,7 +21522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_AddPowerballs_mFAD2AE4E15
 		String_t* L_5;
 		L_5 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteral062DB096C728515E033CF8C48A1C1F0B9A79384B, L_4, /*hidden argument*/NULL);
 		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_5);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_5);
 		// }
 		return;
 	}
@@ -21552,7 +21552,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_UpdateScores_m7BF1B15A4A7
 		String_t* L_6;
 		L_6 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteral60FDE1969AB38ACA7FE72839F89B8DEC9E3AE2AF, L_1, L_5, /*hidden argument*/NULL);
 		NullCheck(L_0);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_6);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_6);
 		// m_player1Text.text = string.Format("{0}\n\n{1}",
 		//     m_opponentName, m_board.GetPlayerScore(1));
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_7 = __this->get_m_player1Text_15();
@@ -21566,7 +21566,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_UpdateScores_m7BF1B15A4A7
 		String_t* L_13;
 		L_13 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteral60FDE1969AB38ACA7FE72839F89B8DEC9E3AE2AF, L_8, L_12, /*hidden argument*/NULL);
 		NullCheck(L_7);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, L_13);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, L_13);
 		// }
 		return;
 	}
@@ -24927,7 +24927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroupPresenceSample_UpdateDestinationsCo
 		// DestinationsConsole.text = "Add some destinations to the developer dashboard first!";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_3 = __this->get_DestinationsConsole_9();
 		NullCheck(L_3);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_3, _stringLiteral9F84DA23C7222C86F7E56CC7651069B0C14A729F);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_3, _stringLiteral9F84DA23C7222C86F7E56CC7651069B0C14A729F);
 	}
 
 IL_0026:
@@ -24996,7 +24996,7 @@ IL_0069:
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_19 = __this->get_DestinationsConsole_9();
 		String_t* L_20 = V_0;
 		NullCheck(L_19);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_19, L_20);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_19, L_20);
 		// }
 		return;
 	}
@@ -25073,7 +25073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroupPresenceSample_UpdateConsole_m93F00
 		String_t* L_3;
 		L_3 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteralF05C75A8FB27154A88373A3A23F7C8E6246FEA24, L_2, /*hidden argument*/NULL);
 		NullCheck(L_1);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_3);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_3);
 		// }
 		return;
 	}
@@ -26427,7 +26427,7 @@ IL_006f:
 			NullCheck(L_24);
 			String_t* L_25 = L_24->get_FormattedPrice_1();
 			NullCheck(L_23);
-			VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_25);
+			VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_25);
 		}
 
 IL_0083:
@@ -30216,7 +30216,7 @@ IL_007c:
 		// m_matchmakeButtonText.text = "Play Online";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_17 = __this->get_m_matchmakeButtonText_7();
 		NullCheck(L_17);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, _stringLiteralF72E1C66C4F0A8168EEB2949107F23AF40C2AB19);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, _stringLiteralF72E1C66C4F0A8168EEB2949107F23AF40C2AB19);
 		// break;
 		goto IL_01e3;
 	}
@@ -30275,7 +30275,7 @@ IL_0105:
 		// m_timerText.text = "0:00.00";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_27 = __this->get_m_timerText_4();
 		NullCheck(L_27);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_27, _stringLiteralBE6343D560D6F1C5CC8B8AF487EE85453237BBDE);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_27, _stringLiteralBE6343D560D6F1C5CC8B8AF487EE85453237BBDE);
 		// break;
 		goto IL_01e3;
 	}
@@ -30291,7 +30291,7 @@ IL_013e:
 		// m_matchmakeButtonText.text = "Cancel";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_29 = __this->get_m_matchmakeButtonText_7();
 		NullCheck(L_29);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_29, _stringLiteral93717CD8FCD45BAB4F15D3BACC989A6A93BA2674);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_29, _stringLiteral93717CD8FCD45BAB4F15D3BACC989A6A93BA2674);
 		// break;
 		goto IL_01e3;
 	}
@@ -30344,7 +30344,7 @@ IL_01a6:
 		// m_timerText.text = "0:00.00";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_39 = __this->get_m_timerText_4();
 		NullCheck(L_39);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_39, _stringLiteralBE6343D560D6F1C5CC8B8AF487EE85453237BBDE);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_39, _stringLiteralBE6343D560D6F1C5CC8B8AF487EE85453237BBDE);
 		// CalculateMatchResults();
 		MatchController_CalculateMatchResults_m15B4917D460BE7BEC88BA531B3EAA6F86310C22F(__this, /*hidden argument*/NULL);
 		// break;
@@ -30585,7 +30585,7 @@ IL_0047:
 		String_t* L_12;
 		L_12 = String_Format_mB3D38E5238C3164DB4D7D29339D9E225A4496D17(_stringLiteralCB0A78B035105B2CCEB9174377B59BDBD1095C96, L_11, /*hidden argument*/NULL);
 		NullCheck(L_6);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_6, L_12);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_6, L_12);
 		// break;
 		goto IL_00d3;
 	}
@@ -30620,7 +30620,7 @@ IL_0075:
 		String_t* L_28;
 		L_28 = String_Format_m039737CCD992C5BFC8D16DFD681F5E8786E87FA6(_stringLiteralC18EAB9DDDB41F49C5D281F7AE058F90F54442C5, L_19, L_23, L_27, /*hidden argument*/NULL);
 		NullCheck(L_15);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_28);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_28);
 		// break;
 		goto IL_00d3;
 	}
@@ -31488,7 +31488,7 @@ IL_005a:
 			String_t* L_35;
 			L_35 = String_Format_m039737CCD992C5BFC8D16DFD681F5E8786E87FA6(_stringLiteralFDA209369C5ACF3A351C5BD261FEB394A164C4B7, L_27, L_30, L_34, /*hidden argument*/NULL);
 			NullCheck(L_23);
-			VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_35);
+			VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_35);
 		}
 
 IL_00c6:
@@ -31718,7 +31718,7 @@ IL_005a:
 			String_t* L_35;
 			L_35 = String_Format_m039737CCD992C5BFC8D16DFD681F5E8786E87FA6(_stringLiteralFDA209369C5ACF3A351C5BD261FEB394A164C4B7, L_27, L_30, L_34, /*hidden argument*/NULL);
 			NullCheck(L_23);
-			VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_35);
+			VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_35);
 		}
 
 IL_00c6:
@@ -32042,7 +32042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchController_DisplayAchievementFlytex
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_6;
 		L_6 = GameObject_GetComponent_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mD98876EFC776CB8D02A1394AE6A72DC47F271C65(L_5, /*hidden argument*/GameObject_GetComponent_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mD98876EFC776CB8D02A1394AE6A72DC47F271C65_RuntimeMethod_var);
 		NullCheck(L_6);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_6, _stringLiteral42946F4DBE53C17EFC3CC02130C0C0B4C6D5063D);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_6, _stringLiteral42946F4DBE53C17EFC3CC02130C0C0B4C6D5063D);
 		// go.transform.position = Vector3.up * 40;
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_7 = V_1;
 		NullCheck(L_7);
@@ -34315,7 +34315,7 @@ IL_0037:
 		// m_matchButtonText.text = "Find Match";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_5 = __this->get_m_matchButtonText_5();
 		NullCheck(L_5);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, _stringLiteral46CA543EF3D4FBA7C2E4EDBD944AFA72DB18A7B3);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, _stringLiteral46CA543EF3D4FBA7C2E4EDBD944AFA72DB18A7B3);
 		// m_remotePlayer = null;
 		__this->set_m_remotePlayer_9((User_tA163463AE919860D9B337F6104B028990A44B69D *)NULL);
 		// Matchmaking.Cancel();
@@ -34354,7 +34354,7 @@ IL_007b:
 		// m_matchButtonText.text = "Leave Queue";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_12 = __this->get_m_matchButtonText_5();
 		NullCheck(L_12);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, _stringLiteral3F4F0222EBD98FF76276C80362B03DDD11482249);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, _stringLiteral3F4F0222EBD98FF76276C80362B03DDD11482249);
 		// Matchmaking.Enqueue2(POOL).OnComplete(MatchmakingEnqueueCallback);
 		Request_1_t129F20DC379AB79AFB05192F347C120780C094FB * L_13;
 		L_13 = Matchmaking_Enqueue2_m9EFC342B11562722AC48C11883CB5219AE0FDEEE(_stringLiteralF738530550845DB075C93EAF91A341B00DC90FFA, (MatchmakingOptions_t32129D046E07E2BF1CA5F761218710DF397E105F *)NULL, /*hidden argument*/NULL);
@@ -34376,7 +34376,7 @@ IL_00b3:
 		// m_matchButtonText.text = "Cancel Match";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_17 = __this->get_m_matchButtonText_5();
 		NullCheck(L_17);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, _stringLiteral81051A4E414CA5464DA6F58F873619B8C28C577D);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, _stringLiteral81051A4E414CA5464DA6F58F873619B8C28C577D);
 		// break;
 		goto IL_00f1;
 	}
@@ -34393,7 +34393,7 @@ IL_00ce:
 		// m_matchButtonText.text = "Cancel Match";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_20 = __this->get_m_matchButtonText_5();
 		NullCheck(L_20);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_20, _stringLiteral81051A4E414CA5464DA6F58F873619B8C28C577D);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_20, _stringLiteral81051A4E414CA5464DA6F58F873619B8C28C577D);
 		// break;
 		goto IL_00f1;
 	}
@@ -34509,7 +34509,7 @@ IL_0027:
 		String_t* L_31;
 		L_31 = String_Format_mCED6767EA5FEE6F15ABCD5B4F9150D1284C2795B(_stringLiteral22C7D61C114BE6EC54C5F7CD3B9FBA6D0F2E88ED, L_26, /*hidden argument*/NULL);
 		NullCheck(L_9);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_31);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_31);
 	}
 
 IL_0089:

@@ -13313,7 +13313,7 @@ IL_01fa:
 		Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6 * L_212 = L_211->get_mesh_4();
 		int32_t L_213 = __this->get_U3CmaterialIndexU3E5__3_10();
 		NullCheck(L_210);
-		VirtActionInvoker2< Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6 *, int32_t >::Invoke(105 /* System.Void TMPro.TMP_Text::UpdateGeometry(UnityEngine.Mesh,System.Int32) */, L_210, L_212, L_213);
+		VirtActionInvoker2< Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6 *, int32_t >::Invoke(107 /* System.Void TMPro.TMP_Text::UpdateGeometry(UnityEngine.Mesh,System.Int32) */, L_210, L_212, L_213);
 		// if (framerate > 0)
 		int32_t L_214 = __this->get_framerate_6();
 		V_7 = (bool)((((int32_t)L_214) > ((int32_t)0))? 1 : 0);

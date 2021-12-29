@@ -28994,7 +28994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Anchor_SetAnchorHandle_m0EB84850F0DA5B8C
 		String_t* L_4;
 		L_4 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteralA937C899247696B6565665BE3BD09607F49A2042, L_3, /*hidden argument*/NULL);
 		NullCheck(L_1);
-		VirtActionInvoker1< String_t* >::Invoke(64 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_1, L_4);
+		VirtActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_1, L_4);
 		// }
 		return;
 	}
@@ -31287,7 +31287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_Update_m8D48F1E3305A2469B0
 		String_t* L_10;
 		L_10 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteral9B3B0354130FD7523622A520E8C297602D7F6E59, L_9, /*hidden argument*/NULL);
 		NullCheck(L_5);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_10);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_10);
 		// uiLaunchSource.GetComponentInChildren<Text>().text = "LaunchSource: " + launchDetails.LaunchSource;
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_11 = __this->get_uiLaunchSource_9();
 		NullCheck(L_11);
@@ -31299,7 +31299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_Update_m8D48F1E3305A2469B0
 		String_t* L_15;
 		L_15 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteralFE23499ED50279B43306732A3B11914AAC0C1104, L_14, /*hidden argument*/NULL);
 		NullCheck(L_12);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, L_15);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, L_15);
 		// uiDeepLinkMessage.GetComponentInChildren<Text>().text = "DeeplinkMessage: " + launchDetails.DeeplinkMessage;
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_16 = __this->get_uiDeepLinkMessage_10();
 		NullCheck(L_16);
@@ -31311,7 +31311,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_Update_m8D48F1E3305A2469B0
 		String_t* L_20;
 		L_20 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteral06ECCEC5BEED1A047299FFE46879F05FAA6EF1BF, L_19, /*hidden argument*/NULL);
 		NullCheck(L_17);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, L_20);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, L_20);
 	}
 
 IL_008a:
@@ -31420,7 +31420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_LaunchUnrealDeeplinkSample
 		L_6 = Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3(L_5, /*hidden argument*/Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3_RuntimeMethod_var);
 		NullCheck(L_6);
 		String_t* L_7;
-		L_7 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_6);
+		L_7 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_6);
 		NullCheck(L_4);
 		ApplicationOptions_SetDeeplinkMessage_m7C4F5FD0AD219FF9BBE4142535722CB09BF52558(L_4, L_7, /*hidden argument*/NULL);
 		// Oculus.Platform.Application.LaunchOtherApp(UNREAL_COMPANION_APP_ID, options);
@@ -31481,7 +31481,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_LaunchSelf_m2CA3C1FCE44148
 		L_10 = Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3(L_9, /*hidden argument*/Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3_RuntimeMethod_var);
 		NullCheck(L_10);
 		String_t* L_11;
-		L_11 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_10);
+		L_11 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_10);
 		NullCheck(L_8);
 		ApplicationOptions_SetDeeplinkMessage_m7C4F5FD0AD219FF9BBE4142535722CB09BF52558(L_8, L_11, /*hidden argument*/NULL);
 		// Oculus.Platform.Application.LaunchOtherApp(appId, options);
@@ -31521,7 +31521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_LaunchOtherApp_mD63AA72CBA
 		L_1 = Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3(L_0, /*hidden argument*/Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3_RuntimeMethod_var);
 		NullCheck(L_1);
 		String_t* L_2;
-		L_2 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_1);
+		L_2 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_1);
 		bool L_3;
 		L_3 = UInt64_TryParse_m9A4700B9A5FD8F9B5270914DA0DF310A6BD07AE5(L_2, (uint64_t*)(&V_0), /*hidden argument*/NULL);
 		V_1 = L_3;
@@ -31552,7 +31552,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppDeeplinkUI_LaunchOtherApp_mD63AA72CBA
 		L_12 = Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3(L_11, /*hidden argument*/Component_GetComponentInChildren_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_mFB5C182E24F496A866F116D3F75CBD8616A46AB3_RuntimeMethod_var);
 		NullCheck(L_12);
 		String_t* L_13;
-		L_13 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_12);
+		L_13 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_12);
 		NullCheck(L_10);
 		ApplicationOptions_SetDeeplinkMessage_m7C4F5FD0AD219FF9BBE4142535722CB09BF52558(L_10, L_13, /*hidden argument*/NULL);
 		// Oculus.Platform.Application.LaunchOtherApp(appId, options);
@@ -44541,7 +44541,7 @@ IL_006c:
 		Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * L_30 = (L_28)->GetAt(static_cast<il2cpp_array_size_t>(L_29));
 		String_t* L_31 = ___label0;
 		NullCheck(((TextMeshProUGUI_tCC5BE8A76E6E9AF92521A462E8D81ACFBA7C85F1 *)CastclassClass((RuntimeObject*)L_30, TextMeshProUGUI_tCC5BE8A76E6E9AF92521A462E8D81ACFBA7C85F1_il2cpp_TypeInfo_var)));
-		VirtActionInvoker1< String_t* >::Invoke(64 /* System.Void TMPro.TMP_Text::set_text(System.String) */, ((TextMeshProUGUI_tCC5BE8A76E6E9AF92521A462E8D81ACFBA7C85F1 *)CastclassClass((RuntimeObject*)L_30, TextMeshProUGUI_tCC5BE8A76E6E9AF92521A462E8D81ACFBA7C85F1_il2cpp_TypeInfo_var)), L_31);
+		VirtActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, ((TextMeshProUGUI_tCC5BE8A76E6E9AF92521A462E8D81ACFBA7C85F1 *)CastclassClass((RuntimeObject*)L_30, TextMeshProUGUI_tCC5BE8A76E6E9AF92521A462E8D81ACFBA7C85F1_il2cpp_TypeInfo_var)), L_31);
 		goto IL_00b8;
 	}
 
@@ -44561,7 +44561,7 @@ IL_0097:
 		Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * L_37 = (L_35)->GetAt(static_cast<il2cpp_array_size_t>(L_36));
 		String_t* L_38 = ___label0;
 		NullCheck(((Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 *)CastclassClass((RuntimeObject*)L_37, Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_il2cpp_TypeInfo_var)));
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, ((Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 *)CastclassClass((RuntimeObject*)L_37, Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_il2cpp_TypeInfo_var)), L_38);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, ((Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 *)CastclassClass((RuntimeObject*)L_37, Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_il2cpp_TypeInfo_var)), L_38);
 	}
 
 IL_00b8:
@@ -44614,7 +44614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t8A6A306FB29A6C8C22010CF9040E31
 		L_4 = Component_GetComponent_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_m2D99AC2081683F963C56EC738451EC0B59B5D137(L_3, /*hidden argument*/Component_GetComponent_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_m2D99AC2081683F963C56EC738451EC0B59B5D137_RuntimeMethod_var);
 		String_t* L_5 = ___label0;
 		NullCheck(L_4);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, L_5);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, L_5);
 		// AddRect(rt, targetCanvas);
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_6 = V_0;
 		int32_t L_7 = ___targetCanvas1;
@@ -44799,7 +44799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t8A6A306FB29A6C8C22010CF9040E31
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_9 = V_2;
 		String_t* L_10 = ___label0;
 		NullCheck(L_9);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_10);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_10);
 		// Toggle t = rt.GetComponentInChildren<Toggle>();
 		U3CU3Ec__DisplayClass42_0_t932598C34133A869FE4A25226C805016E720CD50 * L_11 = V_0;
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_12 = V_1;
@@ -44881,7 +44881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t8A6A306FB29A6C8C22010CF9040E31
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_9 = V_2;
 		String_t* L_10 = ___label0;
 		NullCheck(L_9);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_10);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_10);
 		// Toggle t = rt.GetComponentInChildren<Toggle>();
 		U3CU3Ec__DisplayClass43_0_tD3ABBA7F4F836E6CCC165F9F55702244CA3755FE * L_11 = V_0;
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_12 = V_1;
@@ -44979,7 +44979,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t8A6A306FB29A6C8C22010CF9040E31
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_9 = V_2;
 		String_t* L_10 = ___label0;
 		NullCheck(L_9);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_10);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_10);
 		// Toggle tb = rt.GetComponentInChildren<Toggle>();
 		U3CU3Ec__DisplayClass44_0_t168DEF77441D0983A1F1BE390040085A7101011D * L_11 = V_0;
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_12 = V_1;
@@ -45354,7 +45354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUISample_Start_mF7AB8D2997FF58D02F5
 		String_t* L_19;
 		L_19 = Single_ToString_m80E7ABED4F4D73F2BE19DDB80D3D92FCD8DFA010((float*)(&V_2), /*hidden argument*/NULL);
 		NullCheck(L_15);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_19);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_19);
 		// DebugUIBuilder.instance.AddDivider();
 		DebugUIBuilder_t43207EA600803E029CFAFCD7104F419CAE5A4DE1 * L_20 = ((DebugUIBuilder_t43207EA600803E029CFAFCD7104F419CAE5A4DE1_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIBuilder_t43207EA600803E029CFAFCD7104F419CAE5A4DE1_il2cpp_TypeInfo_var))->get_instance_20();
 		NullCheck(L_20);
@@ -45524,7 +45524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUISample_SliderPressed_m6A03CFB38E2
 		String_t* L_3;
 		L_3 = Single_ToString_m80E7ABED4F4D73F2BE19DDB80D3D92FCD8DFA010((float*)(&___f0), /*hidden argument*/NULL);
 		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_3);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_3);
 		// }
 		return;
 	}

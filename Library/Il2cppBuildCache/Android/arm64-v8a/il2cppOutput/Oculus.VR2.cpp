@@ -22597,7 +22597,7 @@ IL_0407:
 		String_t* L_201;
 		L_201 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_200);
 		NullCheck(L_199);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_199, L_201);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_199, L_201);
 	}
 
 IL_0447:

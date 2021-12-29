@@ -36344,7 +36344,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_LoadScene_mC4A5DA641CB0EA
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_7 = L_6;
 		NullCheck(L_7);
 		String_t* L_8;
-		L_8 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_7);
+		L_8 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_7);
 		SceneInfo_tA4107ED499E7EE041D97C6DD8E0855A051E6CBD9  L_9 = ___sceneInfo0;
 		List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3 * L_10 = L_9.get_scenes_0();
 		NullCheck(L_10);
@@ -36353,20 +36353,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_LoadScene_mC4A5DA641CB0EA
 		String_t* L_12;
 		L_12 = String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78(L_8, _stringLiteral60CAD6D33E1646C1564A89842D8761B7A7BC5709, L_11, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD, /*hidden argument*/NULL);
 		NullCheck(L_7);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, L_12);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, L_12);
 		// logTextBox.text += "Version: " + sceneInfo.version.ToString() + "\n";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_13 = __this->get_logTextBox_10();
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_14 = L_13;
 		NullCheck(L_14);
 		String_t* L_15;
-		L_15 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_14);
+		L_15 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_14);
 		int64_t* L_16 = (&___sceneInfo0)->get_address_of_version_1();
 		String_t* L_17;
 		L_17 = Int64_ToString_m8AAA883F340993DCDF339C208F3416C3BA82589F((int64_t*)L_16, /*hidden argument*/NULL);
 		String_t* L_18;
 		L_18 = String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78(L_15, _stringLiteralD831DFB7F93A3076B92AE31D137C7C38A7E85DC7, L_17, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD, /*hidden argument*/NULL);
 		NullCheck(L_14);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_14, L_18);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_14, L_18);
 		// Debug.Log("[OVRSceneLoader] Loading scene bundle files.");
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral0971DE56D240F887D058464493C2F6A6E08D70B8, /*hidden argument*/NULL);
 		// string[] bundles = Directory.GetFiles(scenePath, "*_*");
@@ -36379,7 +36379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_LoadScene_mC4A5DA641CB0EA
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_22 = L_21;
 		NullCheck(L_22);
 		String_t* L_23;
-		L_23 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_22);
+		L_23 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_22);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_24 = V_1;
 		NullCheck(L_24);
 		V_3 = ((int32_t)((int32_t)(((RuntimeArray*)L_24)->max_length)));
@@ -36388,7 +36388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_LoadScene_mC4A5DA641CB0EA
 		String_t* L_26;
 		L_26 = String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78(L_23, _stringLiteralD91C4520BD2DEBFFA2D356962EDF18D19F3D2317, L_25, _stringLiteralE335EA91E58CE311F49F087D4BB70FDC83800F10, /*hidden argument*/NULL);
 		NullCheck(L_22);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_22, L_26);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_22, L_26);
 		// string mainSceneBundleFileName = "scene_" + sceneInfo.scenes[0].ToLower();
 		SceneInfo_tA4107ED499E7EE041D97C6DD8E0855A051E6CBD9  L_27 = ___sceneInfo0;
 		List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3 * L_28 = L_27.get_scenes_0();
@@ -36581,7 +36581,7 @@ CATCH_01ae:
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_64 = L_63;
 		NullCheck(L_64);
 		String_t* L_65;
-		L_65 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_64);
+		L_65 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_64);
 		Exception_t * L_66 = V_11;
 		NullCheck(L_66);
 		String_t* L_67;
@@ -36589,7 +36589,7 @@ CATCH_01ae:
 		String_t* L_68;
 		L_68 = String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78(L_65, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8ACAA4E0B28437F5FD1A41CE6591A16813F05377)), L_67, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), /*hidden argument*/NULL);
 		NullCheck(L_64);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_64, L_68);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_64, L_68);
 		// return;
 		IL2CPP_POP_ACTIVE_EXCEPTION();
 		goto IL_028e;
@@ -36602,11 +36602,11 @@ IL_01de:
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_70 = L_69;
 		NullCheck(L_70);
 		String_t* L_71;
-		L_71 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_70);
+		L_71 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_70);
 		String_t* L_72;
 		L_72 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_71, _stringLiteralFFAC0502284357ADA3444172DA1D4BB893B01183, /*hidden argument*/NULL);
 		NullCheck(L_70);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_70, L_72);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_70, L_72);
 		// if (mainSceneBundle != null)
 		AssetBundle_t4D34D7FDF0F230DC641DC1FCFA2C0E7E9E628FA4 * L_73 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
@@ -36625,16 +36625,16 @@ IL_01de:
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_77 = L_76;
 		NullCheck(L_77);
 		String_t* L_78;
-		L_78 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_77);
+		L_78 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_77);
 		String_t* L_79;
 		L_79 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_78, _stringLiteral5D94841E1B5568AED645D6CE7A497FEE157DB7EF, /*hidden argument*/NULL);
 		NullCheck(L_77);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_77, L_79);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_77, L_79);
 		// formattedLogText = logTextBox.text;
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_80 = __this->get_logTextBox_10();
 		NullCheck(L_80);
 		String_t* L_81;
-		L_81 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_80);
+		L_81 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_80);
 		__this->set_formattedLogText_12(L_81);
 		// string[] scenePaths = mainSceneBundle.GetAllScenePaths();
 		AssetBundle_t4D34D7FDF0F230DC641DC1FCFA2C0E7E9E628FA4 * L_82 = V_0;
@@ -36673,11 +36673,11 @@ IL_0270:
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_93 = L_92;
 		NullCheck(L_93);
 		String_t* L_94;
-		L_94 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_93);
+		L_94 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_93);
 		String_t* L_95;
 		L_95 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_94, _stringLiteral878B5A958746F805C9568D2CE414C063392CACA9, /*hidden argument*/NULL);
 		NullCheck(L_93);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_93, L_95);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_93, L_95);
 	}
 
 IL_028e:
@@ -36715,16 +36715,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_LoadSceneOperation_comple
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_5 = L_4;
 		NullCheck(L_5);
 		String_t* L_6;
-		L_6 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_5);
+		L_6 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_5);
 		String_t* L_7;
 		L_7 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_6, _stringLiteral3DD89713F0D71E8F3CD8AFD9A88766A9D102BE3E, /*hidden argument*/NULL);
 		NullCheck(L_5);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_7);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_7);
 		// formattedLogText = logTextBox.text;
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_8 = __this->get_logTextBox_10();
 		NullCheck(L_8);
 		String_t* L_9;
-		L_9 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_8);
+		L_9 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_8);
 		__this->set_formattedLogText_12(L_9);
 		// }
 		return;
@@ -36784,7 +36784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_Update_m5989E70554834EB0E
 		String_t* L_11;
 		L_11 = String_Format_mB3D38E5238C3164DB4D7D29339D9E225A4496D17(L_6, L_10, /*hidden argument*/NULL);
 		NullCheck(L_5);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_11);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_11);
 		// if (loadSceneOperation.progress >= 0.9f)
 		AsyncOperation_tB6913CEC83169F22E96067CE8C7117A221E51A86 * L_12 = __this->get_loadSceneOperation_11();
 		NullCheck(L_12);
@@ -36805,17 +36805,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSceneLoader_Update_m5989E70554834EB0E
 		String_t* L_17;
 		L_17 = String_Replace_m98184150DC4E2FBDF13E723BF5B7353D9602AC4D(L_16, _stringLiteralFB2B0B16C48C277D3D47A255003E6AD8C5AF71C8, _stringLiteralD15C403359FBFB9510DE6713D20B2FA50CBBF05F, /*hidden argument*/NULL);
 		NullCheck(L_15);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_17);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_17);
 		// logTextBox.text += "Transitioning to new scene.\nLoad times will vary depending on scene complexity.\n";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_18 = __this->get_logTextBox_10();
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_19 = L_18;
 		NullCheck(L_19);
 		String_t* L_20;
-		L_20 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_19);
+		L_20 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_19);
 		String_t* L_21;
 		L_21 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_20, _stringLiteralA405FD1BE99AD571C234A77B2CB6F996DB54697B, /*hidden argument*/NULL);
 		NullCheck(L_19);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_19, L_21);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_19, L_21);
 	}
 
 IL_00ad:
@@ -36866,7 +36866,7 @@ IL_00af:
 		String_t* L_35;
 		L_35 = String_Format_mB3D38E5238C3164DB4D7D29339D9E225A4496D17(L_30, L_34, /*hidden argument*/NULL);
 		NullCheck(L_29);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_29, L_35);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_29, L_35);
 		goto IL_0130;
 	}
 
@@ -37109,11 +37109,11 @@ CATCH_0057:
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_14 = L_13;
 		NullCheck(L_14);
 		String_t* L_15;
-		L_15 = VirtFuncInvoker0< String_t* >::Invoke(72 /* System.String UnityEngine.UI.Text::get_text() */, L_14);
+		L_15 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_14);
 		String_t* L_16;
 		L_16 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_15, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDC09D3E1774E6AE1C670A8BC9D1DB8947F20A44C)), /*hidden argument*/NULL);
 		NullCheck(L_14);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_14, L_16);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_14, L_16);
 		IL2CPP_POP_ACTIVE_EXCEPTION();
 		goto IL_0078;
 	} // end catch (depth: 1)
