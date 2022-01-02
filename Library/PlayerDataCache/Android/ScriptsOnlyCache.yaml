@@ -31,8 +31,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
-    Unity.PlasticSCM.Editor.dll:
-    - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.XR.Interaction.Toolkit.Editor.dll:
@@ -67,8 +65,8 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.OpenXR.Features.Interactions.MicrosoftMotionControllerProfile
     - UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
     - UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
-    - UnityEngine.XR.OpenXR.OpenXRLoader
     - UnityEngine.XR.OpenXR.OpenXRSettings
+<<<<<<< HEAD
     Unity.XR.WindowsMixedReality.Editor.dll:
     - UnityEditor.XR.WindowsMR.WindowsMRPackageSettings
     Unity.XR.WindowsMixedReality.dll:
@@ -79,6 +77,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
+=======
+>>>>>>> fd03e015164e7734ecf704aabcf3ab006771cbb0
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -136,6 +136,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 1714}
     - Class: 114
       Script: {instanceID: 1718}
@@ -143,6 +144,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1720}
     - Class: 114
       Script: {instanceID: 1802}
+=======
+      Script: {instanceID: 1712}
+    - Class: 114
+      Script: {instanceID: 1716}
+    - Class: 114
+      Script: {instanceID: 1718}
+    - Class: 114
+      Script: {instanceID: 1800}
+>>>>>>> fd03e015164e7734ecf704aabcf3ab006771cbb0
     - Class: 114
       Script: {instanceID: 2016}
     - Class: 114
@@ -158,6 +168,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2996}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 3270}
     - Class: 114
       Script: {instanceID: 3272}
@@ -199,6 +210,49 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6566}
     - Class: 114
       Script: {instanceID: 8190}
+=======
+      Script: {instanceID: 3274}
+    - Class: 114
+      Script: {instanceID: 3276}
+    - Class: 114
+      Script: {instanceID: 3532}
+    - Class: 114
+      Script: {instanceID: 3784}
+    - Class: 114
+      Script: {instanceID: 3822}
+    - Class: 114
+      Script: {instanceID: 3878}
+    - Class: 114
+      Script: {instanceID: 3976}
+    - Class: 114
+      Script: {instanceID: 4256}
+    - Class: 114
+      Script: {instanceID: 4282}
+    - Class: 114
+      Script: {instanceID: 4316}
+    - Class: 114
+      Script: {instanceID: 4830}
+    - Class: 114
+      Script: {instanceID: 5102}
+    - Class: 114
+      Script: {instanceID: 5328}
+    - Class: 114
+      Script: {instanceID: 5422}
+    - Class: 114
+      Script: {instanceID: 5516}
+    - Class: 114
+      Script: {instanceID: 5990}
+    - Class: 114
+      Script: {instanceID: 6170}
+    - Class: 114
+      Script: {instanceID: 6310}
+    - Class: 114
+      Script: {instanceID: 6480}
+    - Class: 114
+      Script: {instanceID: 6576}
+    - Class: 114
+      Script: {instanceID: 8212}
+>>>>>>> fd03e015164e7734ecf704aabcf3ab006771cbb0
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2681,4 +2735,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene 3.unity
-  playerPath: D:/FYP/test3.apk
+  playerPath: C:/Users/badminton trainer/test/test4.apk
