@@ -36,14 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.xr.core-utils\Editor\AssemblyInfo.cs" />
-     <Compile Include="Packages\com.unity.xr.core-utils\Editor\EditorPrefsUtils.cs" />
-     <Compile Include="Packages\com.unity.xr.core-utils\Editor\XROriginEditor.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\GUI\ReadOnlyPropertyDrawer.cs" />
+     <Compile Include="Packages\com.unity.xr.core-utils\Editor\GUI\EnumDisplayPropertyDrawer.cs" />
+     <Compile Include="Packages\com.unity.xr.core-utils\Editor\AssemblyInfo.cs" />
+     <Compile Include="Packages\com.unity.xr.core-utils\Editor\XROriginEditor.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\EditorScriptableSettings.cs" />
+     <Compile Include="Packages\com.unity.xr.core-utils\Editor\EditorPrefsUtils.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\ScriptableSettingsProvider.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\EditorUtils.cs" />
-     <Compile Include="Packages\com.unity.xr.core-utils\Editor\GUI\EnumDisplayPropertyDrawer.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\GUI\FlagsPropertyDrawer.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\CreateUtils.cs" />
      <Compile Include="Packages\com.unity.xr.core-utils\Editor\ScriptableSettingsInitializer.cs" />

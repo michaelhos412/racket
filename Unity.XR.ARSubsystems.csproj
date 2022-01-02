@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_20;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_20;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;UNITY_INPUT_SYSTEM;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -38,44 +38,74 @@
   <ItemGroup>
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\RaycastSubsystem\XRRaycastHit.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ParticipantSubsystem\XRParticipant.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\ConversionParams.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBodyJoint.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Promise.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\TrackingSubsystem\TrackableChanges.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HashCode.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\PlaneAlignment.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRReferencePointSubsystem.deprecated.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\NotTrackingReason.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\Api.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\CameraFocusMode.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\SessionInstallationStatus.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\RaycastSubsystem\XRRaycastSubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\AddReferenceImageJobState.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\RaycastSubsystem\XRRaycastSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\FaceSubsystem\XRFaceSubsystem.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HelpUrls.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\FaceSubsystem\XRFace.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRReferencePointSubsystemDescriptor.deprecated.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\Plane.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraIntrinsics.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\BoundedPlane.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\AsyncConversionStatus.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\DepthSubsystem\XRPointCloudData.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\XRPlaneSubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraFrame.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CpuImageFormat.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRReferenceImage.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRReferenceObjectLibrary.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBodySubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\PlaneClassification.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\AddReferenceImageJobStatus.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRAnchorSubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SerializableGuid.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRTrackedImage.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRReferencePoint.deprecated.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\SessionAvailability.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\PlaneDetectionMode.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRImageTrackingSubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\FaceSubsystem\XRFaceMesh.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\NativeCopyUtility.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\DefaultConfigurationChooser.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\LightEstimationMode.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\ConfigurationDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\Feature.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\XROcclusionSubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\RuntimeReferenceImageLibrary.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\IReferenceImageLibrary.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\DepthSubsystem\XRPointCloud.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\GuidUtil.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ParticipantSubsystem\XRParticipantSubsystem.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\XRCpuImage.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRReferenceImageLibrary.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\XRSessionSubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRTextureDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRObjectTrackingSubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraSubsystem.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\TrackingState.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRObjectTrackingSubsystem.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\DepthSubsystem\XRDepthSubsystemDescriptor.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\Transformation.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBody.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\ConversionParams.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBodyJoint.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\PlaneAlignment.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\NotTrackingReason.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\Api.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\CameraFocusMode.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\RaycastSubsystem\XRRaycastSubsystem.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\FaceSubsystem\XRFaceSubsystem.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRReferencePointSubsystemDescriptor.deprecated.cs" />
+     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\BoundedPlane.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\AsyncConversion.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\EnvironmentProbeSubsystem\XREnvironmentProbe.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\XRSessionSubsystem.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\XRPlaneSubsystem.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRAnchorSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CpuImageFormat.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRReferenceImage.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRReferenceObjectLibrary.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBodySubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBodyPose2DJoint.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ParticipantSubsystem\XRParticipantSubsystemDescriptor.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\PlaneClassification.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\AddReferenceImageJobStatus.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\TrackingSubsystem\ValidationUtility.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\HumanSegmentationStencilMode.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraParams.cs" />
@@ -85,59 +115,29 @@
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\XRSessionUpdateParams.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\RaycastSubsystem\TrackableType.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRReferenceObject.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRAnchorSubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\TrackingSubsystem\TrackingSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SerializableGuid.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRTrackedImage.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraSubsystemDescriptor.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AnchorSubsystem\XRReferencePoint.deprecated.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\SessionAvailability.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ScopedProfiler.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\XROcclusionSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\PlaneTracking\PlaneDetectionMode.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRImageTrackingSubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\RaycastSubsystem\XRRaycast.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\TrackingSubsystem\ITrackable.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\DepthSubsystem\XRDepthSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\FaceSubsystem\XRFaceMesh.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\NativeCopyUtility.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\InputSubsystem\HandheldARInputDevice.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\EnvironmentDepthMode.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\EnvironmentProbeSubsystem\XREnvironmentProbeSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\DefaultConfigurationChooser.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\LightEstimationMode.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\ConfigurationChooser.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\ConfigurationDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraConfiguration.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\Feature.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRTrackedObject.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\HumanSegmentationDepthMode.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRReferenceObjectEntry.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\XROcclusionSubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRSubsystem.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBodySubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\RuntimeReferenceImageLibrary.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\IReferenceImageLibrary.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\DepthSubsystem\XRPointCloud.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\Configuration\Configuration.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRImageTrackingSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\GuidUtil.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\MutableRuntimeReferenceImageLibrary.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ParticipantSubsystem\XRParticipantSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\XRCpuImage.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ImageTrackingSubsystem\XRReferenceImageLibrary.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\OcclusionSubsystem\OcclusionPreferenceMode.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\SessionSubsystem\XRSessionSubsystemDescriptor.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRTextureDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\AssemblyInfo.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRObjectTrackingSubsystemDescriptor.cs" />
      <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\EnvironmentProbeSubsystem\XREnvironmentProbeSubsystemDescriptor.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\CameraSubsystem\XRCameraSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\TrackingState.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\ObjectTrackingSubsystem\XRObjectTrackingSubsystem.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\DepthSubsystem\XRDepthSubsystemDescriptor.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\XRCpuImage\Transformation.cs" />
-     <Compile Include="Packages\com.unity.xr.arsubsystems\Runtime\HumanBodySubsystem\XRHumanBody.cs" />
      <None Include="Packages\com.unity.xr.arsubsystems\Runtime\Unity.XR.ARSubsystems.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -361,9 +361,6 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>D:\2020.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>D:\FYP\Library\PackageCache\com.unity.collab-proxy@1.11.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
     <Reference Include="log4netPlastic">
         <HintPath>D:\FYP\Library\PackageCache\com.unity.collab-proxy@1.11.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
@@ -372,6 +369,9 @@
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>D:\FYP\Library\PackageCache\com.unity.collab-proxy@1.11.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+        <HintPath>D:\FYP\Library\PackageCache\com.unity.collab-proxy@1.11.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:\2020.3.20f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -723,6 +723,10 @@
     <ProjectReference Include="Unity.Subsystem.Registration.csproj">
       <Project>{006aa086-e67f-5b4b-11f1-7a6c8f4f3aae}</Project>
       <Name>Unity.Subsystem.Registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{3e44bc15-77ae-1cc2-0e26-ad4517e46b2a}</Project>
+      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{6993d7c8-03a6-7497-2fb7-f46970e71640}</Project>

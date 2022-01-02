@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.xr.openxr\RuntimeDebugger\DebuggerState.cs" />
      <Compile Include="Packages\com.unity.xr.openxr\RuntimeDebugger\RuntimeDebuggerOpenXRFeature.cs" />
+     <Compile Include="Packages\com.unity.xr.openxr\RuntimeDebugger\DebuggerState.cs" />
      <None Include="Packages\com.unity.xr.openxr\RuntimeDebugger\Unity.XR.OpenXR.Features.RuntimeDebugger.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
