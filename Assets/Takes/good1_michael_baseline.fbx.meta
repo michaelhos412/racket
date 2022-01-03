@@ -1,0 +1,950 @@
+fileFormatVersion: 2
+guid: d58048cf186373842bbf2c32fd16e95f
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -2650874366506582563
+    second: Take 2021-10-28 08.09.02 PM good michael 2
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: good1_michael_baseline(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:optical
+      parentName: good1_michael_baseline(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_WaistLFront
+      parentName: Joleen:optical
+      position: {x: 0.41989, y: 0.92622, z: -0.23584999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_WaistRFront
+      parentName: Joleen:optical
+      position: {x: 0.19047001, y: 0.9372699, z: -0.08146}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_WaistLBack
+      parentName: Joleen:optical
+      position: {x: 0.50077, y: 0.9060199, z: -0.050300002}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_WaistRBack
+      parentName: Joleen:optical
+      position: {x: 0.26257998, y: 0.88089997, z: 0.07818}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_BackTop
+      parentName: Joleen:optical
+      position: {x: 0.44539002, y: 1.33705, z: 0.030739998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_Chest
+      parentName: Joleen:optical
+      position: {x: 0.30201998, y: 1.25226, z: -0.17175}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_BackLeft
+      parentName: Joleen:optical
+      position: {x: 0.51796, y: 1.1011, z: -0.0063300002}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_BackRight
+      parentName: Joleen:optical
+      position: {x: 0.37842, y: 1.10597, z: 0.09458999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_HeadTop
+      parentName: Joleen:optical
+      position: {x: 0.35073, y: 1.6583298, z: -0.027420001}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_HeadFront
+      parentName: Joleen:optical
+      position: {x: 0.27549, y: 1.6355599, z: -0.09385999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_HeadSide
+      parentName: Joleen:optical
+      position: {x: 0.31805, y: 1.5649999, z: 0.0461}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LShoulderBack
+      parentName: Joleen:optical
+      position: {x: 0.58141, y: 1.2603099, z: -0.07023}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LShoulderTop
+      parentName: Joleen:optical
+      position: {x: 0.50848997, y: 1.38382, z: -0.10613}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LElbowOut
+      parentName: Joleen:optical
+      position: {x: 0.60178, y: 0.97809, z: -0.19312999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LUArmHigh
+      parentName: Joleen:optical
+      position: {x: 0.58374, y: 1.11544, z: -0.12851}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LWristOut
+      parentName: Joleen:optical
+      position: {x: 0.56114, y: 0.77861, z: -0.27100998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LFArm
+      parentName: Joleen:optical
+      position: {x: 0.4874, y: 0.88742995, z: -0.25742}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LHandOut
+      parentName: Joleen:optical
+      position: {x: 0.5473, y: 0.6992, z: -0.28499}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LHandIn
+      parentName: Joleen:optical
+      position: {x: 0.45509, y: 0.71825, z: -0.31667998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LThumb
+      parentName: Joleen:optical
+      position: {x: 0.43343, y: 0.74433, z: -0.28697}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LIndex
+      parentName: Joleen:optical
+      position: {x: 0.45269, y: 0.67779, z: -0.32977}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LPinky
+      parentName: Joleen:optical
+      position: {x: 0.53967994, y: 0.66359, z: -0.28464}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RShoulderBack
+      parentName: Joleen:optical
+      position: {x: 0.28749, y: 1.26158, z: 0.13836999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RShoulderTop
+      parentName: Joleen:optical
+      position: {x: 0.31504, y: 1.38058, z: 0.04708}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RElbowOut
+      parentName: Joleen:optical
+      position: {x: 0.19402, y: 1.00885, z: 0.15219}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RUArmHigh
+      parentName: Joleen:optical
+      position: {x: 0.25169, y: 1.11866, z: 0.12892}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RWristOut
+      parentName: Joleen:optical
+      position: {x: 0.12777999, y: 0.77011997, z: 0.10453}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RFArm
+      parentName: Joleen:optical
+      position: {x: 0.14046, y: 0.9149299, z: 0.03105}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RHandOut
+      parentName: Joleen:optical
+      position: {x: 0.07655, y: 0.71133, z: 0.10343}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RHandIn
+      parentName: Joleen:optical
+      position: {x: 0.061399996, y: 0.69331, z: 0.00025}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RThumb
+      parentName: Joleen:optical
+      position: {x: 0.1268, y: 0.67875, z: 0.00221}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RIndex
+      parentName: Joleen:optical
+      position: {x: 0.0645, y: 0.65095, z: 0.00916}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RPinky
+      parentName: Joleen:optical
+      position: {x: 0.118, y: 0.67787004, z: 0.09590999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LKneeOut
+      parentName: Joleen:optical
+      position: {x: 0.46493998, y: 0.45727, z: -0.15246}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LThigh
+      parentName: Joleen:optical
+      position: {x: 0.36146, y: 0.67336, z: -0.23146999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LAnkleOut
+      parentName: Joleen:optical
+      position: {x: 0.44569, y: 0.07373, z: -0.05787}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LShin
+      parentName: Joleen:optical
+      position: {x: 0.39986998, y: 0.22884999, z: -0.12145}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LToeOut
+      parentName: Joleen:optical
+      position: {x: 0.38257998, y: 0.02381, z: -0.16444999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LToeIn
+      parentName: Joleen:optical
+      position: {x: 0.27903, y: 0.028369999, z: -0.08871}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LHeel
+      parentName: Joleen:optical
+      position: {x: 0.45731997, y: 0.03325, z: 0.00756}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_LToeTip
+      parentName: Joleen:optical
+      position: {x: 0.25871, y: 0.03881, z: -0.19076999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RKneeOut
+      parentName: Joleen:optical
+      position: {x: 0.09458, y: 0.54091, z: -0.040289998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RThigh
+      parentName: Joleen:optical
+      position: {x: 0.09199, y: 0.59882, z: -0.15752}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RAnkleOut
+      parentName: Joleen:optical
+      position: {x: 0.13717, y: 0.11612, z: 0.03146}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RShin
+      parentName: Joleen:optical
+      position: {x: 0.08897, y: 0.33159998, z: -0.12023}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RToeOut
+      parentName: Joleen:optical
+      position: {x: -0.03137, y: 0.060419995, z: -0.02316}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RToeIn
+      parentName: Joleen:optical
+      position: {x: 0.0342, y: 0.05137, z: -0.13351999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RHeel
+      parentName: Joleen:optical
+      position: {x: 0.20916, y: 0.06093, z: 0.0073599997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:michael_baseline_finger_RToeTip
+      parentName: Joleen:optical
+      position: {x: -0.057329997, y: 0.08024, z: -0.11662}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker1
+      parentName: Joleen:optical
+      position: {x: -0.027069999, y: 0.56438, z: -0.32334998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker2
+      parentName: Joleen:optical
+      position: {x: -0.019059999, y: 0.54036, z: -0.20249}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker3
+      parentName: Joleen:optical
+      position: {x: 0.14288, y: 0.7465, z: 0.12759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker4
+      parentName: Joleen:optical
+      position: {x: 0.05524, y: 0.63654, z: -0.048609998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker5
+      parentName: Joleen:optical
+      position: {x: -0.12191, y: 0.41142, z: -0.40813}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker6
+      parentName: Joleen:optical
+      position: {x: -0.07841, y: 0.4313, z: -0.21735999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker8
+      parentName: Joleen:optical
+      position: {x: -0.12203, y: 0.37816, z: -0.3196}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joleen:racket_002_Marker7
+      parentName: Joleen:optical
+      position: {x: -0.07606, y: 0.49258, z: -0.42344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Take 2021-10-28 08.09.02 PM good michael 2Null
+      parentName: good1_michael_baseline(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_WaistLFrontNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.41989, y: 0.92622, z: -0.23584999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_WaistRFrontNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.19047001, y: 0.9372699, z: -0.08146}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_WaistLBackNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.50077, y: 0.9060199, z: -0.050300002}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_WaistRBackNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.26257998, y: 0.88089997, z: 0.07818}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_BackTopNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.44539002, y: 1.33705, z: 0.030739998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_ChestNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.30201998, y: 1.25226, z: -0.17175}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_BackLeftNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.51796, y: 1.1011, z: -0.0063300002}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_BackRightNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.37842, y: 1.10597, z: 0.09458999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_HeadTopNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.35073, y: 1.6583298, z: -0.027420001}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_HeadFrontNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.27549, y: 1.6355599, z: -0.09385999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_HeadSideNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.31805, y: 1.5649999, z: 0.0461}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LShoulderBackNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.58141, y: 1.2603099, z: -0.07023}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LShoulderTopNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.50848997, y: 1.38382, z: -0.10613}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LElbowOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.60178, y: 0.97809, z: -0.19312999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LUArmHighNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.58374, y: 1.11544, z: -0.12851}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LWristOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.56114, y: 0.77861, z: -0.27100998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LFArmNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.4874, y: 0.88742995, z: -0.25742}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LHandOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.5473, y: 0.6992, z: -0.28499}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LHandInNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.45509, y: 0.71825, z: -0.31667998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LThumbNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.43343, y: 0.74433, z: -0.28697}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LIndexNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.45269, y: 0.67779, z: -0.32977}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LPinkyNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.53967994, y: 0.66359, z: -0.28464}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RShoulderBackNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.28749, y: 1.26158, z: 0.13836999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RShoulderTopNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.31504, y: 1.38058, z: 0.04708}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RElbowOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.19402, y: 1.00885, z: 0.15219}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RUArmHighNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.25169, y: 1.11866, z: 0.12892}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RWristOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.12777999, y: 0.77011997, z: 0.10453}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RFArmNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.14046, y: 0.9149299, z: 0.03105}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RHandOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.07655, y: 0.71133, z: 0.10343}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RHandInNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.061399996, y: 0.69331, z: 0.00025}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RThumbNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.1268, y: 0.67875, z: 0.00221}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RIndexNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.0645, y: 0.65095, z: 0.00916}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RPinkyNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.118, y: 0.67787004, z: 0.09590999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LKneeOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.46493998, y: 0.45727, z: -0.15246}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LThighNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.36146, y: 0.67336, z: -0.23146999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LAnkleOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.44569, y: 0.07373, z: -0.05787}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LShinNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.39986998, y: 0.22884999, z: -0.12145}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LToeOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.38257998, y: 0.02381, z: -0.16444999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LToeInNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.27903, y: 0.028369999, z: -0.08871}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LHeelNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.45731997, y: 0.03325, z: 0.00756}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_LToeTipNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.25871, y: 0.03881, z: -0.19076999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RKneeOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.09458, y: 0.54091, z: -0.040289998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RThighNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.09199, y: 0.59882, z: -0.15752}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RAnkleOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.13717, y: 0.11612, z: 0.03146}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RShinNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.08897, y: 0.33159998, z: -0.12023}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RToeOutNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.03137, y: 0.060419995, z: -0.02316}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RToeInNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.0342, y: 0.05137, z: -0.13351999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RHeelNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.20916, y: 0.06093, z: 0.0073599997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger_RToeTipNull
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.057329997, y: 0.08024, z: -0.11662}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker1Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.027069999, y: 0.56438, z: -0.32334998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker2Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.019059999, y: 0.54036, z: -0.20249}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker3Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.14288, y: 0.7465, z: 0.12759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker4Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: 0.05524, y: 0.63654, z: -0.048609998}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker5Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.12191, y: 0.41142, z: -0.40813}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker6Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.07841, y: 0.4313, z: -0.21735999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker8Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0.12203, y: 0.37816, z: -0.3196}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket_002_Marker7Null
+      parentName: Take 2021-10-28 08.09.02 PM good michael 2Null
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:HipNull
+      parentName: good1_michael_baseline(Clone)
+      position: {x: 0, y: 0.8530656, z: -0.0742}
+      rotation: {x: -0.014581162, y: 0.9937375, z: -0.10839041, w: 0.022907825}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:AbNull
+      parentName: michael_baseline_finger:HipNull
+      position: {x: -0, y: 0.07540999, z: 0}
+      rotation: {x: -0.1423354, y: 0.016421627, z: 0.01372293, w: 0.9895871}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:ChestNull
+      parentName: michael_baseline_finger:AbNull
+      position: {x: -0, y: 0.19899, z: 0}
+      rotation: {x: 0.09124781, y: 0.0054837153, z: 0.008244178, w: 0.995779}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:NeckNull
+      parentName: michael_baseline_finger:ChestNull
+      position: {x: -0, y: 0.21271, z: 0}
+      rotation: {x: 0.12523806, y: 0.056514885, z: -0.034163244, w: 0.9899265}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:HeadNull
+      parentName: michael_baseline_finger:NeckNull
+      position: {x: -0, y: 0.14254999, z: 0.01839}
+      rotation: {x: -0.0428331, y: 0.06385096, z: -0.09604095, w: 0.99240345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LShoulderNull
+      parentName: michael_baseline_finger:ChestNull
+      position: {x: -0.03703, y: 0.16374001, z: -0.0068099997}
+      rotation: {x: 0.06449992, y: -0.037702918, z: -0.0865579, w: 0.9934415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LUArmNull
+      parentName: michael_baseline_finger:LShoulderNull
+      position: {x: -0.15093, y: 0, z: 0}
+      rotation: {x: 0.2749291, y: 0.06749848, z: 0.07234093, w: 0.9563602}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LFArmNull
+      parentName: michael_baseline_finger:LUArmNull
+      position: {x: -0.28754, y: 0, z: 0}
+      rotation: {x: 0.012450752, y: 0.029412366, z: -0.0012450084, w: 0.99948907}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LHandNull
+      parentName: michael_baseline_finger:LFArmNull
+      position: {x: -0.20997998, y: 0.0019599998, z: -0.00104}
+      rotation: {x: -0.103582226, y: -0.045661677, z: 0.007282031, w: 0.99354553}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LThumb1Null
+      parentName: michael_baseline_finger:LHandNull
+      position: {x: -0.02444, y: -0.02777, z: 0.038879998}
+      rotation: {x: 0.16824642, y: -0.43451205, z: 0.19082601, w: 0.8639895}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LThumb2Null
+      parentName: michael_baseline_finger:LThumb1Null
+      position: {x: -0.02115, y: 0, z: 0.0138}
+      rotation: {x: -0.00000028312192, y: 0.2585492, z: 0.0000009760256, w: 0.96599805}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LThumb3Null
+      parentName: michael_baseline_finger:LThumb2Null
+      position: {x: -0.02759, y: 0, z: 0}
+      rotation: {x: 0, y: -0.051952504, z: -0, w: 0.99864954}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LIndex1Null
+      parentName: michael_baseline_finger:LHandNull
+      position: {x: -0.09998, y: 0, z: 0.038879998}
+      rotation: {x: 0, y: -0, z: -0.037114628, w: 0.99931103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LIndex2Null
+      parentName: michael_baseline_finger:LIndex1Null
+      position: {x: -0.04598, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LIndex3Null
+      parentName: michael_baseline_finger:LIndex2Null
+      position: {x: -0.02299, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LMiddle1Null
+      parentName: michael_baseline_finger:LHandNull
+      position: {x: -0.09998, y: 0, z: 0.01289}
+      rotation: {x: 0, y: -0, z: -0.002635444, w: 0.99999654}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LMiddle2Null
+      parentName: michael_baseline_finger:LMiddle1Null
+      position: {x: -0.05058, y: 0, z: 0}
+      rotation: {x: -0.00000004464441, y: -0.000000022469472, z: 0.04139781, w: 0.99914277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LMiddle3Null
+      parentName: michael_baseline_finger:LMiddle2Null
+      position: {x: -0.02759, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.022233663, w: 0.9997528}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LRing1Null
+      parentName: michael_baseline_finger:LHandNull
+      position: {x: -0.09443, y: 0, z: -0.01289}
+      rotation: {x: 0, y: 0, z: 0.031846873, w: 0.99949276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LRing2Null
+      parentName: michael_baseline_finger:LRing1Null
+      position: {x: -0.04598, y: 0, z: 0}
+      rotation: {x: -0.000000041350052, y: -0.00000082984354, z: 0.03916958, w: 0.99923265}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LRing3Null
+      parentName: michael_baseline_finger:LRing2Null
+      position: {x: -0.02299, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.044465054, w: 0.999011}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LPinky1Null
+      parentName: michael_baseline_finger:LHandNull
+      position: {x: -0.08887, y: 0, z: -0.038879998}
+      rotation: {x: -0.00047758943, y: 0.0070761447, z: 0.05995775, w: 0.99817574}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LPinky2Null
+      parentName: michael_baseline_finger:LPinky1Null
+      position: {x: -0.03679, y: 0, z: 0}
+      rotation: {x: 0.000000027124763, y: 0.00000008614732, z: 0.036848348, w: 0.99932086}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LPinky3Null
+      parentName: michael_baseline_finger:LPinky2Null
+      position: {x: -0.01839, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.06733618, w: 0.9977304}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RShoulderNull
+      parentName: michael_baseline_finger:ChestNull
+      position: {x: 0.03647, y: 0.16374001, z: -0.0068099997}
+      rotation: {x: 0.0490291, y: 0.084936514, z: 0.052611023, w: 0.99378777}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RUArmNull
+      parentName: michael_baseline_finger:RShoulderNull
+      position: {x: 0.15093, y: 0, z: 0}
+      rotation: {x: 0.32103187, y: -0.10526079, z: -0.033605386, w: 0.9406005}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RFArmNull
+      parentName: michael_baseline_finger:RUArmNull
+      position: {x: 0.28754, y: 0, z: 0}
+      rotation: {x: 0.14316621, y: -0.030894615, z: 0.0027368844, w: 0.9892126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RHandNull
+      parentName: michael_baseline_finger:RFArmNull
+      position: {x: 0.24430999, y: 0.0023899998, z: -0.0038999997}
+      rotation: {x: -0.25163296, y: 0.062024105, z: 0.11962103, w: 0.9583969}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RThumb1Null
+      parentName: michael_baseline_finger:RHandNull
+      position: {x: 0.02444, y: -0.02777, z: 0.038879998}
+      rotation: {x: 0.2695578, y: 0.38616422, z: -0.20715067, w: 0.857499}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RThumb2Null
+      parentName: michael_baseline_finger:RThumb1Null
+      position: {x: 0.02115, y: 0, z: 0.0138}
+      rotation: {x: -0.0000009536741, y: -0.26323783, z: 0.0000018551941, w: 0.964731}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RThumb3Null
+      parentName: michael_baseline_finger:RThumb2Null
+      position: {x: 0.02759, y: 0, z: 0}
+      rotation: {x: 0, y: 0.25704846, z: -0, w: 0.96639854}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RIndex1Null
+      parentName: michael_baseline_finger:RHandNull
+      position: {x: 0.09998, y: 0, z: 0.038879998}
+      rotation: {x: -0.0058212727, y: -0.035400696, z: -0.07358116, w: 0.9966438}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RIndex2Null
+      parentName: michael_baseline_finger:RIndex1Null
+      position: {x: 0.04598, y: 0, z: 0}
+      rotation: {x: 0.00000018347055, y: -0.0000021904707, z: -0.027334087, w: 0.9996264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RIndex3Null
+      parentName: michael_baseline_finger:RIndex2Null
+      position: {x: 0.02299, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.1622583, w: 0.98674834}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RMiddle1Null
+      parentName: michael_baseline_finger:RHandNull
+      position: {x: 0.09998, y: 0, z: 0.01289}
+      rotation: {x: -0.10986508, y: -0.036471736, z: -0.06986911, w: 0.9908168}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RMiddle2Null
+      parentName: michael_baseline_finger:RMiddle1Null
+      position: {x: 0.05058, y: 0, z: 0}
+      rotation: {x: -0.00000032782546, y: 0.00000006705521, z: -0.016874406, w: 0.9998576}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RMiddle3Null
+      parentName: michael_baseline_finger:RMiddle2Null
+      position: {x: 0.02759, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.33309108, w: 0.94289464}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RRing1Null
+      parentName: michael_baseline_finger:RHandNull
+      position: {x: 0.09443, y: 0, z: -0.01289}
+      rotation: {x: -0.23059215, y: -0.03847998, z: -0.06819182, w: 0.9698951}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RRing2Null
+      parentName: michael_baseline_finger:RRing1Null
+      position: {x: 0.04598, y: 0, z: 0}
+      rotation: {x: 0.00000035762775, y: -0.00000027939666, z: -0.00641372, w: 0.99997944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RRing3Null
+      parentName: michael_baseline_finger:RRing2Null
+      position: {x: 0.02299, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.49356243, w: 0.8697104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RPinky1Null
+      parentName: michael_baseline_finger:RHandNull
+      position: {x: 0.08887, y: 0, z: -0.038879998}
+      rotation: {x: -0.38657704, y: -0.038926147, z: -0.06911192, w: 0.9188398}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RPinky2Null
+      parentName: michael_baseline_finger:RPinky1Null
+      position: {x: 0.03679, y: 0, z: 0}
+      rotation: {x: 0.0000016987318, y: -0.0000015273685, z: -0.0000040903674, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RPinky3Null
+      parentName: michael_baseline_finger:RPinky2Null
+      position: {x: 0.01839, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.64278764, w: 0.76604444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LThighNull
+      parentName: michael_baseline_finger:HipNull
+      position: {x: -0.09197, y: 0, z: 0}
+      rotation: {x: 0.019775456, y: 0.10107688, z: 0.0008308254, w: 0.9946817}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LShinNull
+      parentName: michael_baseline_finger:LThighNull
+      position: {x: -0, y: -0.3529, z: 0}
+      rotation: {x: -0.048530925, y: 0.18557076, z: -0.00428266, w: 0.9814224}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LFootNull
+      parentName: michael_baseline_finger:LShinNull
+      position: {x: 0.0025099998, y: -0.39102998, z: 0.00021}
+      rotation: {x: 0.05266246, y: 0.92304033, z: -0.20707682, w: 0.31991}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:LToeNull
+      parentName: michael_baseline_finger:LFootNull
+      position: {x: -0, y: -0.05978, z: 0.13795}
+      rotation: {x: 0.016508915, y: 0.012355251, z: -0.004443733, w: 0.9997775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RThighNull
+      parentName: michael_baseline_finger:HipNull
+      position: {x: 0.09197, y: 0, z: 0}
+      rotation: {x: -0.17354722, y: 0.020567622, z: 0.10856539, w: 0.9786071}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RShinNull
+      parentName: michael_baseline_finger:RThighNull
+      position: {x: -0, y: -0.3529, z: 0}
+      rotation: {x: 0.1612747, y: 0.16051729, z: -0.05467183, w: 0.97223234}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RFootNull
+      parentName: michael_baseline_finger:RShinNull
+      position: {x: -0.00061, y: -0.41205, z: -0.0011999999}
+      rotation: {x: 0.123356916, y: 0.91948664, z: -0.14969963, w: 0.34193182}
+      scale: {x: 1, y: 1, z: 1}
+    - name: michael_baseline_finger:RToeNull
+      parentName: michael_baseline_finger:RFootNull
+      position: {x: -0, y: -0.05978, z: 0.13795}
+      rotation: {x: -0.02146731, y: 0.0014003847, z: -0.0009815225, w: 0.9997681}
+      scale: {x: 1, y: 1, z: 1}
+    - name: racket 002Null
+      parentName: good1_michael_baseline(Clone)
+      position: {x: -0.03144, y: 0.52595, z: -0.22591999}
+      rotation: {x: -0.49261412, y: -0.06693413, z: 0.70219094, w: 0.5096852}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
