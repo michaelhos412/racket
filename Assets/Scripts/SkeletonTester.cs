@@ -21,7 +21,7 @@ public class SkeletonTester : MonoBehaviour
         {
             bot1.SetSkeletonFrame(600);
             bot2.SetSkeletonFrame(52);
-            Debug.Log(bot1.saveLoadManager.skeletonStateBuffer.stateList[0].BonePoses.TryGetValue(bot1.);
+            //Debug.Log(bot1.saveLoadManager.skeletonStateBuffer.stateList[0].BonePoses.TryGetValue();
             Debug.Log(bot1.saveLoadManager.skeletonStateBuffer.stateList[0].LocalBonePoses);
         }
     }
