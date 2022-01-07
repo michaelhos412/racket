@@ -24,6 +24,7 @@ using NaturalPoint;
 using NaturalPoint.NatNetLib;
 
 
+
 /// <summary>Skeleton naming conventions supported by OptiTrack Motive.</summary>
 public enum OptitrackBoneNameConvention
 {
@@ -40,9 +41,12 @@ public enum StreamingCoordinatesValues
 
 
 /// <summary>Describes the position and orientation of a streamed tracked object.</summary>
+[System.Serializable]
 public class OptitrackPose
 {
+    [SerializeField]
     public Vector3 Position;
+    [SerializeField]
     public Quaternion Orientation;
 }
 
@@ -69,24 +73,13 @@ public class OptitrackRigidBodyState
 
 
 /// <summary>Represents the state of a streamed skeleton at an instant in time.</summary>
-public class OptitrackSkeletonState : ICloneable
+[Serializable]
+public class OptitrackSkeletonState
 {
-    /// <summary>Maps from OptiTrack bone IDs to their corresponding bone poses.</summary>
-    public Dictionary<Int32, OptitrackPose> BonePoses;
-    public Dictionary<Int32, OptitrackPose> LocalBonePoses;
+    /// <summary>Maps from OptiTrack bone IDs to their corresponding bone poses.</summary>\
+    public SerializableDictionary<Int32, OptitrackPose> BonePoses;
+    public SerializableDictionary<Int32, OptitrackPose> LocalBonePoses;
 
-    public object Clone()
-    {
-        Dictionary<Int32, OptitrackPose> cloneBonePoses = new Dictionary<Int32, OptitrackPose>(BonePoses);
-        Dictionary<Int32, OptitrackPose> cloneLocalBonePoses = new Dictionary<Int32, OptitrackPose>(LocalBonePoses);
-        OptitrackSkeletonState clone = new OptitrackSkeletonState
-        {
-            BonePoses = cloneBonePoses,
-            LocalBonePoses = cloneLocalBonePoses
-        };   
-
-    return clone;
-    }
 
 }
 public class OptitrackRigidBodyDefinition
@@ -103,8 +96,10 @@ public class OptitrackRigidBodyDefinition
 }
 
 /// <summary>Describes the hierarchy and neutral pose of a streamed skeleton.</summary>
+[Serializable]
 public class OptitrackSkeletonDefinition
 {
+    [Serializable]
     public class BoneDefinition
     {
         /// <summary>The ID of this bone within this skeleton.</summary>
@@ -133,7 +128,7 @@ public class OptitrackSkeletonDefinition
     public List<BoneDefinition> Bones;
 
     /// <summary>Bone hierarchy information</summary>
-    public Dictionary<Int32, Int32> BoneIdToParentIdMap;
+    public SerializableDictionary<Int32, Int32> BoneIdToParentIdMap;
 }
 
 public class OptitrackMarkersDefinition
@@ -279,7 +274,7 @@ public class OptitrackStreamingClient : MonoBehaviour
 
     private OptitrackHiResTimer.Timestamp m_lastFrameDeliveryTimestamp;
     private Coroutine m_connectionHealthCoroutine = null;
-
+    
     private NatNetClient m_client;
     private NatNetClient.DataDescriptions m_dataDescs;
     private List<OptitrackRigidBodyDefinition> m_rigidBodyDefinitions = new List<OptitrackRigidBodyDefinition>();
@@ -316,6 +311,7 @@ public class OptitrackStreamingClient : MonoBehaviour
 
     private void Update()
     {
+        
         if (DrawMarkers)
         {
             if (m_client != null && ConnectionType == ClientConnectionType.Unicast)
@@ -483,6 +479,42 @@ public class OptitrackStreamingClient : MonoBehaviour
         if(m_client != null)
         {
             return m_client.RequestCommand("StartRecording");
+        }
+        return false;
+    }
+
+    public bool SetFrame(int frameNumber)
+    {
+        if( m_client!= null )
+        {
+            return m_client.RequestCommand("SetPlaybackCurrentFrame," + frameNumber);
+        }
+        return false;
+    }
+
+    public bool TimelineStop()
+    {
+        if (m_client != null)
+        {
+            return m_client.RequestCommand("TimelineStop");
+        }
+        return false;
+    }
+
+    public int GetTakeLength()
+    {
+        if ( m_client != null)
+        {
+            return m_client.RequestInt32("CurrentTakeLength");
+        }
+        return -1;
+    }
+
+    public bool SetTake(string takeName)
+    {
+        if (m_client != null)
+        {
+            return m_client.RequestCommand("SetPlaybackTakeName," + takeName);
         }
         return false;
     }
@@ -703,7 +735,7 @@ public class OptitrackStreamingClient : MonoBehaviour
                 Id = nativeSkel.Id,
                 Name = nativeSkel.Name,
                 Bones = new List<OptitrackSkeletonDefinition.BoneDefinition>(nativeSkel.RigidBodyCount),
-                BoneIdToParentIdMap = new Dictionary<int, int>(),
+                BoneIdToParentIdMap = new SerializableDictionary<int, int>(),
             };
 
             // Populate nested bone definitions.
@@ -937,7 +969,7 @@ public class OptitrackStreamingClient : MonoBehaviour
         {
             Debug.LogException( ex, this );
             Debug.LogError( GetType().FullName + ": Error connecting to server; check your configuration, and make sure the server is currently streaming.", this );
-            this.enabled = false;
+            //this.enabled = false;
             return;
         }
 
@@ -1422,8 +1454,8 @@ public class OptitrackStreamingClient : MonoBehaviour
         else
         {
             OptitrackSkeletonState newSkeletonState = new OptitrackSkeletonState {
-                BonePoses = new Dictionary<Int32, OptitrackPose>(),
-                LocalBonePoses = new Dictionary<int, OptitrackPose>(),
+                BonePoses = new SerializableDictionary<Int32, OptitrackPose>(),
+                LocalBonePoses = new SerializableDictionary<int, OptitrackPose>(),
             };
 
             m_latestSkeletonStates[skeletonId] = newSkeletonState;
