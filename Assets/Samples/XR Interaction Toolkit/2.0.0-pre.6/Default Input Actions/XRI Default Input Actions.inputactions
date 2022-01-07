@@ -1113,6 +1113,62 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Velocity",
+            "id": "5df7748e-afde-4e9d-9540-401ffb32ca72",
+            "actions": [
+                {
+                    "name": "RightVelocity",
+                    "type": "Button",
+                    "id": "3e6cd107-f9b3-40f6-823f-900747dcd8ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "47f8c6bd-bba9-49a2-8d3e-08809ca26e30",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Shuttlecock Reset",
+            "id": "b0d4fd00-83f4-472c-a978-030516de8da7",
+            "actions": [
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "1556ff83-74e0-412d-83fc-00756ed51da1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c0b71e34-5c78-414f-adeb-ca81920317ba",
+                    "path": "<OculusTouchController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

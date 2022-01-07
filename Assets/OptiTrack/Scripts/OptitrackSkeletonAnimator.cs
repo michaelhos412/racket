@@ -30,6 +30,8 @@ using UnityEngine;
 /// </remarks>
 public class OptitrackSkeletonAnimator : MonoBehaviour
 {
+
+    public TextAsset takeJson;
     /// <summary>The client object to use for receiving streamed skeletal pose data.</summary>
     [Tooltip("The object containing the OptiTrackStreamingClient script.")]
     public OptitrackStreamingClient StreamingClient;
@@ -42,6 +44,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     [Tooltip("The humanoid avatar model.")]
     public Avatar DestinationAvatar;
 
+    public bool useMotive;
     #region Private fields
     /// <summary>Used when retrieving and retargeting source pose. Cached and reused for efficiency.</summary>
     private HumanPose m_humanPose = new HumanPose();
@@ -70,20 +73,37 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     /// <summary>Set up to write poses to this GameObject using <see cref="DestinationAvatar"/>.</summary>
     private HumanPoseHandler m_destPoseHandler;
 
-    private List<OptitrackSkeletonState> skeletonStateBuffer;
+    public SkeletonSaveLoadManager saveLoadManager = new SkeletonSaveLoadManager();
+    private OptitrackSkeletonState skelState;
+
     private OptitrackSkeletonState tempState;
 
     private int skeletonStateBufferIndex;
 
-    private bool useTemp = false;
     private bool recording = false;
     private bool playRecording = false;
+    private string skeletonStateName = "";
+    private string savePathSkeletonStates;
+    private string savePathSkeletonDef;
+    private string savePathStreamingTransform;
     #endregion Private fields
 
     void Start()
     {
-        skeletonStateBuffer = new List<OptitrackSkeletonState>();
+        savePathSkeletonDef = Application.dataPath + "/SkeletonStates/definition.json";
+        savePathSkeletonStates = Application.dataPath + "/SkeletonStates/" + skeletonStateName + ".json";
+        savePathStreamingTransform = Application.dataPath + "/SkeletonStates/transform.json";
+        if (!useMotive)
+        {
+            ManualSetup();
+            if (takeJson.text.Length > 0)
+            {
+                saveLoadManager.LoadSkeletonStatesBufferJson(takeJson.text);
+            }
+            return;
+        }
 
+        
         // If the user didn't explicitly associate a client, find a suitable default.
         if ( this.StreamingClient == null )
         {
@@ -92,8 +112,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             // If we still couldn't find one, disable this component.
             if ( this.StreamingClient == null )
             {
-                Debug.LogError( GetType().FullName + ": Streaming client not set, and no " + typeof( OptitrackStreamingClient ).FullName + " components found in scene; disabling this component.", this );
-                this.enabled = false;
+                Debug.LogError( GetType().FullName + ": Streaming client not set, and no " + typeof( OptitrackStreamingClient ).FullName + " components found in scene; Doing manual setup for offline mode", this );
                 return;
             }
         }
@@ -131,66 +150,95 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         // Hook up retargeting between those GameObjects and the destination Avatar.
         MecanimSetup( rootObjectName );
+        // Can't re-parent this until after Mecanim setup, or else Mecanim gets confused.
+        m_rootObject.transform.parent = this.StreamingClient.transform;
+        m_rootObject.transform.localPosition = Vector3.zero;
+        m_rootObject.transform.localRotation = Quaternion.identity;
+
+    }
+
+    private void ManualSetup()
+    {
+        CacheBoneNameMap(OptitrackBoneNameConvention.Motive, this.SkeletonAssetName);
+        m_skeletonDef = saveLoadManager.LoadSkeletonDefinition(savePathSkeletonDef);
+
+        // Create a hierarchy of GameObjects that will receive the skeletal pose data.
+        string rootObjectName = "OptiTrack Skeleton - " + this.SkeletonAssetName;
+        m_rootObject = new GameObject(rootObjectName);
+
+        m_boneObjectMap = new Dictionary<Int32, GameObject>(m_skeletonDef.Bones.Count);
+
+        for (int boneDefIdx = 0; boneDefIdx < m_skeletonDef.Bones.Count; ++boneDefIdx)
+        {
+            OptitrackSkeletonDefinition.BoneDefinition boneDef = m_skeletonDef.Bones[boneDefIdx];
+
+            GameObject boneObject = new GameObject(boneDef.Name);
+            boneObject.transform.parent = boneDef.ParentId == 0 ? m_rootObject.transform : m_boneObjectMap[boneDef.ParentId].transform;
+            boneObject.transform.localPosition = boneDef.Offset;
+            m_boneObjectMap[boneDef.Id] = boneObject;
+        }
+
+        // Hook up retargeting between those GameObjects and the destination Avatar.
+        MecanimSetup(rootObjectName);
 
         // Can't re-parent this until after Mecanim setup, or else Mecanim gets confused.
         m_rootObject.transform.parent = this.StreamingClient.transform;
         m_rootObject.transform.localPosition = Vector3.zero;
         m_rootObject.transform.localRotation = Quaternion.identity;
-    }
 
+    }
 
     void Update()
     {
-
-        OptitrackSkeletonState skelState = StreamingClient.GetLatestSkeletonState( m_skeletonDef.Id );
-        
-        if (skelState == null)
+        if (useMotive)
         {
-            return;
+            skelState = StreamingClient.GetLatestSkeletonState(m_skeletonDef.Id);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            OptitrackSkeletonState tempState = (OptitrackSkeletonState) skelState.Clone();
-            useTemp = !useTemp;
+            StartCoroutine(RecordTakeCoroutine());
         }
-        
         if (Input.GetKeyDown(KeyCode.R))
         {
             recording = !recording;
             if (recording)
             {
-                skeletonStateBuffer.Clear();
+                saveLoadManager.skeletonStateBuffer.Clear();
                 Debug.Log("start recording motion");
             }
             else
             {
+                saveLoadManager.SaveSkeletonDefinition(this.m_skeletonDef, savePathSkeletonDef);
                 Debug.Log("stop recording motion");
             }
         }
+
 
         if (Input.GetKeyDown(KeyCode.P))
         {
             playRecording = !playRecording;
             Debug.Log("Playing recording");
-            Debug.Log(skeletonStateBuffer.Count);
+            Debug.Log(saveLoadManager.skeletonStateBuffer.Count());
             if (playRecording)
             {
                 skeletonStateBufferIndex = 0;
             }
         }
-
-        if (useTemp)
+        
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            skelState = tempState;
+            Debug.Log("M pressed");
+            saveLoadManager.LoadSkeletonStatesBuffer(savePathSkeletonStates);
         }
 
+        
         if (recording)
         {
             OptitrackSkeletonState newSkeletonState = new OptitrackSkeletonState
             {
-                BonePoses = new Dictionary<Int32, OptitrackPose>(),
-                LocalBonePoses = new Dictionary<int, OptitrackPose>(),
+                BonePoses = new SerializableDictionary<Int32, OptitrackPose>(),
+                LocalBonePoses = new SerializableDictionary<int, OptitrackPose>(),
             };
 
             foreach (KeyValuePair<Int32, OptitrackPose> pair in skelState.BonePoses)
@@ -211,55 +259,79 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 });
             }
 
-            skeletonStateBuffer.Add(newSkeletonState);
+            saveLoadManager.skeletonStateBuffer.stateList.Add(newSkeletonState);
         }
         
         if (playRecording)
         {
-            
-            for (int i = 0; i < m_skeletonDef.Bones.Count; ++i)
-            {
-                Int32 boneId = m_skeletonDef.Bones[i].Id;
-
-                OptitrackPose bonePose;
-                GameObject boneObject;
-
-                bool foundPose = false;
-                if (StreamingClient.SkeletonCoordinates == StreamingCoordinatesValues.Global)
-                {
-                    // Use global skeleton coordinates
-                    foundPose = skeletonStateBuffer[skeletonStateBufferIndex].LocalBonePoses.TryGetValue(boneId, out bonePose);
-                }
-                else
-                {
-                    // Use local skeleton coordinates
-                    foundPose = skeletonStateBuffer[skeletonStateBufferIndex].BonePoses.TryGetValue(boneId, out bonePose);
-                }
-
-                bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
-                if (foundPose && foundObject)
-                {
-                    boneObject.transform.localPosition = bonePose.Position;
-                    boneObject.transform.localRotation = bonePose.Orientation;
-                }
-            }
-
-            // Perform Mecanim retargeting.
-            if (m_srcPoseHandler != null && m_destPoseHandler != null)
-            {
-                // Interpret the streamed pose into Mecanim muscle space representation.
-                m_srcPoseHandler.GetHumanPose(ref m_humanPose);
-
-                // Re-target that muscle space pose to the destination avatar.
-                m_destPoseHandler.SetHumanPose(ref m_humanPose);
-            }
-
-            skeletonStateBufferIndex = (skeletonStateBufferIndex + 1) % skeletonStateBuffer.Count;
+            skelState = saveLoadManager.skeletonStateBuffer.stateList[skeletonStateBufferIndex];
+            AnimateSkeleton(skelState);
+            skeletonStateBufferIndex = (skeletonStateBufferIndex + 1) % saveLoadManager.skeletonStateBuffer.Count();
             return;
         }
 
+        AnimateSkeleton(skelState);
+    }
+
+    System.Collections.IEnumerator RecordTakeCoroutine()
+    {
+        for (int m = 1; m < 15; m++)
+        {
+            Debug.Log("Record Coroutine start");
+            StreamingClient.TimelineStop();
+            int takeLength = StreamingClient.GetTakeLength();
+            saveLoadManager.skeletonStateBuffer.Clear();
+            Debug.Log("take length: " + takeLength);
+        
+            StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_00" + m);
+            for ( int i = 0; i < takeLength; i++)
+            {
+                StreamingClient.SetFrame(i);
+                OptitrackSkeletonState skelState = StreamingClient.GetLatestSkeletonState(m_skeletonDef.Id);
+                OptitrackSkeletonState newSkeletonState = new OptitrackSkeletonState
+                {
+                    BonePoses = new SerializableDictionary<Int32, OptitrackPose>(),
+                    LocalBonePoses = new SerializableDictionary<int, OptitrackPose>(),
+                };
+
+                foreach (KeyValuePair<Int32, OptitrackPose> pair in skelState.BonePoses)
+                {
+                    newSkeletonState.BonePoses.Add(pair.Key, new OptitrackPose
+                    {
+                        Position = pair.Value.Position,
+                        Orientation = pair.Value.Orientation
+                    });
+                }
+
+                foreach (KeyValuePair<Int32, OptitrackPose> pair in skelState.LocalBonePoses)
+                {
+                    newSkeletonState.LocalBonePoses.Add(pair.Key, new OptitrackPose
+                    {
+                        Position = pair.Value.Position,
+                        Orientation = pair.Value.Orientation
+                    });
+                }
+
+                saveLoadManager.skeletonStateBuffer.stateList.Add(newSkeletonState);
+                yield return null;
+            }
+            saveLoadManager.SaveSkeletonStatesBuffer(Application.dataPath + "/SkeletonStates/" + skeletonStateName + m + ".json");
+        }
+    }
+
+    public void SetSkeletonFrame(int frame)
+    {
+        AnimateSkeleton(this.saveLoadManager.skeletonStateBuffer.stateList[frame]);
+    } 
+
+    public void AnimateSkeleton(OptitrackSkeletonState skelState)
+    {
+        if (skelState == null)
+        {
+            return;
+        }
         // Update the transforms of the bone GameObjects.
-        for ( int i = 0; i < m_skeletonDef.Bones.Count; ++i )
+        for (int i = 0; i < m_skeletonDef.Bones.Count; ++i)
         {
             Int32 boneId = m_skeletonDef.Bones[i].Id;
 
@@ -278,7 +350,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
             }
 
-            bool foundObject = m_boneObjectMap.TryGetValue( boneId, out boneObject );
+            bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
             if (foundPose && foundObject)
             {
                 boneObject.transform.localPosition = bonePose.Position;
@@ -287,19 +359,19 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         }
 
         // Perform Mecanim retargeting.
-        if ( m_srcPoseHandler != null && m_destPoseHandler != null )
+        if (m_srcPoseHandler != null && m_destPoseHandler != null)
         {
             // Interpret the streamed pose into Mecanim muscle space representation.
-            m_srcPoseHandler.GetHumanPose( ref m_humanPose );
+            m_srcPoseHandler.GetHumanPose(ref m_humanPose);
 
             // Re-target that muscle space pose to the destination avatar.
-            m_destPoseHandler.SetHumanPose( ref m_humanPose );
+            m_destPoseHandler.SetHumanPose(ref m_humanPose);
         }
-        
     }
 
-
     #region Private methods
+
+
     /// <summary>
     /// Constructs the source Avatar and pose handlers for Mecanim retargeting.
     /// </summary>
@@ -338,7 +410,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             skeletonBones.Add( rootBone );
         }
 
-        // Create remaining re-targeted bone definitions.
+        // Create remaining re-targeted bone iions.
         for ( int boneDefIdx = 0; boneDefIdx < m_skeletonDef.Bones.Count; ++boneDefIdx )
         {
             OptitrackSkeletonDefinition.BoneDefinition boneDef = m_skeletonDef.Bones[boneDefIdx];
@@ -431,6 +503,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         return Quaternion.identity;
     }
+
 
 
     /// <summary>
