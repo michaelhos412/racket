@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.Networking;
+using System.Text;
 
 public class SkeletonSaveLoadManager
 {
@@ -49,13 +51,13 @@ public class SkeletonSaveLoadManager
         Debug.Log("skeletonStateBuffer of length" + skeletonStateBuffer.Count() + " loaded!");
     }
 
-
     public void LoadSkeletonStatesBufferJson(string json)
     {
         Debug.Log("Reading skeletonstatesbuffer json file");
         this.skeletonStateBuffer = JsonUtility.FromJson<SkeletonStatesBuffer>(json);
         Debug.Log("skeletonStateBuffer of length" + skeletonStateBuffer.Count() + " loaded!");
     }
+
 
     public OptitrackSkeletonDefinition LoadSkeletonDefinition(string savePath)
     {
@@ -66,6 +68,35 @@ public class SkeletonSaveLoadManager
         return def;
     }
 
+    public OptitrackSkeletonDefinition LoadSkeletonDefinitionAndroid(string savePath)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(savePath);
+
+        www.SendWebRequest();
+        while (!www.downloadHandler.isDone)
+        {
+
+        }
+
+        OptitrackSkeletonDefinition def = JsonUtility.FromJson<OptitrackSkeletonDefinition>(www.downloadHandler.text);
+        Debug.Log("definition loaded from android");
+
+        return def;
+    }
+
+    public void LoadSkeletonStateJsonAndroid(string savePath)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(savePath);
+
+        www.SendWebRequest();
+        while (!www.downloadHandler.isDone)
+        {
+
+        }
+
+        this.skeletonStateBuffer = JsonUtility.FromJson<SkeletonStatesBuffer>(www.downloadHandler.text);
+        Debug.Log("state loaded from android of lenght" + this.skeletonStateBuffer.Count());
+    }
     public void SaveSkeletonDefinition(OptitrackSkeletonDefinition def, string savePath)
     {
         string json = JsonUtility.ToJson(def);
