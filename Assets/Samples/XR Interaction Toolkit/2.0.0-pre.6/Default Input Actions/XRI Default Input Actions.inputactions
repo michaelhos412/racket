@@ -1169,6 +1169,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Play Demo",
+            "id": "c0e87069-104d-4fa3-8cd3-3e92e141b246",
+            "actions": [
+                {
+                    "name": "PlayDemo",
+                    "type": "Button",
+                    "id": "73e9ea2e-6f52-41dc-b008-c1a35b777d85",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7224eb8e-ad26-4f71-adc3-72ed8147db07",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayDemo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -9,6 +9,8 @@ public class PauseGame : MonoBehaviour
     public GameObject Racket = null;
     public GameObject RightHand = null;
     public GameObject LaserPointer = null;
+    public GameObject MainMenu = null;
+    public GameObject PracticeMenu = null;
 
 
     public void Awake(){
@@ -24,5 +26,7 @@ public class PauseGame : MonoBehaviour
         Racket.SetActive(false);
         RightHand.SetActive(true);
         LaserPointer.SetActive(true);
+        MainMenu.SetActive(true);
+        PracticeMenu.SetActive(false);
     }
 }

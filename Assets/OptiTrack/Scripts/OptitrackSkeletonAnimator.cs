@@ -32,6 +32,9 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 {
 
     public TextAsset takeJson;
+    public TextAsset takeJsonForehand;
+    public TextAsset takeJsonDrive;
+
     /// <summary>The client object to use for receiving streamed skeletal pose data.</summary>
     [Tooltip("The object containing the OptiTrackStreamingClient script.")]
     public OptitrackStreamingClient StreamingClient;
@@ -90,15 +93,25 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     void Start()
     {
-        savePathSkeletonDef = Application.dataPath + "/SkeletonStates/definition.json";
-        savePathSkeletonStates = Application.dataPath + "/SkeletonStates/" + skeletonStateName + ".json";
-        savePathStreamingTransform = Application.dataPath + "/SkeletonStates/transform.json";
+        savePathSkeletonDef = Application.streamingAssetsPath + "/SkeletonStates/definition.json";
+        savePathSkeletonStates = Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + ".json";
+        savePathStreamingTransform = Application.streamingAssetsPath + "/SkeletonStates/transform.json";
+        
         if (!useMotive)
         {
             ManualSetup();
             if (takeJson.text.Length > 0)
             {
+#if UNITY_EDITOR || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
                 saveLoadManager.LoadSkeletonStatesBufferJson(takeJson.text);
+                Debug.Log("loading take " + takeJson.name + " " + saveLoadManager.skeletonStateBuffer.Count());
+
+#endif
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+
+                saveLoadManager.LoadSkeletonStateJsonAndroid(Application.streamingAssetsPath + "/SkeletonStates/13.json");
+#endif
             }
             return;
         }
@@ -160,8 +173,13 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     private void ManualSetup()
     {
         CacheBoneNameMap(OptitrackBoneNameConvention.Motive, this.SkeletonAssetName);
+#if UNITY_EDITOR || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
         m_skeletonDef = saveLoadManager.LoadSkeletonDefinition(savePathSkeletonDef);
+#endif
 
+#if UNITY_ANDROID && !UNITY_EDITOR
+        m_skeletonDef = saveLoadManager.LoadSkeletonDefinitionAndroid(savePathSkeletonDef);
+#endif
         // Create a hierarchy of GameObjects that will receive the skeletal pose data.
         string rootObjectName = "OptiTrack Skeleton - " + this.SkeletonAssetName;
         m_rootObject = new GameObject(rootObjectName);
@@ -195,9 +213,13 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             skelState = StreamingClient.GetLatestSkeletonState(m_skeletonDef.Id);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             StartCoroutine(RecordTakeCoroutine());
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(PlayRecording());
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -229,7 +251,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             Debug.Log("M pressed");
-            saveLoadManager.LoadSkeletonStatesBuffer(savePathSkeletonStates);
+            saveLoadManager.LoadSkeletonStatesBufferJson(takeJson.text);
         }
 
         
@@ -272,6 +294,58 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         AnimateSkeleton(skelState);
     }
+    
+    public void OnClickPlayRecording()
+    {
+        StartCoroutine(PlayRecording());
+    }
+
+    public void OnClickLoadForehand()
+    {
+        saveLoadManager.LoadSkeletonStatesBufferJson(takeJsonForehand.text);
+    }
+
+    public void OnClickLoadDrive()
+    {
+        saveLoadManager.LoadSkeletonStatesBufferJson(takeJsonDrive.text);
+    }
+
+    System.Collections.IEnumerator PlayRecording()
+    {
+        Debug.Log("Playing recording");
+        if (saveLoadManager.skeletonStateBuffer.Count() == 0)
+        {
+            Debug.Log("skeletonStateBuffer length is zero");
+            yield return 0;
+        }
+        int lastFrame = -1;
+        float counter = 0.0f;
+        float totalFrames = saveLoadManager.skeletonStateBuffer.Count();
+        float recordingTime =  totalFrames / 240f;
+        OptitrackPose bonePose;
+        bool foundPose;
+        while (counter < recordingTime)
+        {
+            int frame = Mathf.RoundToInt(counter / recordingTime * totalFrames);
+            if (frame > totalFrames - 1)
+            {
+                yield return 0;
+                break;
+            }
+            if(lastFrame == frame)
+            {
+                counter += Time.deltaTime;
+                yield return null;
+                continue;
+            }
+
+            lastFrame = frame;
+            foundPose = saveLoadManager.skeletonStateBuffer.stateList[frame].LocalBonePoses.TryGetValue(1, out bonePose);
+            AnimateSkeleton(saveLoadManager.skeletonStateBuffer.stateList[frame]);
+            counter += Time.deltaTime;
+            yield return null;
+        }
+    }
 
     System.Collections.IEnumerator RecordTakeCoroutine()
     {
@@ -279,15 +353,29 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         {
             Debug.Log("Record Coroutine start");
             StreamingClient.TimelineStop();
+            yield return new WaitForSeconds(0.01f);
+            if (m > 9)
+            {
+                StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_0" + m);
+
+            }
+            else
+            {
+                StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_00" + m);
+            }
             int takeLength = StreamingClient.GetTakeLength();
+            yield return new WaitForSeconds(0.01f);
             saveLoadManager.skeletonStateBuffer.Clear();
             Debug.Log("take length: " + takeLength);
         
-            StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_00" + m);
+           
             for ( int i = 0; i < takeLength; i++)
             {
                 StreamingClient.SetFrame(i);
+                yield return new WaitForSeconds(0.01f);
                 OptitrackSkeletonState skelState = StreamingClient.GetLatestSkeletonState(m_skeletonDef.Id);
+                yield return new WaitForSeconds(0.01f);
+
                 OptitrackSkeletonState newSkeletonState = new OptitrackSkeletonState
                 {
                     BonePoses = new SerializableDictionary<Int32, OptitrackPose>(),
@@ -311,11 +399,11 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                         Orientation = pair.Value.Orientation
                     });
                 }
-
+                AnimateSkeleton(newSkeletonState);
                 saveLoadManager.skeletonStateBuffer.stateList.Add(newSkeletonState);
                 yield return null;
             }
-            saveLoadManager.SaveSkeletonStatesBuffer(Application.dataPath + "/SkeletonStates/" + skeletonStateName + m + ".json");
+            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + m + ".json");
         }
     }
 
@@ -351,6 +439,10 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
 
             bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
+            if(boneId == 1)
+            {
+                //Debug.Log(bonePose.Position.x);
+            }
             if (foundPose && foundObject)
             {
                 boneObject.transform.localPosition = bonePose.Position;
@@ -369,7 +461,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         }
     }
 
-    #region Private methods
+#region Private methods
 
 
     /// <summary>
@@ -709,6 +801,6 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 break;
         }
     }
-    #endregion Private methods
+#endregion Private methods
     
 }
