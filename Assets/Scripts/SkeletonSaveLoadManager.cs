@@ -19,7 +19,6 @@ public class SkeletonSaveLoadManager
         {
             stateList.Clear();
         }
-
         public int Count()
         {
             return stateList.Count;
