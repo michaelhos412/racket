@@ -7,13 +7,22 @@ public class ResetShuttlecock : MonoBehaviour
 {
     public InputActionReference toggleReference = null;
 
-    public Vector3 position;
+    public List<Vector3> positionList = new List<Vector3>();
 
     private Rigidbody rb;
-
+    private int positionIndex = 0;
+    private Vector3 shuttlecockRotation = new Vector3(109f, 0f, 0f);
     public void Start(){
         rb = gameObject.GetComponent<Rigidbody>();
         toggleReference.action.started += Toggle;
+    }
+
+    public void Update()
+    {
+        if(gameObject.transform.localPosition.y <= 0.1f)
+        {
+            resetShuttlecock();
+        }
     }
 
     public void onDestroy(){
@@ -21,9 +30,16 @@ public class ResetShuttlecock : MonoBehaviour
     }
 
     private void Toggle(InputAction.CallbackContext context){
-        gameObject.transform.position = position;
+        resetShuttlecock();
+    }
+
+    private void resetShuttlecock()
+    {
+        gameObject.transform.position = positionList[positionIndex];
+        gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        positionIndex = (positionIndex + 1) % positionList.Count;
     }
 }
