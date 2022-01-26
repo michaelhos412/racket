@@ -21,6 +21,15 @@ public class ReplayController : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext context)
     {
-        yBot.OnClickPlayRecording();
+        Debug.Log("Spawning and playing 1");
+        StartCoroutine(SpawnAndPlayRecording());
+    }
+
+    private IEnumerator SpawnAndPlayRecording()
+    {
+        Debug.Log("Spawning and playing");
+        yBot.ToggleBotVisibility();
+        yield return StartCoroutine(yBot.PlayRecording());
+        yBot.ToggleBotVisibility();
     }
 }
