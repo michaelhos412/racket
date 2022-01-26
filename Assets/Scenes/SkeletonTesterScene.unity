@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7805085, g: 0.78051883, b: 0.780494, a: 1}
+  m_IndirectSpecularColor: {r: 0.78050727, g: 0.7805178, b: 0.78049296, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -228,7 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeJson: {fileID: 4900000, guid: 2ab7ae1d185a8614db2fefe91759e963, type: 3}
+  takeJson: {fileID: 4900000, guid: e9e78832186a8dd42913ee192a51cb50, type: 3}
+  takeJsonForehand: {fileID: 0}
+  takeJsonDrive: {fileID: 0}
   StreamingClient: {fileID: 794613756}
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
@@ -882,7 +884,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeJson: {fileID: 4900000, guid: c12c766f1ffd51045a444ac01222f1d4, type: 3}
+  takeJson: {fileID: 4900000, guid: ce71ec5a8a0d0974799a4c55307da5da, type: 3}
+  takeJsonForehand: {fileID: 0}
+  takeJsonDrive: {fileID: 0}
   StreamingClient: {fileID: 794613756}
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
