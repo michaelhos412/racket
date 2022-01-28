@@ -228,13 +228,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeJson: {fileID: 4900000, guid: e9e78832186a8dd42913ee192a51cb50, type: 3}
+  takeJson: {fileID: 4900000, guid: 2d34edef1d9667244b24513de88e6210, type: 3}
   takeJsonForehand: {fileID: 0}
   takeJsonDrive: {fileID: 0}
   StreamingClient: {fileID: 794613756}
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
   useMotive: 0
+  isVisible: 0
 --- !u!1 &259510722
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +892,7 @@ MonoBehaviour:
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
   useMotive: 0
+  isVisible: 0
 --- !u!1001 &1111964543
 PrefabInstance:
   m_ObjectHideFlags: 0
