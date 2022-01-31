@@ -223,6 +223,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(PlayRecording());
+            return;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -367,6 +368,8 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
 
             lastFrame = frame;
+            Debug.Log("frame: " + frame);
+
             AnimateSkeleton(saveLoadManager.skeletonStateBuffer.stateList[frame]);
             counter += Time.deltaTime;
             yield return null;
@@ -449,19 +452,16 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             if (StreamingClient.SkeletonCoordinates == StreamingCoordinatesValues.Global)
             {
                 // Use global skeleton coordinates
-                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
+                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
             }
             else
             {
                 // Use local skeleton coordinates
-                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
+                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
             }
 
             bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
-            if(boneId == 1)
-            {
-                //Debug.Log(bonePose.Position.x);
-            }
+            
             if (foundPose && foundObject)
             {
                 boneObject.transform.localPosition = bonePose.Position;

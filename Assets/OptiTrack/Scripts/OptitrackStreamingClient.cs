@@ -1455,7 +1455,7 @@ public class OptitrackStreamingClient : MonoBehaviour
         {
             OptitrackSkeletonState newSkeletonState = new OptitrackSkeletonState {
                 BonePoses = new SerializableDictionary<Int32, OptitrackPose>(),
-                LocalBonePoses = new SerializableDictionary<int, OptitrackPose>(),
+                LocalBonePoses = new SerializableDictionary<Int32, OptitrackPose>(),
             };
 
             m_latestSkeletonStates[skeletonId] = newSkeletonState;
