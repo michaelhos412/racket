@@ -234,7 +234,7 @@ MonoBehaviour:
   StreamingClient: {fileID: 794613756}
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
-  useMotive: 0
+  useMotive: 1
   isVisible: 0
 --- !u!1 &259510722
 GameObject:
@@ -534,7 +534,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79,
         type: 3}
+      propertyPath: DrawMarkers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79,
+        type: 3}
       propertyPath: SkeletonCoordinates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79,
+        type: 3}
+      propertyPath: BoneNamingConvention
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

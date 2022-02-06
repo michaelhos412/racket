@@ -218,7 +218,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            //StartCoroutine(RecordTakeCoroutine());
+            StartCoroutine(RecordTakeCoroutine());
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -383,7 +383,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             Debug.Log("Record Coroutine start");
             StreamingClient.TimelineStop();
             yield return new WaitForSeconds(0.01f);
-            StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_015");
+            //StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_015");
 
             int takeLength = StreamingClient.GetTakeLength();
             yield return new WaitForSeconds(0.01f);
@@ -425,7 +425,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 saveLoadManager.skeletonStateBuffer.stateList.Add(newSkeletonState);
                 yield return null;
             }
-            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + "15" + ".json");
+            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + "TestGlobal" + ".json");
         }
     }
 

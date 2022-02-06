@@ -240,7 +240,7 @@ public class OptitrackStreamingClient : MonoBehaviour
     public ClientConnectionType ConnectionType;
 
     [Tooltip("Controls whether skeleton data is streamed with local or global coordinates.")]
-    public StreamingCoordinatesValues SkeletonCoordinates = StreamingCoordinatesValues.Local;
+    public StreamingCoordinatesValues SkeletonCoordinates = StreamingCoordinatesValues.Global;
 
     [Tooltip("Controls the Bone Naming Convention in the streamed data.")]
     public OptitrackBoneNameConvention BoneNamingConvention = OptitrackBoneNameConvention.Motive;
@@ -911,14 +911,14 @@ public class OptitrackStreamingClient : MonoBehaviour
             m_client.Connect( connType, localAddr, serverAddr );
             
             // Remotely change the Skeleton Coordinate property to Global/Local
-            if (SkeletonCoordinates == StreamingCoordinatesValues.Global) 
-            {
-                m_client.RequestCommand("SetProperty,,Skeleton Coordinates,false");
-            }
-            else
-            {
-                m_client.RequestCommand("SetProperty,,Skeleton Coordinates,true");
-            }
+            //if (SkeletonCoordinates == StreamingCoordinatesValues.Global) 
+            //{
+            //    m_client.RequestCommand("SetProperty,,Skeleton Coordinates,false");
+            //}
+            //else
+            //{
+            //    m_client.RequestCommand("SetProperty,,Skeleton Coordinates,true");
+            //}
 
             // Remotely change the Bone Naming Convention to Motive/FBX/BVH 
             if(BoneNamingConvention == OptitrackBoneNameConvention.Motive)
