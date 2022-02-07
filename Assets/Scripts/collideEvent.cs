@@ -35,7 +35,6 @@ public class collideEvent : MonoBehaviour
         int index = Mathf.Min(racketPositions.Count - 1, positionTrackingDepthInFrames - 1);
         if (index < 0)
             return;
-
         Vector3 racketVelocity =
             (transform.position - racketPositions[index]) /
             (float) positionTrackingDepthInFrames; 
