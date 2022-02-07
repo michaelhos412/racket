@@ -228,11 +228,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeJson: {fileID: 4900000, guid: 2ab7ae1d185a8614db2fefe91759e963, type: 3}
+  takeJson: {fileID: 4900000, guid: 9aa1718fe9fd4094e88164507a5f0952, type: 3}
+  takeJsonForehand: {fileID: 0}
+  takeJsonDrive: {fileID: 0}
   StreamingClient: {fileID: 794613756}
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
-  useMotive: 0
+  useMotive: 1
+  isVisible: 0
 --- !u!1 &259510722
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +531,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79,
+        type: 3}
+      propertyPath: DrawMarkers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79,
+        type: 3}
+      propertyPath: SkeletonCoordinates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79,
+        type: 3}
+      propertyPath: BoneNamingConvention
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a32d482689653847b22155fb3096f79, type: 3}
@@ -882,11 +900,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeJson: {fileID: 4900000, guid: c12c766f1ffd51045a444ac01222f1d4, type: 3}
+  takeJson: {fileID: 4900000, guid: ce71ec5a8a0d0974799a4c55307da5da, type: 3}
+  takeJsonForehand: {fileID: 0}
+  takeJsonDrive: {fileID: 0}
   StreamingClient: {fileID: 794613756}
   SkeletonAssetName: michael_baseline
   DestinationAvatar: {fileID: 9000000, guid: 235859e8ecf03d345812305055223d87, type: 3}
   useMotive: 0
+  isVisible: 0
 --- !u!1001 &1111964543
 PrefabInstance:
   m_ObjectHideFlags: 0

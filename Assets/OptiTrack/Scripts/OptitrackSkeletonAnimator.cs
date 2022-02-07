@@ -83,6 +83,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     private int skeletonStateBufferIndex;
 
+    public bool isVisible = true;
     private bool recording = false;
     private bool playRecording = false;
     private string skeletonStateName = "";
@@ -96,7 +97,9 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         savePathSkeletonDef = Application.streamingAssetsPath + "/SkeletonStates/definition.json";
         savePathSkeletonStates = Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + ".json";
         savePathStreamingTransform = Application.streamingAssetsPath + "/SkeletonStates/transform.json";
-        
+
+        ToggleBotVisibility();
+
         if (!useMotive)
         {
             ManualSetup();
@@ -220,6 +223,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(PlayRecording());
+            return;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -295,6 +299,20 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         AnimateSkeleton(skelState);
     }
     
+    public void ToggleBotVisibility()
+    {
+        if (isVisible)
+        {
+            gameObject.transform.localScale -= gameObject.transform.localScale;
+        }
+        else
+        {
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        isVisible = !isVisible;
+
+    }
+
     public void OnClickPlayRecording()
     {
         StartCoroutine(PlayRecording());
@@ -302,15 +320,27 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     public void OnClickLoadForehand()
     {
+#if UNITY_EDITOR || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
         saveLoadManager.LoadSkeletonStatesBufferJson(takeJsonForehand.text);
+#endif
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        saveLoadManager.LoadSkeletonStateJsonAndroid(Application.streamingAssetsPath + "/SkeletonStates/13.json");
+#endif
     }
 
     public void OnClickLoadDrive()
     {
+#if UNITY_EDITOR || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
         saveLoadManager.LoadSkeletonStatesBufferJson(takeJsonDrive.text);
+#endif
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        saveLoadManager.LoadSkeletonStateJsonAndroid(Application.streamingAssetsPath + "/SkeletonStates/15.json");
+#endif
     }
 
-    System.Collections.IEnumerator PlayRecording()
+    public System.Collections.IEnumerator PlayRecording()
     {
         Debug.Log("Playing recording");
         if (saveLoadManager.skeletonStateBuffer.Count() == 0)
@@ -322,8 +352,6 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         float counter = 0.0f;
         float totalFrames = saveLoadManager.skeletonStateBuffer.Count();
         float recordingTime =  totalFrames / 240f;
-        OptitrackPose bonePose;
-        bool foundPose;
         while (counter < recordingTime)
         {
             int frame = Mathf.RoundToInt(counter / recordingTime * totalFrames);
@@ -340,7 +368,8 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
 
             lastFrame = frame;
-            foundPose = saveLoadManager.skeletonStateBuffer.stateList[frame].LocalBonePoses.TryGetValue(1, out bonePose);
+            Debug.Log("frame: " + frame);
+
             AnimateSkeleton(saveLoadManager.skeletonStateBuffer.stateList[frame]);
             counter += Time.deltaTime;
             yield return null;
@@ -349,20 +378,13 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     System.Collections.IEnumerator RecordTakeCoroutine()
     {
-        for (int m = 1; m < 15; m++)
+        for (int m = 0; m < 1; m++)
         {
             Debug.Log("Record Coroutine start");
             StreamingClient.TimelineStop();
             yield return new WaitForSeconds(0.01f);
-            if (m > 9)
-            {
-                StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_0" + m);
+            //StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_015");
 
-            }
-            else
-            {
-                StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_00" + m);
-            }
             int takeLength = StreamingClient.GetTakeLength();
             yield return new WaitForSeconds(0.01f);
             saveLoadManager.skeletonStateBuffer.Clear();
@@ -403,7 +425,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 saveLoadManager.skeletonStateBuffer.stateList.Add(newSkeletonState);
                 yield return null;
             }
-            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + m + ".json");
+            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + "TestGlobal" + ".json");
         }
     }
 
@@ -430,19 +452,16 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             if (StreamingClient.SkeletonCoordinates == StreamingCoordinatesValues.Global)
             {
                 // Use global skeleton coordinates
-                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
+                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
             }
             else
             {
                 // Use local skeleton coordinates
-                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
+                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
             }
 
             bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
-            if(boneId == 1)
-            {
-                //Debug.Log(bonePose.Position.x);
-            }
+            
             if (foundPose && foundObject)
             {
                 boneObject.transform.localPosition = bonePose.Position;
