@@ -218,7 +218,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(RecordTakeCoroutine());
+            // StartCoroutine(RecordTakeCoroutine());
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
