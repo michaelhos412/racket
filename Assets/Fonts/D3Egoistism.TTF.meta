@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6e6e186180521b42ab162701f90e365
+guid: cb810dc62b0fbd14fb2f280e43d94be6
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - a Atmospheric
+  - D3 Egoistism
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
