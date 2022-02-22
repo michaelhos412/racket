@@ -218,11 +218,12 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            //StartCoroutine(RecordTakeCoroutine());
+            // StartCoroutine(RecordTakeCoroutine());
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(PlayRecording());
+            return;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -367,6 +368,8 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
 
             lastFrame = frame;
+            Debug.Log("frame: " + frame);
+
             AnimateSkeleton(saveLoadManager.skeletonStateBuffer.stateList[frame]);
             counter += Time.deltaTime;
             yield return null;
@@ -380,7 +383,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             Debug.Log("Record Coroutine start");
             StreamingClient.TimelineStop();
             yield return new WaitForSeconds(0.01f);
-            StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_015");
+            //StreamingClient.SetTake("Take 2021-11-10 08.42.34 PM_015");
 
             int takeLength = StreamingClient.GetTakeLength();
             yield return new WaitForSeconds(0.01f);
@@ -422,7 +425,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
                 saveLoadManager.skeletonStateBuffer.stateList.Add(newSkeletonState);
                 yield return null;
             }
-            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + "15" + ".json");
+            saveLoadManager.SaveSkeletonStatesBuffer(Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + "TestGlobal" + ".json");
         }
     }
 
@@ -449,19 +452,16 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             if (StreamingClient.SkeletonCoordinates == StreamingCoordinatesValues.Global)
             {
                 // Use global skeleton coordinates
-                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
+                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
             }
             else
             {
                 // Use local skeleton coordinates
-                foundPose = skelState.BonePoses.TryGetValue(boneId, out bonePose);
+                foundPose = skelState.LocalBonePoses.TryGetValue(boneId, out bonePose);
             }
 
             bool foundObject = m_boneObjectMap.TryGetValue(boneId, out boneObject);
-            if(boneId == 1)
-            {
-                //Debug.Log(bonePose.Position.x);
-            }
+            
             if (foundPose && foundObject)
             {
                 boneObject.transform.localPosition = bonePose.Position;
