@@ -24,7 +24,7 @@ public class SkeletonTester : MonoBehaviour
             //Debug.Log(bot1.saveLoadManager.skeletonStateBuffer.stateList[0].BonePoses.TryGetValue();
             //Debug.Log(bot1.saveLoadManager.skeletonStateBuffer.stateList[0].LocalBonePoses);
             for (int i = 1 ; i < 21 ; i++){
-            Debug.Log(evaluation.GetHighestLeftElbow(bot1.saveLoadManager.skeletonStateBuffer.stateList,i));
+           // Debug.Log(evaluation.GetHighestLeftElbow(bot1.saveLoadManager.skeletonStateBuffer.stateList,i));
             }
         }
     }

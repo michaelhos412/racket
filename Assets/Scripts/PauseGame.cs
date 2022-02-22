@@ -11,6 +11,14 @@ public class PauseGame : MonoBehaviour
     public GameObject LaserPointer = null;
     public GameObject MainMenu = null;
     public GameObject PracticeMenu = null;
+    public GameObject timer = null;
+    public GameObject score = null;
+    private collideEvent _racketScript;
+
+    void Start()
+     {
+         _racketScript = Racket.GetComponent<collideEvent>();
+     }
 
 
     public void Awake(){
@@ -28,5 +36,10 @@ public class PauseGame : MonoBehaviour
         LaserPointer.SetActive(true);
         MainMenu.SetActive(true);
         PracticeMenu.SetActive(false);
+        timer.SetActive(false);
+        score.SetActive(false);
+        _racketScript.scoreAmount = 0;
+        _racketScript.timeToDisplay = 120;
+
     }
 }

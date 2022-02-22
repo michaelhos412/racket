@@ -35,7 +35,9 @@ public class ResetShuttlecock : MonoBehaviour
 
     private void resetShuttlecock()
     {
-        gameObject.transform.position = positionList[positionIndex];
+        // gameObject.transform.position = positionList[positionIndex];
+        // gameObject.transform.position = new Vector3(1.0196f, 0.403f, 3.406f);
+        gameObject.transform.position = new Vector3(1.06f, 0.307f, 3.639f);
         gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
