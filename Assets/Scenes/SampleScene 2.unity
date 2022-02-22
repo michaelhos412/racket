@@ -184,7 +184,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d6e6e186180521b42ab162701f90e365, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -3443,7 +3443,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d6e6e186180521b42ab162701f90e365, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -3994,17 +3994,17 @@ PrefabInstance:
     - target: {fileID: 1321866610173575166, guid: 0448b37cf3da1a043a3788d2f8676e65,
         type: 3}
       propertyPath: m_Center.x
-      value: -1.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1321866610173575166, guid: 0448b37cf3da1a043a3788d2f8676e65,
         type: 3}
       propertyPath: m_Center.y
-      value: -3.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1321866610173575166, guid: 0448b37cf3da1a043a3788d2f8676e65,
         type: 3}
       propertyPath: m_Center.z
-      value: -2.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5320603786534193616, guid: 0448b37cf3da1a043a3788d2f8676e65,
         type: 3}
@@ -4986,7 +4986,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d6e6e186180521b42ab162701f90e365, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -5538,7 +5538,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d6e6e186180521b42ab162701f90e365, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -5762,7 +5762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d6e6e186180521b42ab162701f90e365, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
