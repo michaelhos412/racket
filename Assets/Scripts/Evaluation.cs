@@ -39,32 +39,25 @@ public class Evaluation
     public float GetJointAngle( List<OptitrackSkeletonState> stateList, int time_point, List<int> pivot_indexes){
     // time_point : frame number to be analyzed
     // pivot_indexes : id of bone as pivot for joint angles
+        OptitrackPose pose_a, pose_b, pose_c;
 
-        // float angle = 0.0f; 
-        
-        // Vector3 a = stateList[time_point].BonePoses.values[pivot_indexes[0]].Position;
-        Vector3 a = stateList[time_point].BonePoses.values[pivot_indexes[0]].Position;
-        Vector3 b = stateList[time_point].BonePoses.values[pivot_indexes[1]].Position;
-        Vector3 c = stateList[time_point].BonePoses.values[pivot_indexes[2]].Position;
+        bool temp_a = stateList[time_point].BonePoses.TryGetValue(pivot_indexes[0], out pose_a);
+        bool temp_b = stateList[time_point].BonePoses.TryGetValue(pivot_indexes[1], out pose_b);
+        bool temo_c = stateList[time_point].BonePoses.TryGetValue(pivot_indexes[2], out pose_c);
+        Vector3 bonePose_a = pose_a.Position;
+        Vector3 bonePose_b = pose_b.Position;
+        Vector3 bonePose_c = pose_c.Position;
 
-        Vector3 d = stateList[time_point].BonePoses.values[20].Position;
-        Vector3 u = c-b;
-        Vector3 v = a-b;
+        Vector3 u = bonePose_c - bonePose_b;
+        Vector3 v = bonePose_a - bonePose_b; 
+
 
         float angleBetween = 0.0f; 
         angleBetween = Vector3.Angle(u, v); 
         //Debug.Log("Angle: " + angleBetween);
         //Debug.Log("d: " + d);
 
-        // Debug.Log("def" + def.BoneIdToParentIdMap);
-
-        // for (int i = 0 ; i < stateList.Count ; i++){
-
-
-        //     Debug.Log("Bone Pose frame: " + i + ", bone: " + 1 + " is " + stateList[i].BonePoses.values[5].Position.y);
-        //     // Debug.Log("Local Bone Pose frame: " + i + ", bone: " + 1+ " is " + f);
-        // }
-        getGlobalPosition(stateList, time_point, pivot_indexes[0]);
+        Debug.Log("Angle: " + angleBetween);
         return angleBetween;
 
     }
