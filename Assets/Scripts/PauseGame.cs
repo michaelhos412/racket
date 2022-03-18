@@ -38,8 +38,6 @@ public class PauseGame : MonoBehaviour
         PracticeMenu.SetActive(false);
         timer.SetActive(false);
         score.SetActive(false);
-        _racketScript.scoreAmount = 0;
-        _racketScript.timeToDisplay = 120;
 
     }
 }
