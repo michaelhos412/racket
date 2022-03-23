@@ -11,14 +11,14 @@ public class StartTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // timer.text = minute.ToString() + ":" + seconds.ToString();
+        // time.text = minute.ToString() + ":" + seconds.ToString();
     }
 
     void Update(){
      
         // If the next update is reached
         if(Time.time>=nextUpdate){
-            Debug.Log(Time.time+">="+nextUpdate);
+            // Debug.Log(Time.time+">="+nextUpdate);
             // Change the next update (current second+1)
             nextUpdate=Mathf.FloorToInt(Time.time)+1;
             // Call your fonction

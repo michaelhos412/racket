@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class ResetShuttlecock : MonoBehaviour
 {
+    public FootworkDrill footworkDrill;
     public InputActionReference toggleReference = null;
 
-    public List<Vector3> positionList = new List<Vector3>();
 
     private Rigidbody rb;
     private int positionIndex = 0;
@@ -19,10 +19,10 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void Update()
     {
-        if(gameObject.transform.localPosition.y <= 0.1f)
-        {
-            resetShuttlecock();
-        }
+        // if(gameObject.transform.localPosition.y <= 0.1f)
+        // {
+        //     placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
+        // }
     }
 
     public void onDestroy(){
@@ -30,7 +30,7 @@ public class ResetShuttlecock : MonoBehaviour
     }
 
     private void Toggle(InputAction.CallbackContext context){
-        resetShuttlecock();
+        placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
     }
 
     private void resetShuttlecock()
@@ -42,6 +42,8 @@ public class ResetShuttlecock : MonoBehaviour
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        positionIndex = (positionIndex + 1) % positionList.Count;
     }
+     void OnCollisionEnter(Collision collision) {
+            footworkDrill.FootworkDrillShuttlecockCollideEvent();
+     }
 }

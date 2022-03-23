@@ -10,24 +10,13 @@ public class collideEvent : MonoBehaviour
     public float speedMultiplier = 550f; 
     public float normalInfluence = 0.05f; 
     public Text score;
-    public Text timeText;
-    public Text countdownText;
     public int scoreAmount = 100;
-    private int nextUpdate = 1;
-    public int timeToDisplay = 120;
     public GameObject countdown;
 
 
     void Update()
     {
-        score.text = string.Format("{0:000000}", scoreAmount);
-        if(Time.time>=nextUpdate){
-            Debug.Log(Time.time+">="+nextUpdate);
-            // Change the next update (current second+1)
-            nextUpdate=Mathf.FloorToInt(Time.time)+1;
-            // Call your fonction
-            UpdateEverySecond();
-        }
+        
 
         racketPositions.Insert(0, transform.position);
         if (racketPositions.Count > positionTrackingDepthInFrames)
@@ -39,16 +28,17 @@ public class collideEvent : MonoBehaviour
 
     private Rigidbody ballBody;
     public Vector3 com;
-    public GameObject comPoint;
+    //public GameObject comPoint;
     public GameObject popUpText;
 
 
     void Start()
     {
-        comPoint.transform.localPosition = com;
+        //comPoint.transform.localPosition = com;
         Rigidbody ballBody = ball.GetComponent<Rigidbody>();
         ballBody.centerOfMass = com;
         ballBody.Sleep();
+
     }
 
   
@@ -79,14 +69,8 @@ public class collideEvent : MonoBehaviour
         score.text = string.Format("{0:000000}", scoreAmount);
         
         countdown.SetActive(false);
-
+        
     }
 
-    void UpdateEverySecond()
-    {
-        timeToDisplay -= 1;
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-    }
+    
 }
