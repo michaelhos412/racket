@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5409219359385886110}
   - component: {fileID: 5120239692959039670}
   - component: {fileID: 2251299236982748846}
-  - component: {fileID: 6177888489324254888}
   m_Layer: 5
   m_Name: PointsIndicator
   m_TagString: Untagged
@@ -84,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5120239692959039670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,20 +120,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &6177888489324254888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423331099451857861}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c444b0d20a6424b9efb8e729ffb600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeText: {fileID: 8334535501308802726}
-  timeToDisplay: 120
 --- !u!1 &770266714207407360
 GameObject:
   m_ObjectHideFlags: 0

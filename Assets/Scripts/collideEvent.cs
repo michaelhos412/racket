@@ -29,8 +29,9 @@ public class collideEvent : MonoBehaviour
     private Rigidbody ballBody;
     public Vector3 com;
     //public GameObject comPoint;
-    public GameObject popUpText;
+    public GameObject ArrowHelper;
 
+    public DestroyArrow _arrowScript;
 
     void Start()
     {
@@ -69,7 +70,7 @@ public class collideEvent : MonoBehaviour
         score.text = string.Format("{0:000000}", scoreAmount);
         
         countdown.SetActive(false);
-        
+        Destroy(GameObject.FindWithTag("Arrow"));
     }
 
     

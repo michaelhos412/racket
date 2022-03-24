@@ -7,6 +7,7 @@ public class ResetShuttlecock : MonoBehaviour
 {
     public FootworkDrill footworkDrill;
     public InputActionReference toggleReference = null;
+    public GameObject arrowHelper;
 
 
     private Rigidbody rb;
@@ -33,11 +34,12 @@ public class ResetShuttlecock : MonoBehaviour
         placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
     }
 
-    private void resetShuttlecock()
-    {
+        public void placeShuttlecock(Vector3 pos){
         // gameObject.transform.position = positionList[positionIndex];
         // gameObject.transform.position = new Vector3(1.0196f, 0.403f, 3.406f);
-        gameObject.transform.position = new Vector3(1.06f, 0.307f, 3.639f);
+        // gameObject.transform.position = new Vector3(1.06f, 0.307f, 3.639f);
+        Instantiate(arrowHelper, gameObject.transform.localPosition, Quaternion.identity);
+        gameObject.transform.position = pos;
         gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
