@@ -9,6 +9,7 @@ public class ReplayController : MonoBehaviour
     public OptitrackSkeletonAnimator yBot = null;
     public GameObject AICoachMenuSelection = null;
     public GameObject yBotGameObject = null;
+    public GameObject pauseMenu = null;
 
  
 
@@ -25,6 +26,7 @@ public class ReplayController : MonoBehaviour
     private void Toggle(InputAction.CallbackContext context)
     {
         Debug.Log("Spawning and playing 1");
+        pauseMenu.SetActive(false);
         AICoachMenuSelection.SetActive(true);
         yBotGameObject.SetActive(true);
         StartCoroutine(SpawnAndPlayRecording());
