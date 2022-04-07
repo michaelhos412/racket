@@ -11,7 +11,7 @@ public class ReplayController : MonoBehaviour
     public GameObject yBotGameObject = null;
     public GameObject pauseMenu = null;
 
- 
+    public GameObject CloseMenu = null;
 
     public void Awake()
     {
@@ -29,6 +29,7 @@ public class ReplayController : MonoBehaviour
         pauseMenu.SetActive(false);
         AICoachMenuSelection.SetActive(true);
         yBotGameObject.SetActive(true);
+        CloseMenu.SetActive(true);
         StartCoroutine(SpawnAndPlayRecording());
     }
 
