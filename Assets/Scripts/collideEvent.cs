@@ -13,6 +13,9 @@ public class collideEvent : MonoBehaviour
     public int scoreAmount = 0;
     public GameObject countdown;
 
+    [Header("Audio")]
+    public AudioClip shuttlecockHit; 
+
 
     void Update()
     {
@@ -45,6 +48,9 @@ public class collideEvent : MonoBehaviour
   
     void OnCollisionEnter(Collision collision) {
         ball.GetComponent<Rigidbody>().useGravity = true;
+        Vector3 ballPosition = ball.transform.position;
+        AudioSource.PlayClipAtPoint(shuttlecockHit, ballPosition);
+
 
         int index = Mathf.Min(racketPositions.Count - 1, positionTrackingDepthInFrames - 1);
         if (index < 0)

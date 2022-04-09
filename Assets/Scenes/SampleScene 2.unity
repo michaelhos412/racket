@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.42422244, g: 0.47686946, b: 0.49996835, a: 1}
+  m_IndirectSpecularColor: {r: 0.4242202, g: 0.47686774, b: 0.49996638, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23847,6 +23847,7 @@ MonoBehaviour:
   score: {fileID: 1948707690}
   scoreAmount: 100
   countdown: {fileID: 1598870333}
+  shuttlecockSpawn: {fileID: 8300000, guid: 8a5b7bae438094f6a85304757ad068a0, type: 3}
   ball: {fileID: 848576244}
   myRacketBody: {fileID: 8526399187293115315}
   com: {x: 1.0196, y: 0.403, z: 2.821}
