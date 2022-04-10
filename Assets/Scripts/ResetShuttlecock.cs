@@ -12,18 +12,35 @@ public class ResetShuttlecock : MonoBehaviour
     private int positionIndex = 0;
     private Vector3 shuttlecockRotation = new Vector3(109f, 0f, 0f);
     public bool smashDefenseMode = false;
+    [Header("Canvas")]
     public GameObject TimerCanvas;
     public GameObject ScoreCanvas;
     public GameObject CountdownCanvas;
+    [Header("Racket")]
+    public GameObject Racket;
+    [Header("Left Hand")]
+    public GameObject Lefthand = null;
+    private StartTimer _timerScript;
+    private collideEvent _racketScript;
     enum Difficulty
     {
         Beginner,
         Skilled, 
         Expert,
     }
+
+    public enum GameModes 
+    {
+        Nothing,
+        SmashDefense,
+        ServiceDrill
+    }
+    public GameModes gameMode = GameModes.Nothing;
     Difficulty currentDifficulty  = Difficulty.Beginner;
     public List<Vector3> smashSpeeds = new List<Vector3>{ new Vector3(0f, -4f, 14f), new Vector3(0f, -7f, 17f), new Vector3(0f, -10f, 20f) };
     public void Start(){
+        _timerScript = TimerCanvas.GetComponent<StartTimer>();
+        _racketScript = Racket.GetComponent<collideEvent>();
         rb = gameObject.GetComponent<Rigidbody>();
         toggleReference.action.started += Toggle;
     }
@@ -34,6 +51,20 @@ public class ResetShuttlecock : MonoBehaviour
         // {
         //     placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
         // }
+        if (gameMode == GameModes.Nothing)
+        {
+            OnClickExitSmashDefenseMode();
+        }
+        // OVRInput.Update();
+        if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) != 0)
+        {
+            Debug.Log(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch));
+            gameObject.transform.position = Lefthand.transform.position + new Vector3(0.0f, 0.0f, -0.2f);
+        };
+        if(OVRInput.Get(OVRInput.Button.Four))
+        {
+            Debug.Log("Pressed");
+        };
     }
 
     public void onDestroy(){
@@ -42,12 +73,13 @@ public class ResetShuttlecock : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext context){
         Destroy(GameObject.FindWithTag("Arrow"));
-        if (smashDefenseMode == false){
-            placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
-        }
-        else{
+        if (gameMode == GameModes.SmashDefense)
+        {
             float shuttlecockXPos = Random.Range(-0.45f, 3.00f);
             StartCoroutine(smashCoroutine(new Vector3(shuttlecockXPos, 1.977f, -0.212f)));
+        }
+        else{
+            placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
         }
     }
 
@@ -63,7 +95,7 @@ public class ResetShuttlecock : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
     }
      void OnCollisionEnter(Collision collision) {
-         if (smashDefenseMode == false){
+         if (gameMode != GameModes.SmashDefense){
              footworkDrill.FootworkDrillShuttlecockCollideEvent();
          }
      }
@@ -88,28 +120,47 @@ public class ResetShuttlecock : MonoBehaviour
         }
      }
 
-    public void OnClickEnterSmashDefenseMode(){
+    public void OnClickEnterSmashDefenseMode()
+    {
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
-        smashDefenseMode = true;  
+        gameObject.SetActive(true);
+        gameMode = GameModes.SmashDefense;
+        _timerScript.timeToDisplay = 20;
+        _racketScript.scoreAmount = 0;  
 
         StartCoroutine(smashCoroutine(new Vector3(1.106f, 1.977f, -0.212f)));
     }
 
-    public void OnClickSmashBeginner(){
+    public void OnClickSmashBeginner()
+    {
         currentDifficulty = Difficulty.Beginner;
     }
-    public void OnClickSmashSkilled(){
+    public void OnClickSmashSkilled()
+    {
         currentDifficulty = Difficulty.Skilled;
     }
-    public void OnClickSmashExpert(){
+    public void OnClickSmashExpert()
+    {
         currentDifficulty = Difficulty.Expert;
     }
-    public void OnClickExitSmashDefenseMode(){
+    public void OnClickExitSmashDefenseMode()
+    {
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);
         CountdownCanvas.SetActive(false);
-        smashDefenseMode = false;
+        gameMode = GameModes.Nothing;
+        
+    }
+    public void OnClickEnterServiceDrill()
+    {
+        TimerCanvas.SetActive(true);
+        ScoreCanvas.SetActive(true);
+        CountdownCanvas.SetActive(true);
+        gameObject.SetActive(true);
+        gameMode = GameModes.ServiceDrill;
+        _timerScript.timeToDisplay = 20;
+        _racketScript.scoreAmount = 0;  
     }
 }

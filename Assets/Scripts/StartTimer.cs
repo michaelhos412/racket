@@ -68,7 +68,7 @@ public class StartTimer : MonoBehaviour
     public void OnClickResetTimer()
     {
         countdownText.text = "Start!";
-        timeToDisplay = totalTime;
+        timeToDisplay = 20;
     }
 
 }

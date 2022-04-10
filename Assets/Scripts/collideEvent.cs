@@ -32,9 +32,6 @@ public class collideEvent : MonoBehaviour
     private Rigidbody ballBody;
     public Vector3 com;
     //public GameObject comPoint;
-    public GameObject ArrowHelper;
-
-    public DestroyArrow _arrowScript;
 
     void Start()
     {
@@ -48,6 +45,7 @@ public class collideEvent : MonoBehaviour
   
     void OnCollisionEnter(Collision collision) {
         ball.GetComponent<Rigidbody>().useGravity = true;
+        Destroy(GameObject.FindWithTag("Arrow"));
         Vector3 ballPosition = ball.transform.position;
         AudioSource.PlayClipAtPoint(shuttlecockHit, ballPosition);
 
