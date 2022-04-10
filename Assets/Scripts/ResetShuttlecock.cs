@@ -22,6 +22,8 @@ public class ResetShuttlecock : MonoBehaviour
     public GameObject Lefthand = null;
     private StartTimer _timerScript;
     private collideEvent _racketScript;
+    [Header("Bots")]
+    public GameObject FwdStepR_FootworkDrill = null;
     enum Difficulty
     {
         Beginner,
@@ -33,7 +35,8 @@ public class ResetShuttlecock : MonoBehaviour
     {
         Nothing,
         SmashDefense,
-        ServiceDrill
+        ServiceDrill,
+        FootworkDrill
     }
     public GameModes gameMode = GameModes.Nothing;
     Difficulty currentDifficulty  = Difficulty.Beginner;
@@ -54,7 +57,9 @@ public class ResetShuttlecock : MonoBehaviour
         // }
         if (gameMode == GameModes.Nothing)
         {
+            // FwdStepR_FootworkDrill.SetActive(false);
             OnClickExitGameMode();
+
         }
         // OVRInput.Update();
         if (gameMode == GameModes.ServiceDrill){
@@ -166,6 +171,16 @@ public class ResetShuttlecock : MonoBehaviour
         CountdownCanvas.SetActive(true);
         gameObject.SetActive(true);
         gameMode = GameModes.ServiceDrill;
+        _timerScript.timeToDisplay = 20;
+        _racketScript.scoreAmount = 0;  
+    }
+    public void OnClickEnterFootworkDrill()
+    {
+        TimerCanvas.SetActive(true);
+        ScoreCanvas.SetActive(true);
+        CountdownCanvas.SetActive(true);
+        gameObject.SetActive(true);
+        gameMode = GameModes.FootworkDrill;
         _timerScript.timeToDisplay = 20;
         _racketScript.scoreAmount = 0;  
     }
