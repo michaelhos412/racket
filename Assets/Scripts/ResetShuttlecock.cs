@@ -47,24 +47,30 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void Update()
     {
+        gameObject.layer = 7;
         // if(gameObject.transform.localPosition.y <= 0.1f)
         // {
         //     placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
         // }
         if (gameMode == GameModes.Nothing)
         {
-            OnClickExitSmashDefenseMode();
+            OnClickExitGameMode();
         }
         // OVRInput.Update();
-        if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) != 0)
-        {
-            Debug.Log(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch));
-            gameObject.transform.position = Lefthand.transform.position + new Vector3(0.0f, 0.0f, -0.2f);
-        };
-        if(OVRInput.Get(OVRInput.Button.Four))
-        {
-            Debug.Log("Pressed");
-        };
+        if (gameMode == GameModes.ServiceDrill){
+            // hold shuttlecock
+            if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) != 0)
+            {  
+                // to make sure shuttlecock does not collide when being held.
+                gameObject.layer = 0;
+                gameObject.transform.position = Lefthand.transform.position + new Vector3(0.0f, 0.0f, -0.2f);
+            }
+            else
+            {
+                gameObject.layer = 7;
+            }
+        }
+        
     }
 
     public void onDestroy(){
@@ -145,7 +151,7 @@ public class ResetShuttlecock : MonoBehaviour
     {
         currentDifficulty = Difficulty.Expert;
     }
-    public void OnClickExitSmashDefenseMode()
+    public void OnClickExitGameMode()
     {
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);

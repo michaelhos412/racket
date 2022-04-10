@@ -10,7 +10,7 @@ public class collideEvent : MonoBehaviour
     public float speedMultiplier = 550f; 
     public float normalInfluence = 0.05f; 
     public Text score;
-    public int scoreAmount = 0;
+    public int scoreAmount = 100;
     public GameObject countdown;
 
     [Header("Audio")]
@@ -44,6 +44,7 @@ public class collideEvent : MonoBehaviour
 
   
     void OnCollisionEnter(Collision collision) {
+        Debug.Log("Collide");
         ball.GetComponent<Rigidbody>().useGravity = true;
         Destroy(GameObject.FindWithTag("Arrow"));
         Vector3 ballPosition = ball.transform.position;
