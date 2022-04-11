@@ -9,14 +9,18 @@ public class FootworkBotManager : MonoBehaviour
     Animation _animFwdR;
     Animator animFwdL;
     Animation _animFwdL;
+    Animator animBwd;
+    Animation _animBwd;
     [Header("Bots")]
     public GameObject FwdStepR_FootworkDrill = null;
     public GameObject FwdStepL_FootworkDrill = null;
+    public GameObject BwdStep_FootworkDrill = null;
     // Start is called before the first frame update
     void Start()
     {
         animFwdR = FwdStepR_FootworkDrill.GetComponent<Animator>();
         animFwdL = FwdStepL_FootworkDrill.GetComponent<Animator>();
+        animBwd = BwdStep_FootworkDrill.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,13 @@ public class FootworkBotManager : MonoBehaviour
         if (animFwdL.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
             FwdStepL_FootworkDrill.SetActive(false);
+            BwdStep_FootworkDrill.SetActive(true);
+            animBwd.Play("Base Layer.BwdStep", 0, 0);
+        }
+
+        if (animBwd.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        {
+            BwdStep_FootworkDrill.SetActive(false);
         }
     }
 }
