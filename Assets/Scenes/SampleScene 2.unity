@@ -5043,6 +5043,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: cef48b9471865f849a659047735fda70, type: 2}
     - target: {fileID: 9500000, guid: 066e6db7e2704674f897a4af9ccd305a, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 066e6db7e2704674f897a4af9ccd305a, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
@@ -8028,6 +8032,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 049ef9da832b4504abbeea060353c405, type: 2}
+    - target: {fileID: 9500000, guid: ec0e166c828b46149b2f8d774233c56e, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0e166c828b46149b2f8d774233c56e, type: 3}
 --- !u!4 &512683637 stripped
@@ -8658,6 +8666,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 903696968}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &568720945
 MonoBehaviour:
@@ -11468,6 +11488,42 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 903696968}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1550157608}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2083835302}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &755892446
 MonoBehaviour:
@@ -19537,6 +19593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e21a2cbc8350ac4b87ba32afd965197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shuttlecock: {fileID: 848576244}
   FwdStepR_FootworkDrill: {fileID: 300486960}
   FwdStepL_FootworkDrill: {fileID: 512683638}
   BwdStep_FootworkDrill: {fileID: 1586260386}
@@ -21299,6 +21356,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9a9439025e4c39e4d891725f7bfe6f7c, type: 2}
+    - target: {fileID: 9500000, guid: 09f65abe57879f440ba5c9cafac54016, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f65abe57879f440ba5c9cafac54016, type: 3}
 --- !u!4 &1586260385 stripped

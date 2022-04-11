@@ -17,7 +17,7 @@ public class collideEvent : MonoBehaviour
     public AudioClip shuttlecockHit; 
 
 
-    void Update()
+    void FixedUpdate()
     {
         
 

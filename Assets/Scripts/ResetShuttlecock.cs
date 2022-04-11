@@ -64,15 +64,17 @@ public class ResetShuttlecock : MonoBehaviour
         // OVRInput.Update();
         if (gameMode == GameModes.ServiceDrill){
             // hold shuttlecock
-            if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) != 0)
+            if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) >= 0.4)
             {  
                 // to make sure shuttlecock does not collide when being held.
                 gameObject.layer = 0;
                 gameObject.transform.position = Lefthand.transform.position + new Vector3(0.0f, 0.0f, -0.2f);
+                rb.useGravity = false;
             }
             else
             {
                 gameObject.layer = 7;
+                rb.useGravity = true;
             }
         }
         
@@ -106,7 +108,7 @@ public class ResetShuttlecock : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
     }
      void OnCollisionEnter(Collision collision) {
-         if (gameMode != GameModes.SmashDefense){
+         if (gameMode == GameModes.FootworkDrill){
              footworkDrill.FootworkDrillShuttlecockCollideEvent();
          }
      }
