@@ -5,6 +5,11 @@ using UnityEngine.InputSystem;
 
 public class ResetShuttlecock : MonoBehaviour
 {
+    [Header("Sound Effect")]
+    public AudioSource selectClick;
+    public AudioSource exitClick;
+    public AudioSource shuttleAppear; 
+
     public FootworkDrill footworkDrill;
     public InputActionReference toggleReference = null;
     public GameObject arrowHelper;
@@ -42,6 +47,11 @@ public class ResetShuttlecock : MonoBehaviour
     Difficulty currentDifficulty  = Difficulty.Beginner;
     public List<Vector3> smashSpeeds = new List<Vector3>{ new Vector3(0f, -4f, 14f), new Vector3(0f, -7f, 17f), new Vector3(0f, -10f, 20f) };
     public void Start(){
+
+        selectClick = GetComponent<AudioSource>(); 
+        exitClick = GetComponent<AudioSource>();
+        shuttleAppear = GetComponent<AudioSource>();
+
         _timerScript = TimerCanvas.GetComponent<StartTimer>();
         _racketScript = Racket.GetComponent<collideEvent>();
         rb = gameObject.GetComponent<Rigidbody>();
@@ -96,10 +106,11 @@ public class ResetShuttlecock : MonoBehaviour
         }
     }
 
-        public void placeShuttlecock(Vector3 pos){
+    public void placeShuttlecock(Vector3 pos){
         // gameObject.transform.position = positionList[positionIndex];
         // gameObject.transform.position = new Vector3(1.0196f, 0.403f, 3.406f);
         // gameObject.transform.position = new Vector3(1.06f, 0.307f, 3.639f);
+        shuttleAppear.Play();
         Instantiate(arrowHelper, pos, Quaternion.identity);
         gameObject.transform.position = pos;
         gameObject.transform.eulerAngles = shuttlecockRotation;
@@ -107,7 +118,7 @@ public class ResetShuttlecock : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
-     void OnCollisionEnter(Collision collision) {
+    void OnCollisionEnter(Collision collision) {
          if (gameMode == GameModes.FootworkDrill){
              footworkDrill.FootworkDrillShuttlecockCollideEvent();
          }
@@ -135,6 +146,7 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickEnterSmashDefenseMode()
     {
+        selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
@@ -148,18 +160,22 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickSmashBeginner()
     {
+        selectClick.Play();
         currentDifficulty = Difficulty.Beginner;
     }
     public void OnClickSmashSkilled()
     {
+        selectClick.Play();
         currentDifficulty = Difficulty.Skilled;
     }
     public void OnClickSmashExpert()
     {
+        selectClick.Play();
         currentDifficulty = Difficulty.Expert;
     }
     public void OnClickExitGameMode()
     {
+        exitClick.Play();
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);
         CountdownCanvas.SetActive(false);
@@ -168,6 +184,7 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickEnterServiceDrill()
     {
+        selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
@@ -178,6 +195,7 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickEnterFootworkDrill()
     {
+        selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
