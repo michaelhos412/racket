@@ -16,9 +16,17 @@ public class StartTimer : MonoBehaviour
     private int nextUpdate = 1;
     private int totalTime = -1;
     public GameObject EndEvaluationCanvas;
+
+    public AudioSource startWhistle;
+    public AudioSource timesUp; 
+
     // Start is called before the first frame update
     void Start()
     {
+        //get audio source for start whistle
+        startWhistle = GetComponent<AudioSource>();
+        timesUp = GetComponent<AudioSource>(); 
+
         totalTime = timeToDisplay;
         // time.text = minute.ToString() + ":" + seconds.ToString();
     }
@@ -40,6 +48,7 @@ public class StartTimer : MonoBehaviour
         }
         }
         else if(timeToDisplay == 0){
+            timesUp.Play();
             countdownText.text = "Time's Up!";
             shuttlecock.SetActive(false);
             EndEvaluationCanvas.SetActive(true);
@@ -67,6 +76,7 @@ public class StartTimer : MonoBehaviour
 
     public void OnClickResetTimer()
     {
+        startWhistle.Play();
         countdownText.text = "Start!";
         timeToDisplay = 20;
     }
