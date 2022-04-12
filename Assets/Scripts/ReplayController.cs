@@ -12,13 +12,16 @@ public class ReplayController : MonoBehaviour
     public GameObject pauseMenu = null;
 
     public GameObject CloseMenu = null;
+    [Header("Arrow")]
+    public GameObject arrow = null;
+    
     [Header("Canvas")]
     public GameObject timerCanvas = null;
     public GameObject scoreCanvas = null;
     public GameObject countdownCanvas = null;
     [Header("Shuttle")]
     public GameObject shuttlecock = null;
-    public ResetShuttlecock _shuttlecockScript = null;
+    private ResetShuttlecock _shuttlecockScript = null;
 
     public void Start(){
         _shuttlecockScript = shuttlecock.GetComponent<ResetShuttlecock>();
@@ -35,17 +38,20 @@ public class ReplayController : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext context)
     {
-        Debug.Log("Spawning and playing 1");
-        _shuttlecockScript.gameMode = ResetShuttlecock.GameModes.Nothing;
-        pauseMenu.SetActive(false);
-        AICoachMenuSelection.SetActive(true);
-        yBotGameObject.SetActive(true);
-        CloseMenu.SetActive(true);
-        timerCanvas.SetActive(false);
-        scoreCanvas.SetActive(false);
-        countdownCanvas.SetActive(false);
-        shuttlecock.SetActive(false);
-        StartCoroutine(SpawnAndPlayRecording());
+        if (_shuttlecockScript.gameMode == ResetShuttlecock.GameModes.Nothing)
+        {
+            Debug.Log("Spawning and playing 1");
+            pauseMenu.SetActive(false);
+            AICoachMenuSelection.SetActive(true);
+            yBotGameObject.SetActive(true);
+            CloseMenu.SetActive(true);
+            timerCanvas.SetActive(false);
+            scoreCanvas.SetActive(false);
+            countdownCanvas.SetActive(false);
+            shuttlecock.SetActive(false);
+            arrow.SetActive(false);
+            StartCoroutine(SpawnAndPlayRecording());
+        }
     }
 
     private IEnumerator SpawnAndPlayRecording()

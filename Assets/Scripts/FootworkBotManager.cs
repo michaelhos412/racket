@@ -12,6 +12,9 @@ public class FootworkBotManager : MonoBehaviour
     Animator animBwd;
     Animation _animBwd;
 
+    [Header("Arrow")]
+    public GameObject Arrow = null;
+
     [Header("Shuttle")]
     public GameObject Shuttlecock = null;
 
@@ -37,6 +40,7 @@ public class FootworkBotManager : MonoBehaviour
         {
             if(OVRInput.Get(OVRInput.RawButton.Y))
             {
+                Arrow.SetActive(false);
                 Time.timeScale = 0;
                 FwdStepR_FootworkDrill.SetActive(true);
                 animFwdR.Play("Base Layer.FwdStepR", 0, 0);
@@ -60,6 +64,7 @@ public class FootworkBotManager : MonoBehaviour
             {
                 BwdStep_FootworkDrill.SetActive(false);
                 Time.timeScale = 1;
+                Arrow.SetActive(true);
             }
         }
         

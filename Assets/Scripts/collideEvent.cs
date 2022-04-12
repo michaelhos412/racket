@@ -46,7 +46,6 @@ public class collideEvent : MonoBehaviour
     void OnCollisionEnter(Collision collision) {
         Debug.Log("Collide");
         ball.GetComponent<Rigidbody>().useGravity = true;
-        Destroy(GameObject.FindWithTag("Arrow"));
         Vector3 ballPosition = ball.transform.position;
         AudioSource.PlayClipAtPoint(shuttlecockHit, ballPosition);
 

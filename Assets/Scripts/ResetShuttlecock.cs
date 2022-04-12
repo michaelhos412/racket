@@ -12,7 +12,7 @@ public class ResetShuttlecock : MonoBehaviour
 
     public FootworkDrill footworkDrill;
     public InputActionReference toggleReference = null;
-    public GameObject arrowHelper;
+    public GameObject Arrow;
     private Rigidbody rb;
     private int positionIndex = 0;
     private Vector3 shuttlecockRotation = new Vector3(109f, 0f, 0f);
@@ -67,12 +67,11 @@ public class ResetShuttlecock : MonoBehaviour
         // }
         if (gameMode == GameModes.Nothing)
         {
-            // FwdStepR_FootworkDrill.SetActive(false);
             OnClickExitGameMode();
 
         }
-        // OVRInput.Update();
-        if (gameMode == GameModes.ServiceDrill){
+        else if (gameMode == GameModes.ServiceDrill)
+        {
             // hold shuttlecock
             if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) >= 0.4)
             {  
@@ -87,7 +86,6 @@ public class ResetShuttlecock : MonoBehaviour
                 rb.useGravity = true;
             }
         }
-        
     }
 
     public void onDestroy(){
@@ -95,13 +93,13 @@ public class ResetShuttlecock : MonoBehaviour
     }
 
     private void Toggle(InputAction.CallbackContext context){
-        Destroy(GameObject.FindWithTag("Arrow"));
         if (gameMode == GameModes.SmashDefense)
         {
             float shuttlecockXPos = Random.Range(-0.45f, 3.00f);
             StartCoroutine(smashCoroutine(new Vector3(shuttlecockXPos, 1.977f, -0.212f)));
         }
         else{
+            Debug.Log(gameMode);
             placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
         }
     }
@@ -110,8 +108,7 @@ public class ResetShuttlecock : MonoBehaviour
         // gameObject.transform.position = positionList[positionIndex];
         // gameObject.transform.position = new Vector3(1.0196f, 0.403f, 3.406f);
         // gameObject.transform.position = new Vector3(1.06f, 0.307f, 3.639f);
-        shuttleAppear.Play();
-        Instantiate(arrowHelper, pos, Quaternion.identity);
+        // shuttleAppear.Play();
         gameObject.transform.position = pos;
         gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
@@ -126,7 +123,6 @@ public class ResetShuttlecock : MonoBehaviour
 
      IEnumerator smashCoroutine(Vector3 pos)
      {
-        Instantiate(arrowHelper, pos, Quaternion.identity);
         gameObject.transform.position = pos;
         gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
@@ -146,11 +142,12 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickEnterSmashDefenseMode()
     {
-        selectClick.Play();
+        // selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
         gameObject.SetActive(true);
+        Arrow.SetActive(true);
         gameMode = GameModes.SmashDefense;
         _timerScript.timeToDisplay = 20;
         _racketScript.scoreAmount = 0;  
@@ -160,46 +157,49 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickSmashBeginner()
     {
-        selectClick.Play();
+        // selectClick.Play();
         currentDifficulty = Difficulty.Beginner;
     }
     public void OnClickSmashSkilled()
     {
-        selectClick.Play();
+        // selectClick.Play();
         currentDifficulty = Difficulty.Skilled;
     }
     public void OnClickSmashExpert()
     {
-        selectClick.Play();
+        // selectClick.Play();
         currentDifficulty = Difficulty.Expert;
     }
     public void OnClickExitGameMode()
     {
-        exitClick.Play();
+        // exitClick.Play();
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);
         CountdownCanvas.SetActive(false);
+        Arrow.SetActive(false);
         gameMode = GameModes.Nothing;
         
     }
     public void OnClickEnterServiceDrill()
     {
-        selectClick.Play();
+        // selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
         gameObject.SetActive(true);
+        Arrow.SetActive(true);
         gameMode = GameModes.ServiceDrill;
         _timerScript.timeToDisplay = 20;
         _racketScript.scoreAmount = 0;  
     }
     public void OnClickEnterFootworkDrill()
     {
-        selectClick.Play();
+        // selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
         gameObject.SetActive(true);
+        Arrow.SetActive(true);
         gameMode = GameModes.FootworkDrill;
         _timerScript.timeToDisplay = 20;
         _racketScript.scoreAmount = 0;  

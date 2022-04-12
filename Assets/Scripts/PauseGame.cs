@@ -15,6 +15,9 @@ public class PauseGame : MonoBehaviour
     public GameObject score = null;
     public GameObject Shuttlecock = null;
 
+    [Header("Arrow")]
+    public GameObject Arrow = null;
+
     [Header("Buttons")]
     public GameObject practiceSection = null;
     public GameObject demoSection = null;
@@ -38,7 +41,7 @@ public class PauseGame : MonoBehaviour
     }
 
     private void Toggle(InputAction.CallbackContext context){
-        Destroy(GameObject.FindWithTag("Arrow"));
+        Arrow.SetActive(false);
         gameObject.SetActive(true);
         Racket.SetActive(false);
         RightHand.SetActive(true);

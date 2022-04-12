@@ -48,7 +48,7 @@ public class StartTimer : MonoBehaviour
         }
         }
         else if(timeToDisplay == 0){
-            timesUp.Play();
+            // timesUp.Play();
             countdownText.text = "Time's Up!";
             shuttlecock.SetActive(false);
             EndEvaluationCanvas.SetActive(true);
@@ -76,7 +76,7 @@ public class StartTimer : MonoBehaviour
 
     public void OnClickResetTimer()
     {
-        startWhistle.Play();
+        // startWhistle.Play();
         countdownText.text = "Start!";
         timeToDisplay = 20;
     }
