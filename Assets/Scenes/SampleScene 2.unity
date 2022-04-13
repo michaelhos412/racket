@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.42422113, g: 0.47686833, b: 0.49996644, a: 1}
+  m_IndirectSpecularColor: {r: 0.42422244, g: 0.47686946, b: 0.49996835, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4497,7 +4497,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1252122626}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -5565,6 +5565,7 @@ Transform:
   - {fileID: 685652972}
   - {fileID: 421522616}
   - {fileID: 497803329}
+  - {fileID: 348028085}
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6591,12 +6592,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348028082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 308800907}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &357622429
 GameObject:
@@ -9374,7 +9375,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 5ddd756b2c355f1439d8887611751f64, type: 2}
     - target: {fileID: 9500000, guid: ec0e166c828b46149b2f8d774233c56e, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0e166c828b46149b2f8d774233c56e, type: 3}
@@ -10669,8 +10670,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 6f0ed2219ff129a43a45732c39e4918a, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15531,7 +15531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1031876769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26198,7 +26198,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: a291c19f4b9043b41b587cf2bf6d6d37, type: 2}
     - target: {fileID: 9500000, guid: 4254f159fdffd3c49bc7dad78d3a703f, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4254f159fdffd3c49bc7dad78d3a703f, type: 3}
@@ -26599,7 +26599,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 3399bf35bdaac824f932f12fdba840a5, type: 2}
     - target: {fileID: 9500000, guid: 09f65abe57879f440ba5c9cafac54016, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f65abe57879f440ba5c9cafac54016, type: 3}
@@ -28803,7 +28803,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1a24557e4accb664688f23f2c5030fd9, type: 2}
     - target: {fileID: 9500000, guid: 9faab9171c0963c499969af5fba58fe5, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9faab9171c0963c499969af5fba58fe5, type: 3}
@@ -29144,7 +29144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2058580726
 RectTransform:
   m_ObjectHideFlags: 0

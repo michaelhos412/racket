@@ -41,7 +41,7 @@ public class PauseGame : MonoBehaviour
     }
 
     private void Toggle(InputAction.CallbackContext context){
-        // AudioListener.pause = true;
+        AudioListener.pause = false;
         Arrow.SetActive(false);
         gameObject.SetActive(true);
         Racket.SetActive(false);

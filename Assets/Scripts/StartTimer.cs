@@ -18,15 +18,15 @@ public class StartTimer : MonoBehaviour
     public GameObject EndEvaluationCanvas;
 
     [Header("Audio")]
-    public AudioSource startWhistle;
-    public AudioSource timesUp; 
+    public AudioSource startWhistle = null;
+    public AudioSource timesUp = null; 
 
     public AudioSource gamePlayBgm = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        // gamePlayBgm = gamePlayBgm.GetComponent<AudioSource>();
+        gamePlayBgm = gamePlayBgm.GetComponent<AudioSource>();
         //get audio source for start whistle
         startWhistle = startWhistle.GetComponent<AudioSource>();
         timesUp = timesUp.GetComponent<AudioSource>(); 
@@ -42,8 +42,10 @@ public class StartTimer : MonoBehaviour
 
     void Update(){
         // If the next update is reached
-        if(timeToDisplay > 0){
-            if(Time.time>=nextUpdate){
+        if(timeToDisplay > 0)
+        {
+            if(Time.time>=nextUpdate)
+            {
             // Debug.Log(Time.time+">="+nextUpdate);
             // Change the next update (current second+1)
             nextUpdate=Mathf.FloorToInt(Time.time)+1;
@@ -51,8 +53,8 @@ public class StartTimer : MonoBehaviour
             UpdateEverySecond();
         }
         }
-        else if(timeToDisplay == 0){
-            // timesUp.Play();
+        else if(timeToDisplay == 0)
+        {
             countdownText.text = "Time's Up!";
             // AudioListener.pause = true;
             shuttlecock.SetActive(false);
@@ -61,11 +63,13 @@ public class StartTimer : MonoBehaviour
             playerHand.SetActive(true);
             UIHelper.SetActive(true);
         }
-
-        if (timeToDisplay == totalTime - 2 ){
+        if(timeToDisplay == totalTime - 2 )
+        {
             countdownText.text = "";
-
-
+        }
+        if(timeToDisplay == 1)
+        {
+            timesUp.PlayDelayed(1);
         }
      
     }

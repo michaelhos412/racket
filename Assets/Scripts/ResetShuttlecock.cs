@@ -155,7 +155,6 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickEnterSmashDefenseMode()
     {
-        // AudioListener.pause = true;
         enterPlayMode();
         gameMode = GameModes.SmashDefense;
 
@@ -182,7 +181,6 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickExitGameMode()
     {
-        // AudioListener.pause = true;
         exitClick.Play();
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);
@@ -193,13 +191,11 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickEnterServiceDrill()
     {
-        // AudioListener.pause = true;
         enterPlayMode();
         gameMode = GameModes.ServiceDrill;
     }
     public void OnClickEnterFootworkDrill()
     {
-        // AudioListener.pause = true;
         enterPlayMode();
         gameMode = GameModes.FootworkDrill;
     }
@@ -210,6 +206,7 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void enterPlayMode()
     {
+        // AudioListener.pause = true;
         selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
