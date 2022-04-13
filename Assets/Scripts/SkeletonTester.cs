@@ -18,7 +18,7 @@ public class SkeletonTester : MonoBehaviour
         m_skeletonDef = saveLoadManager.LoadSkeletonDefinition(Application.streamingAssetsPath + "/SkeletonStates/definition.json");
     }
     // Update is called once per frame
-    async void Update()
+    void Update()
     {
         // check order of the serialized dictionary with csv
         if (Input.GetKeyDown(KeyCode.A))

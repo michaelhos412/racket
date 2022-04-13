@@ -368,7 +368,6 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
 
             lastFrame = frame;
-            Debug.Log("frame: " + frame);
 
             AnimateSkeleton(saveLoadManager.skeletonStateBuffer.stateList[frame]);
             counter += Time.deltaTime;
