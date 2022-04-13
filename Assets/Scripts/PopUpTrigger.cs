@@ -21,10 +21,8 @@ public class PopUpTrigger : MonoBehaviour
 
         public void showPopUp()
     {
-        // Instantiate(floatingText, new Vector3(4.515f, 2.501f, 1.787f), Quaternion.identity);
         Instantiate(floatingText, gameObject.transform.localPosition, Quaternion.identity);
         // PointsPopUp indicator = Instantiate(popUpText, transform.position, Quaternion.identity, transform).GetComponent<PointsPopUp>();
-        // indicator.SetPointsText(100);
     }
 
 }
