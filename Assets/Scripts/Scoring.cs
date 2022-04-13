@@ -10,7 +10,12 @@ public class Scoring : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = 0;
+    }
+
+    void OnEnable()
+    {
+        score = 0;
     }
 
     // Update is called once per frame
@@ -23,5 +28,9 @@ public class Scoring : MonoBehaviour
     {
         score += 100;
         scoreAmount.text = string.Format("{0:0000}", score);
+    }
+    public void OnClickResetScore()
+    {
+        score = 0;
     }
 }

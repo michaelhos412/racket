@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Arrow
+  - Points
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - CubeFollower
   - Shuttlecock
   - Racket
-  - 
-  - 
+  - Hand
+  - Floor
   - 
   - 
   - 

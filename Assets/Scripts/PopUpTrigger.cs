@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class PopUpTrigger : MonoBehaviour
 {    
-    public GameObject popUpContainer;
-    private ShowPopUp _script;
     public GameObject floatingText;
-    public Transform container;
 
     // Start is called before the first frame update
     void Start()
     {
-        _script = popUpContainer.GetComponent<ShowPopUp>();
+        
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        showPopUp();
+        if (collision.gameObject.tag == "Player"){
+            showPopUp();
+        }
     }
 
         public void showPopUp()
     {
-        // Instantiate(floatingText, new Vector3(4.515f, 2.501f, 1.787f), Quaternion.identity);
-        Instantiate(floatingText, gameObject.transform.localPosition, container.rotation);
+        Instantiate(floatingText, gameObject.transform.localPosition, Quaternion.identity);
         // PointsPopUp indicator = Instantiate(popUpText, transform.position, Quaternion.identity, transform).GetComponent<PointsPopUp>();
-        // indicator.SetPointsText(100);
     }
 
 }

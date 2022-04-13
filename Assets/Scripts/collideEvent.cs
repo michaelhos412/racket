@@ -13,8 +13,11 @@ public class collideEvent : MonoBehaviour
     public int scoreAmount = 100;
     public GameObject countdown;
 
+    [Header("Audio")]
+    public AudioClip shuttlecockHit; 
 
-    void Update()
+
+    void FixedUpdate()
     {
         
 
@@ -29,8 +32,6 @@ public class collideEvent : MonoBehaviour
     private Rigidbody ballBody;
     public Vector3 com;
     //public GameObject comPoint;
-    public GameObject popUpText;
-
 
     void Start()
     {
@@ -43,7 +44,11 @@ public class collideEvent : MonoBehaviour
 
   
     void OnCollisionEnter(Collision collision) {
+        Debug.Log("Collide");
         ball.GetComponent<Rigidbody>().useGravity = true;
+        Vector3 ballPosition = ball.transform.position;
+        AudioSource.PlayClipAtPoint(shuttlecockHit, ballPosition);
+
 
         int index = Mathf.Min(racketPositions.Count - 1, positionTrackingDepthInFrames - 1);
         if (index < 0)
@@ -68,8 +73,12 @@ public class collideEvent : MonoBehaviour
         scoreAmount += 100;
         score.text = string.Format("{0:000000}", scoreAmount);
         
-        countdown.SetActive(false);
-        
+        // countdown.SetActive(false);
+    }
+
+    public void OnClickResetScore(){
+        scoreAmount = 0;
+        score.text = string.Format("{0:000000}", scoreAmount);
     }
 
     

@@ -13,11 +13,22 @@ public class PauseGame : MonoBehaviour
     public GameObject PracticeMenu = null;
     public GameObject timer = null;
     public GameObject score = null;
+    public GameObject Shuttlecock = null;
+
+    [Header("Arrow")]
+    public GameObject Arrow = null;
+
+    [Header("Buttons")]
+    public GameObject practiceSection = null;
+    public GameObject demoSection = null;
+    public GameObject smashDifficulty = null;
     private collideEvent _racketScript;
+    private ResetShuttlecock _shuttlecockScript;
 
     void Start()
      {
          _racketScript = Racket.GetComponent<collideEvent>();
+         _shuttlecockScript = Shuttlecock.GetComponent<ResetShuttlecock>();
      }
 
 
@@ -30,6 +41,8 @@ public class PauseGame : MonoBehaviour
     }
 
     private void Toggle(InputAction.CallbackContext context){
+        AudioListener.pause = true;
+        Arrow.SetActive(false);
         gameObject.SetActive(true);
         Racket.SetActive(false);
         RightHand.SetActive(true);
@@ -38,6 +51,9 @@ public class PauseGame : MonoBehaviour
         PracticeMenu.SetActive(false);
         timer.SetActive(false);
         score.SetActive(false);
-
+        practiceSection.SetActive(false);
+        demoSection.SetActive(false);
+        smashDifficulty.SetActive(false);
+        _shuttlecockScript.gameMode = ResetShuttlecock.GameModes.Nothing;
     }
 }

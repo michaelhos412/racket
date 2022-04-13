@@ -98,7 +98,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         savePathSkeletonStates = Application.streamingAssetsPath + "/SkeletonStates/" + skeletonStateName + ".json";
         savePathStreamingTransform = Application.streamingAssetsPath + "/SkeletonStates/transform.json";
 
-        ToggleBotVisibility();
+        // ToggleBotVisibility();
 
         if (!useMotive)
         {
@@ -216,13 +216,18 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             skelState = StreamingClient.GetLatestSkeletonState(m_skeletonDef.Id);
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            // StartCoroutine(RecordTakeCoroutine());
-        }
+        // if (Input.GetKeyDown(KeyCode.A))
+        // {
+        //     Time.timeScale = 0;
+        //     // StartCoroutine(RecordTakeCoroutine());
+        // }
+        // if (Input.GetKeyDown(KeyCode.Z))
+        // {
+        //     Time.timeScale = 1;
+        // }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(PlayRecording());
+            StartCoroutine(PlayRecording(0));
             return;
         }
         if (Input.GetKeyDown(KeyCode.R))
@@ -313,9 +318,9 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     }
 
-    public void OnClickPlayRecording()
+    public void OnClickPlayRecording(int startingFrame)
     {
-        StartCoroutine(PlayRecording());
+        StartCoroutine(PlayRecording(startingFrame));
     }
 
     public void OnClickLoadForehand()
@@ -340,7 +345,17 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 #endif
     }
 
-    public System.Collections.IEnumerator PlayRecording()
+    public void pauseAnimation()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void continueAnimation()
+    {
+        Time.timeScale = 1;
+    }
+
+    public System.Collections.IEnumerator PlayRecording(int startingFrame)
     {
         Debug.Log("Playing recording");
         if (saveLoadManager.skeletonStateBuffer.Count() == 0)
@@ -354,7 +369,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
         float recordingTime =  totalFrames / 240f;
         while (counter < recordingTime)
         {
-            int frame = Mathf.RoundToInt(counter / recordingTime * totalFrames);
+            int frame = Mathf.RoundToInt(counter / recordingTime * totalFrames) + startingFrame;
             if (frame > totalFrames - 1)
             {
                 yield return 0;
