@@ -8,7 +8,7 @@ public class ResetShuttlecock : MonoBehaviour
     [Header("Sound Effect")]
     public AudioSource selectClick = null;
     public AudioSource exitClick = null;
-    public AudioSource shuttleAppear = null; 
+    public AudioSource shuttleAppear = null;
 
     public FootworkDrill footworkDrill;
     public InputActionReference toggleReference = null;
@@ -141,6 +141,7 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickEnterSmashDefenseMode()
     {
+        AudioListener.pause = true;
         selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
@@ -156,21 +157,25 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickSmashBeginner()
     {
+        AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Beginner;
     }
     public void OnClickSmashSkilled()
     {
+        AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Skilled;
     }
     public void OnClickSmashExpert()
     {
+        AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Expert;
     }
     public void OnClickExitGameMode()
     {
+        AudioListener.pause = true;
         exitClick.Play();
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);
@@ -181,7 +186,9 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickEnterServiceDrill()
     {
+        AudioListener.pause = true;
         selectClick.Play();
+
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
@@ -193,6 +200,7 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickEnterFootworkDrill()
     {
+        AudioListener.pause = true;
         selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
