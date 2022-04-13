@@ -1197,6 +1197,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "StrokeRecording",
+            "id": "6a92595b-b592-43f5-bceb-0a7fe644cff3",
+            "actions": [
+                {
+                    "name": "ToggleRecording",
+                    "type": "Button",
+                    "id": "ffe38622-773a-474f-9ad9-bb5637ffb00f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "90c49728-ce8c-4ba6-9711-9aa5f92d3082",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleRecording",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -1219,6 +1219,34 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""StrokeRecording"",
+            ""id"": ""6a92595b-b592-43f5-bceb-0a7fe644cff3"",
+            ""actions"": [
+                {
+                    ""name"": ""ToggleRecording"",
+                    ""type"": ""Button"",
+                    ""id"": ""ffe38622-773a-474f-9ad9-bb5637ffb00f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""90c49728-ce8c-4ba6-9711-9aa5f92d3082"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/primaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleRecording"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1336,6 +1364,9 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
         // Play Demo
         m_PlayDemo = asset.FindActionMap("Play Demo", throwIfNotFound: true);
         m_PlayDemo_PlayDemo = m_PlayDemo.FindAction("PlayDemo", throwIfNotFound: true);
+        // StrokeRecording
+        m_StrokeRecording = asset.FindActionMap("StrokeRecording", throwIfNotFound: true);
+        m_StrokeRecording_ToggleRecording = m_StrokeRecording.FindAction("ToggleRecording", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1886,6 +1917,39 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
         }
     }
     public PlayDemoActions @PlayDemo => new PlayDemoActions(this);
+
+    // StrokeRecording
+    private readonly InputActionMap m_StrokeRecording;
+    private IStrokeRecordingActions m_StrokeRecordingActionsCallbackInterface;
+    private readonly InputAction m_StrokeRecording_ToggleRecording;
+    public struct StrokeRecordingActions
+    {
+        private @XRIDefaultInputActions m_Wrapper;
+        public StrokeRecordingActions(@XRIDefaultInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ToggleRecording => m_Wrapper.m_StrokeRecording_ToggleRecording;
+        public InputActionMap Get() { return m_Wrapper.m_StrokeRecording; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(StrokeRecordingActions set) { return set.Get(); }
+        public void SetCallbacks(IStrokeRecordingActions instance)
+        {
+            if (m_Wrapper.m_StrokeRecordingActionsCallbackInterface != null)
+            {
+                @ToggleRecording.started -= m_Wrapper.m_StrokeRecordingActionsCallbackInterface.OnToggleRecording;
+                @ToggleRecording.performed -= m_Wrapper.m_StrokeRecordingActionsCallbackInterface.OnToggleRecording;
+                @ToggleRecording.canceled -= m_Wrapper.m_StrokeRecordingActionsCallbackInterface.OnToggleRecording;
+            }
+            m_Wrapper.m_StrokeRecordingActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ToggleRecording.started += instance.OnToggleRecording;
+                @ToggleRecording.performed += instance.OnToggleRecording;
+                @ToggleRecording.canceled += instance.OnToggleRecording;
+            }
+        }
+    }
+    public StrokeRecordingActions @StrokeRecording => new StrokeRecordingActions(this);
     private int m_GenericXRControllerSchemeIndex = -1;
     public InputControlScheme GenericXRControllerScheme
     {
@@ -1973,5 +2037,9 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
     public interface IPlayDemoActions
     {
         void OnPlayDemo(InputAction.CallbackContext context);
+    }
+    public interface IStrokeRecordingActions
+    {
+        void OnToggleRecording(InputAction.CallbackContext context);
     }
 }
