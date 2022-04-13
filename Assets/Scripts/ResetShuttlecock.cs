@@ -15,7 +15,7 @@ public class ResetShuttlecock : MonoBehaviour
     public GameObject Arrow = null;
     private Rigidbody rb;
     private int positionIndex = 0;
-    private Vector3 shuttlecockRotation = new Vector3(109f, 0f, 0f);
+    private Vector3 shuttlecockRotation = new Vector3(122f, 0f, 0f);
     [Header("Canvas")]
     public GameObject TimerCanvas = null;
     public GameObject ScoreCanvas = null;
