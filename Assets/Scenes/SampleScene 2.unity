@@ -13305,7 +13305,6 @@ MonoBehaviour:
   toggleReference: {fileID: 1322007100649991577, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   Arrow: {fileID: 675442142}
-  smashDefenseMode: 0
   TimerCanvas: {fileID: 187070672}
   ScoreCanvas: {fileID: 1760161932}
   CountdownCanvas: {fileID: 629604855}
@@ -13359,9 +13358,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848576244}
   serializedVersion: 2
-  m_Mass: 0.3
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Mass: 0.2
+  m_Drag: 0.5
+  m_AngularDrag: 0.005
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0

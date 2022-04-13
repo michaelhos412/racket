@@ -17,6 +17,7 @@ public class StartTimer : MonoBehaviour
     private int totalTime = -1;
     public GameObject EndEvaluationCanvas;
 
+    [Header("Audio")]
     public AudioSource startWhistle;
     public AudioSource timesUp; 
 
@@ -24,8 +25,8 @@ public class StartTimer : MonoBehaviour
     void Start()
     {
         //get audio source for start whistle
-        startWhistle = GetComponent<AudioSource>();
-        timesUp = GetComponent<AudioSource>(); 
+        startWhistle = startWhistle.GetComponent<AudioSource>();
+        timesUp = timesUp.GetComponent<AudioSource>(); 
 
         totalTime = timeToDisplay;
         // time.text = minute.ToString() + ":" + seconds.ToString();
