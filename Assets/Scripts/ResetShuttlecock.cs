@@ -40,7 +40,8 @@ public class ResetShuttlecock : MonoBehaviour
         Nothing,
         SmashDefense,
         ServiceDrill,
-        FootworkDrill
+        FootworkDrill,
+        NetShotDrill,
     }
     public GameModes gameMode = GameModes.Nothing;
     Difficulty currentDifficulty  = Difficulty.Beginner;
@@ -97,7 +98,13 @@ public class ResetShuttlecock : MonoBehaviour
             float shuttlecockXPos = Random.Range(-0.45f, 3.00f);
             StartCoroutine(smashCoroutine(new Vector3(shuttlecockXPos, 1.977f, -0.212f)));
         }
-        else{
+        else if (gameMode == GameModes.NetShotDrill)
+        {
+            float shuttlecockXPos = Random.Range(-0.45f, 3.00f);
+            placeShuttlecock(new Vector3(shuttlecockXPos, 1.706f, 0.2f));
+        }
+        else
+        {
             Debug.Log(gameMode);
             placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
         }
@@ -110,7 +117,14 @@ public class ResetShuttlecock : MonoBehaviour
         shuttleAppear.Play();
         gameObject.transform.position = pos;
         gameObject.transform.eulerAngles = shuttlecockRotation;
-        rb.useGravity = false;
+        if (gameMode == GameModes.NetShotDrill)
+        {
+            rb.useGravity = true;
+        }
+        else
+        {
+            rb.useGravity = false;
+        }
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
@@ -141,41 +155,34 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickEnterSmashDefenseMode()
     {
-        AudioListener.pause = true;
-        selectClick.Play();
-        TimerCanvas.SetActive(true);
-        ScoreCanvas.SetActive(true);
-        CountdownCanvas.SetActive(true);
-        gameObject.SetActive(true);
-        Arrow.SetActive(true);
+        // AudioListener.pause = true;
+        enterPlayMode();
         gameMode = GameModes.SmashDefense;
-        _timerScript.timeToDisplay = 20;
-        _racketScript.scoreAmount = 0;  
 
         StartCoroutine(smashCoroutine(new Vector3(1.106f, 1.977f, -0.212f)));
     }
 
     public void OnClickSmashBeginner()
     {
-        AudioListener.pause = true;
+        // AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Beginner;
     }
     public void OnClickSmashSkilled()
     {
-        AudioListener.pause = true;
+        // AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Skilled;
     }
     public void OnClickSmashExpert()
     {
-        AudioListener.pause = true;
+        // AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Expert;
     }
     public void OnClickExitGameMode()
     {
-        AudioListener.pause = true;
+        // AudioListener.pause = true;
         exitClick.Play();
         TimerCanvas.SetActive(false);
         ScoreCanvas.SetActive(false);
@@ -186,28 +193,29 @@ public class ResetShuttlecock : MonoBehaviour
     }
     public void OnClickEnterServiceDrill()
     {
-        AudioListener.pause = true;
-        selectClick.Play();
-
-        TimerCanvas.SetActive(true);
-        ScoreCanvas.SetActive(true);
-        CountdownCanvas.SetActive(true);
-        gameObject.SetActive(true);
-        Arrow.SetActive(true);
+        // AudioListener.pause = true;
+        enterPlayMode();
         gameMode = GameModes.ServiceDrill;
-        _timerScript.timeToDisplay = 20;
-        _racketScript.scoreAmount = 0;  
     }
     public void OnClickEnterFootworkDrill()
     {
-        AudioListener.pause = true;
+        // AudioListener.pause = true;
+        enterPlayMode();
+        gameMode = GameModes.FootworkDrill;
+    }
+    public void OnClickEnterNetShotDrill()
+    {
+        enterPlayMode();
+        gameMode = GameModes.NetShotDrill;
+    }
+    public void enterPlayMode()
+    {
         selectClick.Play();
         TimerCanvas.SetActive(true);
         ScoreCanvas.SetActive(true);
         CountdownCanvas.SetActive(true);
         gameObject.SetActive(true);
         Arrow.SetActive(true);
-        gameMode = GameModes.FootworkDrill;
         _timerScript.timeToDisplay = 20;
         _racketScript.scoreAmount = 0;  
     }

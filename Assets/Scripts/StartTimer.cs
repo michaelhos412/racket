@@ -26,7 +26,7 @@ public class StartTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gamePlayBgm = gamePlayBgm.GetComponent<AudioSource>();
+        // gamePlayBgm = gamePlayBgm.GetComponent<AudioSource>();
         //get audio source for start whistle
         startWhistle = startWhistle.GetComponent<AudioSource>();
         timesUp = timesUp.GetComponent<AudioSource>(); 
@@ -54,7 +54,7 @@ public class StartTimer : MonoBehaviour
         else if(timeToDisplay == 0){
             // timesUp.Play();
             countdownText.text = "Time's Up!";
-            AudioListener.pause = true;
+            // AudioListener.pause = true;
             shuttlecock.SetActive(false);
             EndEvaluationCanvas.SetActive(true);
             FinalScoreText.text = Score.text;
@@ -81,10 +81,10 @@ public class StartTimer : MonoBehaviour
 
     public void OnClickResetTimer()
     {
-        AudioListener.pause = true;
+        // AudioListener.pause = true;
         // startWhistle.Play();
         countdownText.text = "Start!";
-        gamePlayBgm.PlayDelayed(1);
+        // gamePlayBgm.PlayDelayed(1);
         timeToDisplay = 20;
     }
 

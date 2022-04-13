@@ -17,29 +17,35 @@ public class collideEvent : MonoBehaviour
     public AudioClip shuttlecockHit; 
 
 
-    void FixedUpdate()
-    {
-        
-
-        racketPositions.Insert(0, transform.position);
-        if (racketPositions.Count > positionTrackingDepthInFrames)
-            racketPositions.RemoveAt(positionTrackingDepthInFrames);
-    }
-
     public GameObject ball;
     public Rigidbody myRacketBody;
 
     private Rigidbody ballBody;
     public Vector3 com;
+
+    private ResetShuttlecock _shuttlecockScript = null;
+
     //public GameObject comPoint;
 
     void Start()
     {
         //comPoint.transform.localPosition = com;
+        _shuttlecockScript = ball.GetComponent<ResetShuttlecock>();
         Rigidbody ballBody = ball.GetComponent<Rigidbody>();
         ballBody.centerOfMass = com;
         ballBody.Sleep();
 
+    }
+
+    void FixedUpdate()
+    {
+        if (_shuttlecockScript.gameMode != ResetShuttlecock.GameModes.Nothing)
+        {
+            score.text = string.Format("{0:000000}", scoreAmount);
+        }
+        racketPositions.Insert(0, transform.position);
+        if (racketPositions.Count > positionTrackingDepthInFrames)
+            racketPositions.RemoveAt(positionTrackingDepthInFrames);
     }
 
   
@@ -70,8 +76,10 @@ public class collideEvent : MonoBehaviour
 
         ballBody.velocity = racketVelocity + racketNormal * racketVelocity.magnitude * normalInfluence;
 
-        scoreAmount += 100;
-        score.text = string.Format("{0:000000}", scoreAmount);
+        if (_shuttlecockScript.gameMode != ResetShuttlecock.GameModes.NetShotDrill)
+        {
+            scoreAmount += 100;
+        }
         
         // countdown.SetActive(false);
     }
