@@ -13,20 +13,38 @@ public class StrokeController : MonoBehaviour
     // moveCode 3 -> Forward Step
     // moveCode 4 -> Backward Step
     public int moveCode = 0;
-
- 
+    private Vector3 initialRootPosition;
+    private Vector3 initialPosition;
+    private Quaternion initialRootRotation;
+    private Quaternion initialRotation;
+    private string animationName = "";
+    private bool isAnimationReversed = false;
+    private float desiredTime;
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         _anim = gameObject.GetComponent<Animation>();
+        initialPosition = anim.bodyPosition;
+        initialRotation = anim.bodyRotation;
+        initialRootPosition = anim.rootPosition;
+        initialRootRotation = anim.rootRotation;
+        Debug.Log(initialPosition.x + " " +initialPosition.y +" " + initialPosition.z );
     }
     void Update()
     {
-   
+        // if (animationName == ""){
+        //     return;
+        // }
+        // if (isAnimationReversed == false){
+        //     anim.speed = 1;
+        //     anim.Play(animationName, 0, desiredTime);
+            
+        // }
     }
 
     public void OnClickPlayRecording()
     {
+        OnClickSetState(0f);
         anim.speed = 1;
     }
     public void OnClickPauseRecording()
@@ -35,6 +53,11 @@ public class StrokeController : MonoBehaviour
     }
     public void OnClickSetState(float desiredTime)
     {
+        anim.speed = 0.03f;    
+        anim.rootPosition = initialRootPosition;
+        anim.rootRotation = initialRootRotation;
+        anim.bodyPosition = initialPosition;
+        anim.bodyRotation = initialRotation;
         if(moveCode == 1){
             anim.Play("Base Layer.Backhand_receive2_success_001_FINAL", 0, desiredTime);
         }
@@ -47,5 +70,9 @@ public class StrokeController : MonoBehaviour
         else if(moveCode == 4){
             anim.Play("Base Layer.Bwd_step_002_FINAL", 0, desiredTime);
         }
+    }
+
+    public void LoopAnimationSlowMotion(string animation) {
+
     }
 }
