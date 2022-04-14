@@ -22,6 +22,8 @@ public class PauseGame : MonoBehaviour
     public GameObject practiceSection = null;
     public GameObject demoSection = null;
     public GameObject smashDifficulty = null;
+    [Header("Footwork Drill")]
+    public GameObject footworkDrill = null;
     private collideEvent _racketScript;
     private ResetShuttlecock _shuttlecockScript;
 
@@ -54,6 +56,7 @@ public class PauseGame : MonoBehaviour
         practiceSection.SetActive(false);
         demoSection.SetActive(false);
         smashDifficulty.SetActive(false);
+        footworkDrill.SetActive(false);
         _shuttlecockScript.gameMode = ResetShuttlecock.GameModes.Nothing;
     }
 }
