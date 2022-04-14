@@ -9,7 +9,7 @@ public class BackgroundMusic : MonoBehaviour
     void Awake(){
         if (bgm == null){
             bgm = this;
-            DontDestroyOnLoad(bgm);
+            DontDestroyOnLoad(this.gameObject);
         }
         else {
             Destroy(gameObject);

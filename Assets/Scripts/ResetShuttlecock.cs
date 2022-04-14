@@ -61,13 +61,8 @@ public class ResetShuttlecock : MonoBehaviour
     public void Update()
     {
         gameObject.layer = 7;
-        // if(gameObject.transform.localPosition.y <= 0.1f)
-        // {
-        //     placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
-        // }
         if (gameMode == GameModes.Nothing)
         {
-            // OnClickExitGameMode();
 
         }
         else if (gameMode == GameModes.ServiceDrill)
@@ -76,7 +71,9 @@ public class ResetShuttlecock : MonoBehaviour
             if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.Touch) >= 0.4)
             {  
                 // to make sure shuttlecock does not collide when being held.
-                gameObject.layer = 0;
+                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,0f);
+                gameObject.transform.eulerAngles = shuttlecockRotation;
+                gameObject.layer = 7;
                 gameObject.transform.position = Lefthand.transform.position + new Vector3(0.0f, 0.0f, -0.2f);
                 rb.useGravity = false;
             }
@@ -84,6 +81,13 @@ public class ResetShuttlecock : MonoBehaviour
             {
                 gameObject.layer = 7;
                 rb.useGravity = true;
+            }
+        }
+        else if (gameMode == GameModes.FootworkDrill)
+        {
+            if(gameObject.transform.localPosition.y <= 0.1f)
+            {
+                placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
             }
         }
     }
@@ -163,19 +167,16 @@ public class ResetShuttlecock : MonoBehaviour
 
     public void OnClickSmashBeginner()
     {
-        // AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Beginner;
     }
     public void OnClickSmashSkilled()
     {
-        // AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Skilled;
     }
     public void OnClickSmashExpert()
     {
-        // AudioListener.pause = true;
         selectClick.Play();
         currentDifficulty = Difficulty.Expert;
     }
