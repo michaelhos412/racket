@@ -24,11 +24,6 @@ public class StrokeController : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         _anim = gameObject.GetComponent<Animation>();
-        initialPosition = anim.bodyPosition;
-        initialRotation = anim.bodyRotation;
-        initialRootPosition = anim.rootPosition;
-        initialRootRotation = anim.rootRotation;
-        Debug.Log(initialPosition.x + " " +initialPosition.y +" " + initialPosition.z );
     }
     void Update()
     {
@@ -53,11 +48,7 @@ public class StrokeController : MonoBehaviour
     }
     public void OnClickSetState(float desiredTime)
     {
-        anim.speed = 0.03f;    
-        anim.rootPosition = initialRootPosition;
-        anim.rootRotation = initialRootRotation;
-        anim.bodyPosition = initialPosition;
-        anim.bodyRotation = initialRotation;
+        anim.speed = 0.025f;    
         if(moveCode == 1){
             anim.Play("Base Layer.Backhand_receive2_success_001_FINAL", 0, desiredTime);
         }
@@ -72,7 +63,4 @@ public class StrokeController : MonoBehaviour
         }
     }
 
-    public void LoopAnimationSlowMotion(string animation) {
-
-    }
 }

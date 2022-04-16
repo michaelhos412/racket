@@ -1238,7 +1238,7 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
                 {
                     ""name"": """",
                     ""id"": ""90c49728-ce8c-4ba6-9711-9aa5f92d3082"",
-                    ""path"": ""<OculusTouchController>{LeftHand}/primaryButton"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/secondaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

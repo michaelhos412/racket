@@ -13,6 +13,7 @@ using TensorFlowLite;
     float[] outputs;
 
     string[] classes = {"correct","hammergrip","elbow_strain","no_elbow_swing"};
+    
 
     void Start()
     {
@@ -74,10 +75,10 @@ using TensorFlowLite;
         isProcessing = false;
     }
 
-    public string GetPredictionClass(){
+    public int GetPredictionClass(){
         float maxValue = outputs.Max();
         int maxIndex = outputs.ToList().IndexOf(maxValue);
-        return classes[maxIndex];
+        return maxIndex;
     }
     public void ReadAndProcessCSV(string path){
         StreamReader strReader = new StreamReader(path);
