@@ -20,8 +20,9 @@ public class StartTimer : MonoBehaviour
     [Header("Audio")]
     public AudioSource startWhistle = null;
     public AudioSource timesUp = null; 
-
     public AudioSource gamePlayBgm = null;
+    [Header("Footwork Drill")]
+    public GameObject footworkDrill = null;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +63,8 @@ public class StartTimer : MonoBehaviour
             FinalScoreText.text = Score.text;
             playerHand.SetActive(true);
             UIHelper.SetActive(true);
+            footworkDrill.SetActive(false);
+            
         }
         if(timeToDisplay == totalTime - 2 )
         {
