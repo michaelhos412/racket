@@ -8,16 +8,15 @@ public class ControllerData : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public StrokeClassifier strokeClassifier;
-    public Text devicePositionText;
-    public Text deviceVelocityText;
-    public Text deviceAngularVelocityText;
-    public Text deviceAccelerationText;
-    public Text deviceRotationText;
-    public Text deviceAngularAccelerationText;
-    public Text strokePredictionText;
+    // public Text devicePositionText;
+    // public Text deviceVelocityText;
+    // public Text deviceAngularVelocityText;
+    // public Text deviceAccelerationText;
+    // public Text deviceRotationText;
+    // public Text deviceAngularAccelerationText;
+    // public Text strokePredictionText;
  
-    public Text isRecordingText;
+    // public Text isRecordingText;
     private XRNode RightNode = XRNode.RightHand;
  
     private List<UnityEngine.XR.InputDevice> devices = new List<UnityEngine.XR.InputDevice>();
@@ -31,11 +30,11 @@ public class ControllerData : MonoBehaviour
     private Quaternion deviceRotationValue = Quaternion.identity;
     private Vector3 deviceAngularAccelerationValue = Vector3.zero;
     private TextWriter tw;
-    private string csvFilePath; 
+    public string csvFilePath; 
     private bool isRecording = false;
     private string filename;
     private float[] classifierOutput;
-    public int counter;
+    private int counter;
     //Access to the hardware device and gets its information saving it in the variable device
     void GetDevice()
     {
@@ -54,13 +53,13 @@ public class ControllerData : MonoBehaviour
             GetDevice();
         }
     }
-    public void Awake(){
-        toggleReference.action.started += ToggleRecording;
-    }
+    // public void Awake(){
+    //     toggleReference.action.started += ToggleRecording;
+    // }
 
-    public void onDestroy(){
-        toggleReference.action.started -= ToggleRecording;
-    }
+    // public void onDestroy(){
+    //     toggleReference.action.started -= ToggleRecording;
+    // }
 
     void Update()
     {
@@ -86,12 +85,12 @@ public class ControllerData : MonoBehaviour
             device.TryGetFeatureValue(deviceRotation, out deviceRotationValue);
             device.TryGetFeatureValue(deviceAngularAcceleration, out deviceAngularAccelerationValue);
             
-            devicePositionText.text = devicePositionValue.ToString("F1");
-            deviceVelocityText.text = deviceVelocityValue.ToString("F1");
-            deviceAngularVelocityText.text = deviceAngularVelocityValue.ToString("F1");
-            deviceAccelerationText.text = deviceAccelerationValue.ToString("F1");
-            deviceRotationText.text = deviceRotationValue.ToString("F1");
-            deviceAngularAccelerationText.text = deviceAngularAccelerationValue.ToString("F1");
+            // devicePositionText.text = devicePositionValue.ToString("F1");
+            // deviceVelocityText.text = deviceVelocityValue.ToString("F1");
+            // deviceAngularVelocityText.text = deviceAngularVelocityValue.ToString("F1");
+            // deviceAccelerationText.text = deviceAccelerationValue.ToString("F1");
+            // deviceRotationText.text = deviceRotationValue.ToString("F1");
+            // deviceAngularAccelerationText.text = deviceAngularAccelerationValue.ToString("F1");
 
             tw.WriteLine(devicePositionValue.x.ToString("F5") + "," + devicePositionValue.y.ToString("F5") + "," + devicePositionValue.z.ToString("F5") + "," + 
                          deviceVelocityValue.x.ToString("F5") + ","  + deviceVelocityValue.y.ToString("F5") + ","  + deviceVelocityValue.z.ToString("F5") + "," +
@@ -105,30 +104,26 @@ public class ControllerData : MonoBehaviour
                 
     }
 
-    private void ToggleRecording(UnityEngine.InputSystem.InputAction.CallbackContext context){
+    public void ToggleRecording(){
         if(isRecording == false){
-            counter += 1;
-            csvFilePath = CreateCSV(counter);
-            isRecordingText.text = "stroke number: " + counter.ToString();
+            // counter += 1;
+            csvFilePath = CreateCSV();
+            // isRecordingText.text = "stroke number: " + counter.ToString();
             
         }
         else{
             Debug.Log("recording finished");
             tw.Close();
 
-            classifierOutput = strokeClassifier.PredictFromCSV(csvFilePath);
-            Debug.Log(string.Join(", ", classifierOutput));
-            strokePredictionText.text = strokeClassifier.GetPredictionClass();
-            isRecordingText.text = "Not recording...";
+            // isRecordingText.text = "Not recording...";
         }
         isRecording = !isRecording;
     }
 
-    private string CreateCSV(int counter){
-        Debug.Log("test" + counter.ToString() + ".csv created");
-        filename = Application.streamingAssetsPath + "/TestData/hammergrip" + counter.ToString() + ".csv";
-
-        tw = new StreamWriter(filename, true);
+    private string CreateCSV(){
+        filename = Application.streamingAssetsPath + "/PredictData/predict" + counter+ ".csv";
+        counter += 1;
+        tw = new StreamWriter(filename, false);
         tw.WriteLine("posX, posY, posZ, velX, velY, velZ, angVelX, angVelY, angVelZ, accX, accY, accZ, rotX, rotY, rotZ, rotW, angAccX, angAccY, angAccZ");
         return filename;
     }   

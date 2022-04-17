@@ -16,6 +16,8 @@ public class ShuttleCenterOfMassManager : MonoBehaviour
     void Update()
     {
         rb.centerOfMass = CenterOfMass;
+        gameObject.transform.up = Vector3.Slerp(gameObject.transform.up, rb.velocity.normalized, Time.deltaTime * 2.3f);
+        // gameObject.transform.rotation = Quaternion.LookRotation(rb.velocity);
     }
 
     // private void OnDrawGizmos()

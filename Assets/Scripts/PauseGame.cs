@@ -14,6 +14,7 @@ public class PauseGame : MonoBehaviour
     public GameObject timer = null;
     public GameObject score = null;
     public GameObject Shuttlecock = null;
+    public GameObject formAnalysis;
 
     [Header("Arrow")]
     public GameObject Arrow = null;
@@ -58,5 +59,6 @@ public class PauseGame : MonoBehaviour
         smashDifficulty.SetActive(false);
         footworkDrill.SetActive(false);
         _shuttlecockScript.gameMode = ResetShuttlecock.GameModes.Nothing;
+        formAnalysis.SetActive(false);
     }
 }
