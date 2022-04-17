@@ -90,6 +90,14 @@ public class ResetShuttlecock : MonoBehaviour
                 placeShuttlecock(new Vector3(1.0196f, 0.403f, 3.406f));
             }
         }
+        else if (gameMode == GameModes.SmashDefense)
+        {
+            if(gameObject.transform.position.y <= 0.1f)
+            {
+                Debug.Log("Smash");
+                StartCoroutine(smashCoroutine(new Vector3(0f, 1.977f, -0.212f)));
+            }
+        }
     }
 
     public void onDestroy(){
@@ -133,27 +141,44 @@ public class ResetShuttlecock : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
     }
     void OnCollisionEnter(Collision collision) {
-         if (gameMode == GameModes.FootworkDrill){
-             footworkDrill.FootworkDrillShuttlecockCollideEvent();
-         }
+        if (gameMode == GameModes.FootworkDrill){
+            footworkDrill.FootworkDrillShuttlecockCollideEvent();
+        }
      }
 
      IEnumerator smashCoroutine(Vector3 pos)
      {
-        gameObject.transform.position = pos;
+        float shuttlecockXPos = 0f;
+        if (currentDifficulty == Difficulty.Beginner)
+        {
+            shuttlecockXPos = Random.Range(0.8f, 2f);
+        }
+        else if (currentDifficulty == Difficulty.Skilled)
+        {
+            shuttlecockXPos = Random.Range(0.2f, 2.4f);
+        }
+        else if (currentDifficulty == Difficulty.Expert)
+        {
+            shuttlecockXPos = Random.Range(-0.45f, 3.00f);
+        }
+        gameObject.transform.position = new Vector3(shuttlecockXPos, 1.977f, -0.212f);
         gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        yield return new WaitForSeconds(2);
         if (currentDifficulty == Difficulty.Beginner){
-            rb.velocity = smashSpeeds[0];
+            yield return new WaitForSeconds(3);
+            rb.velocity = new Vector3(0f, -4f, 14f);
         }
         else if (currentDifficulty == Difficulty.Skilled){
-            rb.velocity = smashSpeeds[1];
+            yield return new WaitForSeconds(2.5f);
+            float zSpeed = Random.Range(17f, 25f);
+            rb.velocity = new Vector3(0f, -7f, zSpeed);
         }
         else if (currentDifficulty == Difficulty.Expert){
-            rb.velocity = smashSpeeds[2];
+            yield return new WaitForSeconds(2);
+            float zSpeed = Random.Range(20f, 30f);
+            rb.velocity = new Vector3(0f, -10f, zSpeed);
         }
      }
 
