@@ -15,6 +15,8 @@ public class PauseGame : MonoBehaviour
     public GameObject score = null;
     public GameObject Shuttlecock = null;
     public GameObject formAnalysis;
+    public GameObject controlsInformationCanvas;
+    public GameObject strokeMistakeCanvas;
 
     [Header("Arrow")]
     public GameObject Arrow = null;
@@ -60,5 +62,7 @@ public class PauseGame : MonoBehaviour
         footworkDrill.SetActive(false);
         _shuttlecockScript.gameMode = ResetShuttlecock.GameModes.Nothing;
         formAnalysis.SetActive(false);
+        strokeMistakeCanvas.SetActive(false);
+        controlsInformationCanvas.SetActive(false);
     }
 }
