@@ -9,13 +9,13 @@ public class SetYBotFrame : MonoBehaviour
     public int frameNumber;
     void Start()
     {
-        skelAnimator.SetSkeletonFrame(frameNumber);
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        skelAnimator.SetSkeletonFrame(frameNumber);
             
     }
 }

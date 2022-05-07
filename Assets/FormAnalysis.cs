@@ -23,7 +23,7 @@ public class FormAnalysis : MonoBehaviour
         ElbowStrain = 2,
         NoElbowSwing = 3,
     }
-    
+    private int counter = 1;
     private StrokeClasses strokePrediction;
     private float[] classifierOutput;
 
@@ -53,18 +53,19 @@ public class FormAnalysis : MonoBehaviour
         shuttlecockRB.velocity = spawnPoint.TransformDirection(new Vector3(0, 12, 5.6f));
         shuttlecockRB.useGravity = true;
         // controllerData.ToggleRecording();
-        Invoke("StartRecording", 0.5f);        
+        //Invoke("StartRecording", 0.5f);        
         Invoke("StopRecordAndPredict", 2.2f);
     }
     private void StartRecording(){
         controllerData.ToggleRecording();
     }
     private void StopRecordAndPredict(){
-        controllerData.ToggleRecording();
-        classifierOutput = strokeClassifier.PredictFromCSV(controllerData.csvFilePath);
-        strokePrediction = (StrokeClasses) strokeClassifier.GetPredictionClass();
-        Debug.Log(string.Join(", ", classifierOutput));
+        //controllerData.ToggleRecording();
+        //classifierOutput = strokeClassifier.PredictFromCSV(controllerData.csvFilePath);
+        strokePrediction = (StrokeClasses) counter;
+        //Debug.Log(string.Join(", ", classifierOutput));
         EnableStrokeMistakeCanvas(strokePrediction);
+        counter = (counter + 1) % 4;
     }
 
     private void DisableStrokeMistakeCanvas(){

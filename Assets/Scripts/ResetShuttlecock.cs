@@ -131,7 +131,7 @@ public class ResetShuttlecock : MonoBehaviour
         gameObject.transform.eulerAngles = shuttlecockRotation;
         if (gameMode == GameModes.NetShotDrill)
         {
-            rb.useGravity = true;
+            rb.useGravity = false;
         }
         else
         {
@@ -161,19 +161,19 @@ public class ResetShuttlecock : MonoBehaviour
         {
             shuttlecockXPos = Random.Range(-0.45f, 3.00f);
         }
-        gameObject.transform.position = new Vector3(shuttlecockXPos, 1.977f, -0.212f);
+        gameObject.transform.position = new Vector3(shuttlecockXPos, 3f, -3.5f);
         gameObject.transform.eulerAngles = shuttlecockRotation;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         if (currentDifficulty == Difficulty.Beginner){
             yield return new WaitForSeconds(3);
-            rb.velocity = new Vector3(0f, -4f, 14f);
+            rb.velocity = new Vector3(0f, -4.5f, 14f);
         }
         else if (currentDifficulty == Difficulty.Skilled){
             yield return new WaitForSeconds(2.5f);
             float zSpeed = Random.Range(17f, 25f);
-            rb.velocity = new Vector3(0f, -7f, zSpeed);
+            rb.velocity = new Vector3(0f, -6f, zSpeed);
         }
         else if (currentDifficulty == Difficulty.Expert){
             yield return new WaitForSeconds(2);
@@ -239,7 +239,6 @@ public class ResetShuttlecock : MonoBehaviour
         CountdownCanvas.SetActive(true);
         gameObject.SetActive(true);
         Arrow.SetActive(true);
-        _timerScript.timeToDisplay = 20;
         _racketScript.scoreAmount = 0;  
     }
 }

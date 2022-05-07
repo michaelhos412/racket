@@ -14,13 +14,14 @@ public class PlayerCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
-            transform.Translate(Vector3.forward * 10f * Time.deltaTime); 
-        }
     }
     void OnTriggerEnter(Collider other){
-        Debug.Log("player touched base");
-        footworkDrill.TouchBase();
+        Debug.Log(other.gameObject.name);
+        if(other.gameObject.name == "PlayerCollider"){
+            Debug.Log("player touched base");
+            footworkDrill.TouchBase();
+        }
+        
     }
 
     // void OnControllerColliderHit(ControllerColliderHit hit){

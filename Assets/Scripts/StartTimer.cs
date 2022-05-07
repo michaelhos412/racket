@@ -12,9 +12,9 @@ public class StartTimer : MonoBehaviour
     public GameObject shuttlecock;
     public GameObject playerHand;
     public GameObject UIHelper;
-    public int timeToDisplay = 120;
+    private int timeToDisplay;
     private int nextUpdate = 1;
-    private int totalTime = -1;
+    public int totalTime;
     public GameObject EndEvaluationCanvas;
 
     [Header("Audio")]
@@ -32,13 +32,8 @@ public class StartTimer : MonoBehaviour
         startWhistle = startWhistle.GetComponent<AudioSource>();
         timesUp = timesUp.GetComponent<AudioSource>(); 
 
-        totalTime = timeToDisplay;
+        timeToDisplay = totalTime;
         // time.text = minute.ToString() + ":" + seconds.ToString();
-    }
-
-    void OnEnable()
-    {
-        totalTime = timeToDisplay;
     }
 
     void Update(){
@@ -89,10 +84,10 @@ public class StartTimer : MonoBehaviour
     public void OnClickResetTimer()
     {
         // AudioListener.pause = true;
-        // startWhistle.Play();
+        startWhistle.Play();
         countdownText.text = "Start!";
         // gamePlayBgm.PlayDelayed(1);
-        timeToDisplay = 20;
+        timeToDisplay = totalTime;
     }
 
 }

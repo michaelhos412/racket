@@ -39,9 +39,9 @@ public class FootworkDrill : MonoBehaviour
         // place shuttle in random position of the 4 corners
         int index =  Random.Range(0,3);
         Vector3 pos = positionList[index]; 
-        if (index > 1){
-            //pos.y = Random.Range(minY, maxY); // randomize the height
-        }
+       
+        pos.y = Random.Range(minY, maxY); // randomize the height
+        
         shuttlecock.placeShuttlecock(pos);
         
     }
